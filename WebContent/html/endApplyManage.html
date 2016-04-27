@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>结题申报管理</title>
+	<link rel="stylesheet" type="text/css" href="../resource/css/vendor/bootstrap/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../resource/css/page/index.css">
+</head>
+<body>
+  <ul id="myTab" class="nav nav-tabs">
+  	  <li class="active"><a href="#tab1" data-toggle="tab">全部</a></li>
+      <li class=""><a href="#tab2" data-toggle="tab">待结题评审</a></li>
+	  <li class=""><a href="#tab3" data-toggle="tab">结题评审中<span class="countTip">12</span></a></li>
+	  <li class=""><a href="#tab4" data-toggle="tab">待修改</a></li>
+	  <li class=""><a href="#tab5" data-toggle="tab">已结题</a></li>
+  </ul>
+  <div id="myTabContent" class="tab-content">
+  	<div class="tab-pane fade in active" id="tab1">
+      <br/>
+      <div class="" style="position:relative;">
+      	<div style=" margin-right:467px;">
+      		 <input class="form-control f-ib projectName" placeholder="课题名称"/>
+      	</div>   
+        <div style="position:absolute;top:0;right:0">
+        	<input class="form-control f-ib" placeholder="主题词" style="width:180px;"/>
+	        <input class="form-control f-ib" placeholder="负责人" style="width:100px;"/>
+	        <select class="form-control f-ib" style="width:110px; padding-top:5px;"/>
+	           <option value='' disabled selected style='display:none;'>学科分类</option>
+	           <option value="0">马列、科社</option>
+	           <option value="1">哲学</option>
+	           <option value="2">政法</option>
+	           <option value="3">理论经济</option>
+	           <option value="4">应用经济</option>
+	           <option value="5">管理学</option>
+	           <option value="6">社会学</option>
+	           <option value="7">历史学</option>
+	           <option value="8">文学</option>
+	           <option value="9">新闻学</option>
+	           <option value="10">语言学</option>
+	           <option value="11">教育学</option>
+	           <option value="12">文化学</option>
+	           <option value="13">其他</option>
+		     </select>
+            <a class="btn btn-primary f-ib" style="width:60px;">搜 索</a></div>
+      </div><br/>
+       <table class="table table-hover table-bordered table-borderSelf1">
+		<thead>
+			<tr>
+				<th width="5%">序号</th>
+				<th width="15%">操作</th>
+				<th width="15%">课题编号</th>
+				<th>课题名称</th>
+				<th width="7.8%">负责人</th>
+				<th width="12%">学科分类</th>
+				<th width="15%">起止时间</th>
+				<th width="15%">状态</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>
+					<a href="">下载申请书</a><br>
+					<a href="">下载结题报告</a><br>
+					<a href="reviewComments.html">查看/编辑评审意见</a><br>
+					<a href="">历史操作记录</a>
+				</td>
+				<td>1651651</td>
+				<td>gdfhgdhfd</td>
+				<td>aa</td>
+				<td>文学</td>
+				<td>2014-10-12 <span>至</span> 2015-10-12</td>
+				<td class="passReview">已结题</td>				
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>
+					<a href="">下载申请书</a><br>
+					<a href="">下载结题报告</a><br>
+					<a href="reviewComments.html">查看/编辑评审意见</a><br>
+					<a href="">历史操作记录</a>
+				</td>
+				<td>1521654996</td>
+				<td>gdgdfhfdh</td>
+				<td>sfdf</td>
+				<td>艺术</td>
+				<td>2014-10-12 <span>至</span> 2015-10-12</td>
+				<td class="passReview">已结题</td>				
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>
+					<a href="">下载申请书</a><br>
+					<a href="">下载结题报告</a><br>
+					<a href="reviewComments.html">查看/编辑评审意见</a><br>
+					<a href="">历史操作记录</a>
+				</td>
+				<td>1651651</td>
+				<td>gdfhgdhfd</td>
+				<td>aa</td>
+				<td>文学</td>
+				<td>2014-10-12 <span>至</span> 2015-10-12</td>
+				<td class="nopassReview">待修改</td>				
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>
+					<a href="">下载申请书</a><br>
+					<a href="">下载结题报告</a><br>
+					<a href="reviewComments.html">查看/编辑评审意见</a><br>
+					<a href="">历史操作记录</a>
+				</td>
+				<td>651561654</td>
+				<td>dwerewtt</td>
+				<td>66</td>
+				<td>艺术</td>
+				<td>2014-10-12 <span>至</span> 2015-10-12</td>
+				<td class="nopassReview">待修改</td>				
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>
+					<a href="">下载申请书</a><br>
+					<a href="">下载结题报告</a><br>
+					<a href="reviewComments.html">查看/编辑评审意见</a><br>
+					<a href="">历史操作记录</a>
+				</td>
+				<td>651561654</td>
+				<td>dwerewtt</td>
+				<td>66</td>
+				<td>艺术</td>
+				<td>2014-10-12 <span>至</span> 2015-10-12</td>
+				<td class="toReview">结题评审中</td>				
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>
+					<a href="">下载申请书</a><br>
+					<a href="">下载结题报告</a><br>
+					<a href="reviewComments.html">查看/编辑评审意见</a><br>
+					<a href="">历史操作记录</a>
+				</td>
+				<td>651561654</td>
+				<td>dwerewtt</td>
+				<td>66</td>
+				<td>艺术</td>
+				<td>2014-10-12 <span>至</span> 2015-10-12</td>
+				<td>待结题评审</td>				
+			</tr>
+		</tbody>
+      </table>
+    </div>
+    <div class="tab-pane" id="tab2">
+       <table class="table table-hover table-bordered table-borderSelf1">
+		<thead>
+			<tr>
+				<th width="5%">序号</th>
+				<th width="15%">操作</th>
+				<th width="15%">课题编号</th>
+				<th>课题名称</th>
+				<th width="7.8%">负责人</th>
+				<th width="12%">学科分类</th>
+				<th width="15%">起止时间</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>
+					<a href="expertDispatch.html">专家分派</a><br>
+					<a href="">下载申请书</a><br>
+					<a href="">下载结题报告</a><br>
+					<a href="">历史操作记录</a>
+				</td>
+				<td>12345675</td>
+				<td>afdfsdgdsgfs</td>
+				<td>aa</td>
+				<td>文学</td>
+				<td>2014-10-12 <span>至</span> 2015-10-12</td>			
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>
+					<a href="expertDispatch.html">专家分派</a><br>
+					<a href="">下载申请书</a><br>
+					<a href="">下载结题报告</a><br>
+					<a href="">历史操作记录</a>
+				</td>
+				<td>651561654</td>
+				<td>gfdgfdhfdh</td>
+				<td>66</td>
+				<td>艺术</td>
+				<td>2014-10-12 <span>至</span> 2015-10-12</td>			
+			</tr>
+		</tbody>
+      </table>
+    </div>
+    <div class="tab-pane" id="tab3">
+       <table class="table table-hover table-bordered table-borderSelf1">
+		<thead>
+			<tr>
+				<th width="5%">序号</th>
+				<th width="17%">操作</th>
+				<th width="15%">课题编号</th>
+				<th>课题名称</th>
+				<th width="7.8%">负责人</th>
+				<th width="12%">学科分类</th>
+				<th width="15%">起止时间</th>
+				<th width="15%">评审状态</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>
+					<a href="expertDispatch1.html">专家分派</a><br>
+					<a href="">下载申请书</a><br>
+					<a href="">下载结题报告</a><br>
+					<a href="reviewComments.html">查看/编辑评审意见</a><br>
+					<a href="">历史操作记录</a>
+				</td>
+				<td>12345675</td>
+				<td>afdfsdgdsgfs</td>
+				<td>aa</td>
+				<td>文学</td>
+				<td>2014-10-12 <span>至</span> 2015-10-12</td>
+				<td>
+					<span>已完成  8/10</span><br>
+					<span>同意 </span><span>4/8</span><br>
+					<span>拒绝 </span><span>4/8</span><br>
+				</td>				
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>
+					<a href="expertDispatch1.html">专家分派</a><br>
+					<a href="">下载申请书</a><br>
+					<a href="">下载结题报告</a><br>
+					<a href="reviewComments.html">查看/编辑评审意见</a><br>
+					<a href="">历史操作记录</a>
+				</td>
+				<td>15165135</td>
+				<td>dfsdfdsg</td>
+				<td>sfdf</td>
+				<td>艺术</td>
+				<td>2014-10-12 <span>至</span> 2015-10-12</td>
+				<td>
+					<span>已完成  8/10</span><br>
+					<span>同意 </span><span>4/8</span><br>
+					<span>拒绝 </span><span>4/8</span><br>
+				</td>				
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>
+					<a href="expertDispatch1.html">专家分派</a><br>
+					<a href="">下载申请书</a><br>
+					<a href="">下载结题报告</a><br>
+					<a href="reviewComments.html">查看/编辑评审意见</a><br>
+					<a href="">历史操作记录</a>
+				</td>
+				<td>651561654</td>
+				<td>gfdgfdhfdh</td>
+				<td>66</td>
+				<td>艺术</td>
+				<td>2014-10-12 <span>至</span> 2015-10-12</td>
+				<td>
+					<span>已完成  8/10</span><br>
+					<span>同意 </span><span>4/8</span><br>
+					<span>拒绝 </span><span>4/8</span><br>
+				</td>				
+			</tr>
+		</tbody>
+      </table>
+    </div>
+    <div class="tab-pane" id="tab4">
+       <table class="table table-hover table-bordered table-borderSelf1">
+		<thead>
+			<tr>
+				<th width="5%">序号</th>
+				<th width="15%">操作</th>
+				<th width="15%">课题编号</th>
+				<th>课题名称</th>
+				<th width="7.8%">负责人</th>
+				<th width="12%">学科分类</th>
+				<th width="15%">起止时间</th>
+				<th width="15%">状态</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>
+					<a href="">下载申请书</a><br>
+					<a href="">下载结题报告</a><br>
+					<a href="reviewComments.html">查看/编辑评审意见</a><br>
+					<a href="">历史操作记录</a>
+				</td>
+				<td>1651651</td>
+				<td>gdfhgdhfd</td>
+				<td>aa</td>
+				<td>文学</td>
+				<td>2014-10-12 <span>至</span> 2015-10-12</td>
+				<td class="nopassReview">待修改</td>				
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>
+					<a href="">下载申请书</a><br>
+					<a href="">下载结题报告</a><br>
+					<a href="reviewComments.html">查看/编辑评审意见</a><br>
+					<a href="">历史操作记录</a>
+				</td>
+				<td>1521654996</td>
+				<td>gdgdfhfdh</td>
+				<td>sfdf</td>
+				<td>艺术</td>
+				<td>2014-10-12 <span>至</span> 2015-10-12</td>
+				<td class="nopassReview">待修改</td>				
+			</tr>
+		</tbody>
+      </table>
+    </div>
+    <div class="tab-pane" id="tab5">
+      <table class="table table-hover table-bordered table-borderSelf1">
+		<thead>
+			<tr>
+				<th width="5%">序号</th>
+				<th width="15%">操作</th>
+				<th width="15%">课题编号</th>
+				<th>课题名称</th>
+				<th width="7.8%">负责人</th>
+				<th width="12%">学科分类</th>
+				<th width="15%">起止时间</th>
+				<th width="15%">状态</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>
+					<a href="">下载申请书</a><br>
+					<a href="">下载结题报告</a><br>
+					<a href="reviewComments.html">查看/编辑评审意见</a><br>
+					<a href="">历史操作记录</a>
+				</td>
+				<td>1651651</td>
+				<td>gdfhgdhfd</td>
+				<td>aa</td>
+				<td>文学</td>
+				<td>2014-10-12 <span>至</span> 2015-10-12</td>
+				<td class="passReview">已结题</td>				
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>
+					<a href="">下载申请书</a><br>
+					<a href="">下载结题报告</a><br>
+					<a href="reviewComments.html">查看/编辑评审意见</a><br>
+					<a href="">历史操作记录</a>
+				</td>
+				<td>651561654</td>
+				<td>dwerewtt</td>
+				<td>66</td>
+				<td>艺术</td>
+				<td>2014-10-12 <span>至</span> 2015-10-12</td>
+				<td class="passReview">已结题</td>				
+			</tr>
+		</tbody>
+      </table>
+    </div>
+  </div>
+<script type="text/javascript" src="../resource/js/vendor/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="../resource/js/vendor/bootstrap/bootstrap.js"></script>
+<script>
+   $(".countTip").parent().click(function(){
+	    $(".countTip").css("display","none"); 
+   })
+</script>
+</body>
+</html>

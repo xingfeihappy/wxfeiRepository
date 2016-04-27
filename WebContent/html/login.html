@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<title>登录</title>
+	<link rel="stylesheet" type="text/css" href="../resource/css/common/reset.css">
+	<link rel="stylesheet" type="text/css" href="../resource/css/vendor/bootstrap/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../resource/css/page/login.css">
+</head>
+<body id="loginFrame" onselectstart="return false;">
+	<div id="header">
+		<div id="logo">
+			<a href="#"></a>
+		</div>
+	</div>
+	<div id="loginBox">
+
+		<div id="loginBoxBody">
+			<ul class="floatLeft">
+				<li>
+					<h4>请用您的注册账号登录</h4>
+					<br/>
+				</li>
+
+			    <form id="login bs-example bs-example-form" method="post" action="index.html">
+				    <li>
+					    <div class="input-group">
+					        <span class="input-group-addon">账号</span>
+					        <input class="form-control" type="text" id="email"  maxLength=150 size=30 name="email" >
+					    </div>
+				    </li>
+				    <a class="highlight" href="" target="_blank" style="float:right;  margin-top:10px;">忘记密码？</a> 
+				    <li>
+				   		<div class="input-group">
+					        <span class="input-group-addon">密码</span>
+					        <input class="form-control" id="password"  maxLength=80 size=30 type="password" name="password">    
+					    </div>  
+				    </li>
+				    
+				    <li>
+				   		<div class="input-group">
+					      <span class="input-group-addon">角色</span>
+						<select class="form-control f-ib" />
+			             <option value="0">申请人</option>
+			             <option value="1">专家</option>
+			             <option value="2">管理员</option>
+			           </select> 
+					    </div>
+					    
+				    </li>
+				    <li style="float:right;margin-right:80px;">
+				    	<input class="btn btn-primary submit" onclick="this.blur()" style="width:100px;margin-right:25px;" value="登  录" type=submit> 
+				    	<input class="btn btn-primary register" onclick="this.blur()" style="width:100px;" value="注  册" type=submit> 
+				    </li>
+			   </form>
+
+		    </ul>
+			<div class="floatRight">欢迎来到西湖学研究科研项目管理系统<br/>欢迎来到西湖学研究科研项目管理系统<br/>欢迎来到西湖学研究科研项目管理系统<br/>
+			</div>
+			<br clear=all>
+		</div>
+
+    </div>
+	<div id="footer">
+		<span>© 2016</span>
+	</div>
+</body>
+</html>

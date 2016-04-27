@@ -1,0 +1,260 @@
+/*  头部 */
+body{margin:0;padding:0;background-color:#ffffff !important;min-height:500px;}
+html, body{height:100%;}
+img{border:none;}
+*{font-family:'微软雅黑';font-size:14px;color:#626262;}
+dl,dt,dd{display:block;margin:0;}
+a{text-decoration:none;cursor:pointer}
+a:hover{text-decoration: none}
+i{display:inline-block;}
+.table{margin-bottom:0}
+.f-clearSpace{margin:0px;width:100%}
+.f-clearPadding{padding:0}
+.f-movetoleft{margin-left:7%}
+.f-fl{float:left}
+.f-fr{float:right}
+.f-ib{display: inline-block}
+.g-top{background-color:#4291D7;height:30px}
+/* 清除浮动 */
+.clearfix:after {content: '.';display: block;clear: both;height: 0;overflow: hidden;visibility: hidden;}
+.top ul li {list-style: none;float: left;padding-top: 6px; display: list-item;}
+.top ul li.topright {list-style: none;float: right;padding-top: 6px;margin-right:3%}
+.top ul.nav li i.logo1 {background-image: url(../../image/glyphicons-halflings-white.png);background-repeat: no-repeat;background-position: -184px 0px;background-size: 513px 174px;height: 16px;width: 16px;vertical-align: middle;}
+.top .nav li i.logo2 {background-image: url(../../image/glyphicons-halflings-white.png);background-repeat: no-repeat;background-position: -315px -27px;background-size: 513px 174px;height: 16px;width: 16px;vertical-align: middle;}
+.top .nav li i.logo3 {background-image: url(../../image/glyphicons-halflings-white.png);background-repeat: no-repeat;background-position: -52px -27px;background-size: 513px 174px;height: 16px;width: 16px;vertical-align: middle;}
+.top .nav li i.logo4 {background-image: url(../../image/glyphicons-halflings-white.png);background-repeat: no-repeat;background-position: -132px -80px;background-size: 513px 174px;height: 16px;width: 16px;vertical-align: middle;}
+.top .nav li.drop ul{ display: none;position: absolute; top: 29px; left: 20px; width: 112px;z-index: 1000;  border: 1px solid rgb(122,156,211);}
+.top .nav li.drop:hover ul, .top .nav li a:hover ul {display: block;}
+.top .nav li.drop ul li {  background-color: #fff;  color: #000; width: 110px; text-align: center; height: 30px;line-height: 30px;
+padding: 0;border-bottom: 1px solid #ccc; vertical-align: baseline;}
+.top .nav li.drop ul li a{ display: block; height: 30px;color: #000 !important;text-decoration: none;} 
+
+.top .nav li.drop ul li a:hover{display: block; background: rgb(30,144,255) !important;color: #fff !important;} 
+/* 头部 */
+
+/* banner */
+.g-banner{height:120px;background-color:#fff;border-bottom:1px solid #ccc;}
+.g-banner-content{width:100%;text-align:left}
+.g-banner-content .logo{height:57px;width:38%;}
+.g-banner-content .logo .logo-img{margin-top:1.1%;display:inline-block; width:100px;height:86px;background:url(../../image/west-logo.png); filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";   -moz-background-size:100% 100%;background-size:100% 100%;}
+.g-banner-content .logo .logo-text{margin-top:2.8%;margin-left:2%}
+.g-banner-content .logo .logo-text-t1{font-size:19px;color:#4291D7;font-weight:bold}
+.g-banner-content .logo .logo-text-t2{font-size:15px;color:#666;}
+.search_box{margin-top: 3.7%;display: inline-block;width:30%;}
+@media screen and (max-width:992px)
+{
+	.g-banner-content .logo .logo-text{margin-left:0.2%;margin-top:3.8%}
+    .g-banner-content .logo .logo-text-t2{display: none}
+}
+.search_input{-webkit-border-radius:5px;-moz-border-radius:5px; border-radius: 5px;border: 1px solid #ccc;width: 97%;height:35px}
+.search_box .btn-search{border:none;color:#fff;line-height:16px;background-color:#fff;margin-left:-9.8%;width:6%;background-image: url(../../image/search.png);background-repeat: no-repeat;}
+/* banner */
+
+/* 中间的左边 */
+/*left*/
+.table,.table>thead>tr>th {text-align: center;}
+
+/* .table tr td input[type="text"]{margin-left:-6%} */
+.table,.table>thead>tr>th,.table,.table>tbody>tr>td{padding:0}
+.g-main{margin-top:30px}
+.leftsidebar_box{width:100%;height:auto !important;height:45% !important;background-color:#3992d0;}
+.leftsidebar_box dl dd{width:100%}
+.leftsidebar_box dt{color:#f5f5f5;padding-left:35%;background-repeat:no-repeat;background-position:10px center;color:#f5f5f5;font-size:16px;position:relative;line-height:45px;cursor:pointer;}
+.leftsidebar_box dt a{color: inherit; text-decoration:none;padding-right:10px;background-repeat:no-repeat;background-position:10px center;font-size:16px;position:relative;line-height:45px;cursor:pointer;}
+.leftsidebar_box dd{background-color:#3992d0;padding-left:28%;}
+.leftsidebar_box dd a{text-decoration:none;color:#f5f5f5;line-height:30px;display:block; padding-left:20%;}
+.leftsidebar_box dt img{position:absolute;right:10px;top:20px;}
+.project_application dt{background:url(../../image/system.png) 15% center no-repeat}
+.project_application dd,.project_query dd,.project_end dd,.tool dd,.project_application_manage dd{opacity:0.8;line-height:35px;}
+.project_query dt{background:url(../../image/research.png) 15% center no-repeat}
+.project_end dt{background:url(../../image/source.png) 15% center no-repeat}
+.project_review dt{background:url(../../image/system.png) 15% center no-repeat}
+.my_project dt{background:url(../../image/channel.png) 15% center no-repeat}
+.end_review dt{background:url(../../image/source.png) 15% center no-repeat}
+.project_application_manage dt{background:url(../../image/system.png) 15% center no-repeat}
+.end_application_manage dt{background:url(../../image/source.png) 15% center no-repeat}
+.general_query dt{background:url(../../image/research.png) 15% center no-repeat}
+.home dt{background:url(../../image/home.png) 15% 60% no-repeat;background-size:26px 26px;}
+/* .tool{padding-bottom:20px} */
+.database_manage{padding-bottom:20px}
+.tool dt{background:url(../../image/custom.png) 15% center no-repeat}
+.database_manage dt{background:url(../../image/system.png) 15% center no-repeat}
+.leftsidebar_box dd a.link_onclick{background-color: rgb(235,239,241)!important;color: #004d99;border-top-left-radius: 10px;border-bottom-left-radius: 10px;}
+.leftsidebar_box dt.link_onclick{background-color: rgb(191,214,229)!important;color: #004d99;border-top-left-radius: 10px;border-bottom-left-radius: 10px;}
+/* 中间的左边 */
+/* 中间的右边 */
+.newApplication .newApTitle{font-size:15px;font-weight: bold;}
+.newApplication table th{text-align: center;}
+.newApplication table tr:first-child{height:50px}
+.newApplication table tr,.table-borderSelf tr{height:40px}
+.table-borderSelf tr a{cursor:pointer}
+.newApplication table tr td input[type="text"],.newApplication table tr td input[type="number"]{border:0;height:90%;padding:0 3%;width:80%}
+.newApplication table tr td input[type="checkbox"]{margin-left:1%}
+.newApplication table tr td select{width:60%;border:0;height:90%;padding:0 3%} 
+.newApplication1 .newApTitle{font-size:15px;font-weight: bold;}
+.newApplication1 table th{text-align: center;}
+.newApplication1 table tr,.table-borderSelf tr{height:40px}
+.newApplication1 table tr td input[type="text"]{width:95%;border:0;height:90%;padding:0 3%}
+.newApplication1 table tr td input[type="checkbox"]{margin-left:1%}
+.newApplication1 table tr td select{width:60%;border:0;height:90%;padding:0 3%}
+.right_content_box{background-color:#fff;margin-left:3%}
+.icon-inbox,.icon-trash,.icon-exclamation,.icon-plus,.icon-default,.deleteProfessor{background-repeat: no-repeat;width:18px;height:18px}
+.icon-inbox{background-image: url("../../image/glyphicons-halflings.png");background-position: 0 -46px;}
+.icon-trash{background-image: url("../../image/glyphicons-halflings.png");background-position: -457px 0;}
+.icon-exclamation{background-image: url("../../image/glyphicons-halflings.png");background-position: -97px -119px;}
+.icon-plus{background-image: url("../../image/glyphicons-halflings.png");background-position: -0px -95px;} 
+.deleteProfessor{background-image: url("../../image/glyphicons-halflings.png");background-position: -457px 0;}
+.icon-default{background-image: url("../../image/glyphicons-halflings.png");background-position: 0px -73px;}
+.icon-add{background-image: url("../../image/glyphicons-halflings.png");background-position: -408px -96px;width:13px;height:13px;}
+.icon-del{background-image: url("../../image/glyphicons-halflings.png");background-position: -434px -96px;width:13px;height:13px;}
+.addParticipation,.addParticipation1{letter-spacing:0;margin-left:2%;cursor:pointer}
+.addParticipation span,.addParticipation1 span{color:#999}
+.addCols{float: left;padding-left:1%;padding-top: 16px;}
+.table{background-color:#fff}
+.btn{padding:6px 5px}
+.commonbtn{width:100%}
+.addUser,.back{background-color:#4291D7;border:1px solid #fff;}
+.commonbtn a,.commonbtn input{background-color:#4291D7;border:1px solid #fff;margin:0 0.2%}/* padding:1% 2% */
+.tab-content #tab5 textarea{height: 50px;border:0;resize:none;}
+/* 中间的右边 */
+/*用户管理*/
+.addUserContent form div input,.addUserContent form div label{display: inline-block;}
+.addUserContent form div label{width:40%}
+.addUserContent form div input{width:auto;margin-left:10px}
+.addUserForm > div{margin:1%} 
+/*用户管理*/
+/*消息提示数目*/
+.icountTip{display:inline-block;color:red;font-size: 12px; float: right;margin-top: -10px;}
+.countTip{background:red;border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;color:#fff;font-size: 12px;width: 20px; height: 20px; padding: 2px;float: right;margin-top: -10px;}
+.toReview{color:#f0ad4e}
+.passReview{color:#5cb85c}
+.nopassReview{color:#d9534f}
+/*消息提示数目*/
+/*课题查询*/
+.projectionSearch a,.addProfessor a{width:100px}
+.projectionSearch input,.addProfessor input{width:auto;margin-right:2%;width:14%}
+.projectionSearch input{margin-bottom: 0.5%;}
+.addProfessor input{width:20%}
+.projectionSearch .projectName{width:20%}
+/*课题查询*/
+/*底部*/
+.g-footer{width:100%;height:auto;background-color:#4291D7;margin-top:30%;}
+/*底部*/
+
+/*填表说明*/
+.fillFormHelp{padding: 2% 5%;background: #fff;border:1px solid #ccc;width:75%;margin:0 auto;}
+.acceptFill{padding:1%;margin-left:25%;}
+.acceptFill input{margin-right:1.4%;}
+.fillFormHelp .btn-fillApplication{margin-left:31%;margin-top:1%;}
+.fillFormHelp .btn-back{display:none;margin-left:33%;margin-top:1%;width:10%}
+/*填表说明*/
+
+/* 课题评审 */
+.download,.tab-content .tab-pane .table a .download{background-image:url("../../image/glyphicons-halflings.png");background-repeat: no-repeat; background-position: -92px -21px;/* background-size:  513px 174px; */vertical-align: baseline;height: 18px;width: 18px;}
+.tab-content .tab-pane .table .disabled{ background-color: gray; }
+.tab-content .tab-pane .table thead>tr>th{   vertical-align: middle;}
+ul.TableRemark{ padding: 5px;  clear: both;  background-color: #F4F4F4;  list-style-type: none;  line-height: 130%; border: dotted 1px gray;}
+ul.TableRemark li.Help{ padding-left: 22px; background: url("../../image/light.gif") no-repeat; font-size: 10pt; display: inline-block;list-style:none;margin:0;}
+#note{width: 400px;height:15%; background-color: #fff;border:1px red solid; padding:10px; position:fixed; z-index:99999; top: 200px;}
+/* 课题评审 */
+
+/*自适应*/
+ @media screen and (max-width:1200px)
+{
+    .col-md-2 { width: 22%;}
+    .col-md-10 { width:78%;}
+} 
+/*自适应*/
+/*评审*/
+input[name="score1"],input[name="score2"],input[name="score3"],input[name="agree"]{height: 17px !important;width: 17px !important; vertical-align: middle;}
+/*评审*/
+
+th{vertical-align: middle !important; height: 40px;}
+
+/* 上传文件按钮 */
+.fileUpload span{color: white;}
+.fileUpload {position: relative;overflow: hidden;cursor: pointer;}
+.fileUpload input.upload{position: absolute;top: 0;right: 0;margin: 0;padding: 0;font-size: 20px;opacity: 0;filter: alpha(opacity=0);}
+/* 上传文件按钮 */
+/*表格边框*/
+.table-borderSelf{border-bottom:1px solid #ddd;border-top:1px solid #ddd;}/*没有紧贴tab按钮时*/
+.table-borderSelf1{border-bottom:1px solid #ddd;}/*紧贴tab按钮时*/
+.table-borderSelf2{border-top:0px;border-left:1px solid #ddd;border-right:1px solid #ddd;border-bottom:1px solid #ddd}/*只需要去掉上面的*/
+.table-borderSelf3{border:1px solid #ddd;height:30px}
+/*多条件搜索*/
+.mulSearch{margin-bottom:5px}
+.search,.export{margin-top: 10px; width: 90px;}
+
+/* 个人信息修改 */
+.personinformation .newApTitle{font-size:15px;font-weight: bold;}
+.personinformation table tr:first-child{height:50px}
+.personinformation table tr,.table-borderSelf tr{height:40px}
+.table-borderSelf tr a{cursor:pointer}
+.personinformation table tr td input[type="text"]{width:99%;border:0;height:90%;padding:0 3%}
+.personinformation table tr td input[type="checkbox"]{margin-left:1%}
+.personinformation table tr td select{width:60%;border:0;height:90%;}
+.review_tr_bg{background-color:#f5f5f5}
+.face-box{width:100%;height:auto;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;border:10px solid #ddd}
+.review_tr_bg{background-color:#f5f5f5}
+
+/*用户角色-首页*/
+.fieldset{padding-top:10px;padding-bottom:10px;border:1px solid #4291D7;margin-bottom:50px;width:90%;background-color:#F4F4F4}
+.fieldsetSearch,ul.userFiledset{position: relative;left:9%;padding:0px}
+.fieldsetSearch a{color:#4291D7;margin-right:1%}
+.fieldsetSearch a:hover,ul.userFiledset li a:hover{color:rgb(98, 98, 98)}
+.fieldsetSearch a:last-child,.fieldsetSearch a:nth-child(2){margin-left:1%}
+.userFiledset{list-style:none}
+/* .legend{font-weight:800;color:#4291D7;font-size:18px;padding:5px} */
+.legend{font-weight:800;color:#4291D7;padding:3px 14px;border:1px solid #4291D7;font-size:18px;background-color:#fff;}
+ul.userFiledset li a,ul.userFiledset li span{font-size:15px;/* color:rgb(98, 98, 98); */cursor:pointer}
+ul.userFiledset li{heigth:25px}
+ul.userFiledset li a{display:inline-block;width:30%;letter-spacing: 0.1em}
+.fieldsetSearch1{border:1px solid #4291D7;padding:5%;margin:2% 0px;width:75%;background-color:#fff}
+.fieldsetSearch1 a{display: inline-block;width:20%;text-align: center;margin-right:1%}
+/*用户角色-首页*/
+
+.budget tr td input{border:0 !important;text-align: center !important;height: 100%;}/* width: 95%; */
+label.labelFont{font-weight:normal !important;}
+.back1{padding: 4px;}
+
+/* 验证所需 */
+/*==========以下部分是Validform必须的===========*/
+.novalidate,.validate,.validate1,.validate2,.validate3{display:none}
+.Validform_right{width:16px;height:16px;color:#71b83d;padding-left:20px;background:url(../../image/right.png) no-repeat left center;}
+.Validform_wrong{width: 13px;height: 13px;color:red;padding-left:20px;white-space:nowrap;background:url(../../image/error.png) no-repeat left center;}
+.registerform table tr td input[type="text"],.registerform table tr td input[type="number"]{width:79.5%}
+.noeditfont td,.noeditfont span{color:#999}
+.mustToWrite{color:red}
+.noValidate{color:red;margin:4px 0 8px 0;display:none}
+.haveValidate{color:#5cb85c;margin:4px 0 8px 0;display:none}
+.helpButton{width:100%;margin-top:3%;margin-left:-17%;}
+.helpButton button{margin-left:2%;}
+.helpButton button:first-child{margin-left:0}
+.haveValidate{color:#5cb85c;margin:4px 0 8px 0;display:none}
+
+.registerForm  table{border-collapse:  separate;   border-spacing:  10px; }
+.registerForm  table th{text-align:right; }
+.line{height:33px}
+.deleteProfessor{border:3px solid #fff; background-color: transparent;}
+textarea{width:95%}
+
+/* 表格样式 */
+.topam,.topam1{table-layout:fixed !important;};
+.topam th,td{word-wrap:break-word;};
+.topam1 th,td{word-wrap:break-word;};
+.topam1 .line{height:118px !important;}
+
+/* 消除数组框的上下箭头 */
+/*chrome */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0; 
+}
+/* Firefox */
+input[type="number"]{-moz-appearance:textfield;}
+.budgetNumber{width:100% !important}
+
+textarea{
+	resize: none;
+}

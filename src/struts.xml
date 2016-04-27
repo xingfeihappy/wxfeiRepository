@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 指定Struts2配置文件的DTD信息 -->
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<!-- Struts2配置文件的根元素 -->
+<struts>
+	<constant name="struts.multipart.maxSize" value="52428800000"></constant>
+	<package name="default" extends="struts-default">
+	    <global-results>
+			<result name="login">/WEB-INF/jsp/login.jsp</result>
+			<result name="error">/WEB-INF/jsp/pageError_404.jsp</result>
+			<result name="downError">/WEB-INF/jsp/downerror.jsp</result>
+		</global-results>
+		<action name="InterFace">
+			<result >/WEB-INF/jsp/interface.jsp</result>
+		</action>
+		<action name="LoginPage">
+			<result>/WEB-INF/jsp/login.jsp</result>
+		</action>
+		<action name="AdminIndex">
+			<result>/WEB-INF/jsp/admin/index.jsp</result>
+		</action>
+	</package>
+<!-- ======================================================================================ADMIN -->
+	<package name="admin" extends="struts-default">
+	    <!-- =========================================================userManage -->
+	    <action name="UserManage" class="com.projection.action.admin.OperateUserAction">
+			<result>/WEB-INF/jsp/admin/userManage.jsp</result>
+		</action>
+		<action name="AddUserPage">
+			<result>/WEB-INF/jsp/admin/addUser.jsp</result>
+		</action>
+		<action name="EditUserPage" class="com.projection.action.admin.OperateUserAction" method="GetAUser">
+			<result>/WEB-INF/jsp/admin/addUser.jsp</result>
+		</action>
+		<action name="ViewUserPage" class="com.projection.action.admin.OperateUserAction" method="GetAUser">
+			<result>/WEB-INF/jsp/admin/viewUser.jsp</result>
+		</action>
+		<action name="AddUserForm" class="com.projection.action.admin.OperateUserAction" method="AddUser">
+			<result type="redirect">UserManage</result>
+		</action>
+		<action name="DeleteUser" class="com.projection.action.admin.OperateUserAction" method="DeleteUser">
+			<result type="redirect">UserManage</result>
+		</action>
+		<!-- ============================================================userManage -->
+		
+		<!-- ==========================================================dishesManage -->
+		<action name="DishesManage" class="com.projection.action.admin.DishesAction">
+			<result>/WEB-INF/jsp/admin/dishesManage.jsp</result>
+		</action>
+		<action name="AddDishesPage">
+			<result>/WEB-INF/jsp/admin/addDishes.jsp</result>
+		</action>
+		<action name="ViewDishesPage"  class="com.projection.action.admin.DishesAction" method="GetADishes">
+			<result>/WEB-INF/jsp/admin/viewDishes.jsp</result>
+		</action>
+		<action name="EditDishesPage"  class="com.projection.action.admin.DishesAction" method="GetADishes">
+			<result>/WEB-INF/jsp/admin/addDishes.jsp</result>
+		</action>
+		<action name="AddDishesForm" class="com.projection.action.admin.DishesAction" method="AddDishes">
+			<result type="redirect">DishesManage</result>
+		</action>
+		<!-- ==========================================================dishesManage -->
+		
+		<!-- ===========================================================orderManage -->
+		<action name="OrderManage">
+			<result>/WEB-INF/jsp/admin/orderManage.jsp</result>
+		</action>
+		<!-- ===========================================================orderManage -->
+		
+		<!-- ============================================================seatManage -->
+		<action name="SeatManage">
+			<result>/WEB-INF/jsp/admin/seatManage.jsp</result>
+		</action>
+		<!-- ============================================================seatManage -->
+		
+		<!-- =========================================================messageManage -->
+		<action name="MessageManage" class="com.projection.action.admin.MessageAction">
+			<result>/WEB-INF/jsp/admin/messageManage.jsp</result>
+		</action>
+		<action name="ViewMessage" class="com.projection.action.admin.MessageAction" method="GetAMessage">
+			<result type="redirect">MessageManage</result>
+		</action>
+		<action name="DeleteMessage" class="com.projection.action.admin.MessageAction" method="DeleteMessage">
+			<result type="redirect">MessageManage</result>
+		</action>
+		<!-- =========================================================messageManage -->
+		
+		<!-- =============================================================logManage -->
+		<action name="LogManage" class="com.projection.action.admin.LogAction">
+			<result>/WEB-INF/jsp/admin/logManage.jsp</result>
+		</action>
+		<action name="DeleteLog" class="com.projection.action.admin.LogAction" method="DeleteLog">
+			<result type="redirect">LogManage</result>
+		</action>
+		<!-- =============================================================logManage -->
+		
+		<!-- =============================================================allSearch -->
+		<action name="AllSearch">
+			<result>/WEB-INF/jsp/admin/allSearch.jsp</result>
+		</action>
+		<!-- =============================================================allSearch -->
+	</package>
+	<!-- ======================================================================================ADMIN -->
+</struts>

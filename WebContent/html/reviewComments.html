@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>查看评审意见</title>
+	<link rel="stylesheet" type="text/css" href="../resource/css/vendor/bootstrap/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../resource/css/page/index.css">
+</head>
+<body>
+    <form class="addProfessor">
+    	<a class="btn btn-default f-f1" onclick="history.go(-1)" target="right">返回</a>
+    </form>
+    <br/>
+	<form class="newApplication1">
+		<table class="table table-bordered">
+		   	<thead>
+		   		<tr>
+		   			<th rowspan="2" style="width:15%">课题名称</th>
+		   			<th rowspan="2" style="width:8%">评审状态</th>
+		   			<th colspan="3" style="width:15%">平均分（10分制）</th>
+		   			<th colspan="2" style="width:20%">管理员填写</th>
+		   		</tr>
+		   		<tr>
+		   			<th style="width:5%">选题</th>
+		   			<th style="width:5%">论证</th>
+		   			<th style="width:5%">研究基础</th>
+		   			<th style="width:5%">资助资金项（元）</th>
+		   			<th>备注</th>
+		   		</tr>
+		   	</thead>
+		   	<tbody>
+		   		<tr>
+			   		<td>关于西湖学研究课题关于西湖学研究课题</td>
+			   		<td>
+			   			<span>已完成  8/10</span><br>
+						<span>同意立项 </span><span>4/8</span><br>
+						<span>拒绝立项 </span><span>4/8</span><br>
+					</td>
+			   		<td>4</td>
+			   		<td>4</td>
+			   		<td>4</td>
+			   		<td><input type="text"></td>
+			   		<td>
+			   			<textarea rows="5" style="width: 100%;border: 0px;"></textarea>
+			   		</td>
+		   	    </tr>
+		   	</tbody>
+		</table>
+		<br/>
+		<a class="btn btn-primary submit" onclick="history.go(-1)" target="right" style="float:right;">填写确认</a>
+		<br/><br/>
+	</form>
+	<br/>
+	<form class="newApplication1">
+	    <table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th></th>
+					<th>评审专家</th>
+					<th>评审意见</th>
+					<th>评审意见表</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>aaa</td>
+					<td>拒绝立项</td>
+					<td><a href="lookreview.html">查看</a>&nbsp;&nbsp;<a href="lookreview.html">编辑</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>bbb</td>
+					<td>同意立项</td>
+					<td><a href="lookreview.html">查看</a>&nbsp;&nbsp;<a href="lookreview.html">编辑</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<br/>
+		<a class="btn btn-primary submit" onclick="history.go(-1)" target="right" style="float:right;">同意立项</a>
+    	<a class="btn btn-primary save" target="right" style="float:right; margin-right:10px">拒绝立项</a>
+	</form>
+	
+</body>
+<script type="text/javascript" src="../resource/js/vendor/jquery-2.1.4.js"></script>
+</html>

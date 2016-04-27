@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GBK"?>
+<!-- 指定Hibernate映射文件的DTD信息 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Hibernate映射文件的根元素 -->
+<hibernate-mapping package="com.projection.domain">
+	<class name="Dishes" table="Dishes">
+		<!-- 使用读写缓存 -->
+		<cache usage="read-write" />
+		<!-- 映射标识属性 -->
+		<id name="id" type="integer" column="id">
+			<!-- 指定使用identity主键生成策略 -->
+			<generator class="identity" />
+		</id>
+
+		<property name="name" column="name" type="string" />
+		<property name="codes" column="codes" type="string"/>
+		<property name="price" column="price" type="double"/>
+		<property name="type" column="type" type="string"/>
+		<property name="describes" column="describes" type="string"/>
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>新建申报1</title>
+<link rel="stylesheet" type="text/css" href="../resource/css/vendor/bootstrap/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../resource/css/vendor/bootstrap/bootstrap-datetimepicker.css">
+</head>
+<BODY>    
+ <input  id="time" type="text"  class="datetimepicker " data-date-format="yyyy-mm-dd" readonly="readonly"/> 
+ <input id="add" type="button" value="+" />
+ <script type="text/javascript" src="../resource/js/vendor/jquery-2.1.4.js"></script>
+ <script type="text/javascript" src="../resource/js/vendor/bootstrap/bootstrap.js"></script>
+ <script type="text/javascript" src="../resource/js/vendor/bootstrap/bootstrap-datetimepicker.js"></script>
+
+    <script type="text/javascript">
+        document.getElementById("add").onclick=function(){
+            var txt = document.createElement("input");
+            txt.type="text";
+            txt.id="date2";
+            txt.className="datetimepicker";
+            document.body.appendChild(txt);
+        }
+    </script>
+
+   	<script>
+		$('.datetimepicker').datetimepicker({
+		language : 'fr',weekStart : 1,todayBtn : 1,autoclose : 1,
+		todayHighlight : 1,startView : 2,minView : 2,forceParse : 0,showMeridian:1,
+    });
+	</script>
+</BODY>
+</HTML>

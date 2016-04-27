@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<title>结题申请</title>
+<link rel="stylesheet" type="text/css" href="../resource/css/vendor/bootstrap/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../resource/css/page/index.css">
+<link rel="stylesheet" type="text/css" href="../resource/css/page/conclusion.css">
+</head>
+<body>
+<!-- 代码部分begin -->
+<div class="f-fl commonbtn">
+   <a class="btn btn-primary" onclick="tabChange()">返回</a>
+   <a class="btn btn-primary zc" href="" target="right">暂存</a>
+   <a class="btn btn-primary jy">校验</a>
+   <input type="button" class="btn btn-primary generate" title="" value="生成结题申请书">
+   <input type="button" class="btn btn-primary down" title="" value="下载课题结题书"/>
+   <input type="submit" class="btn btn-primary submit" title="" value="递交" />
+</div>
+<br /><br /><br />
+<div class="bigone" style="position:relative;">
+	<div style="position:relative;">
+	<ul id="myTab" class="nav nav-tabs">
+	  <li class="active"><a href="#tab1" data-toggle="tab">课题基本情况</a></li>
+	  <!-- <li class=""><a href="#tab2" data-toggle="tab">资金开支归类情况</a></li> -->
+	  <li class=""><a href="#tab3" data-toggle="tab">成果列表</a></li>
+	  <li class=""><a href="#tab4" data-toggle="tab">相关附件</a></li>
+	</ul>
+	<div class="tab-content" id="myTabContent" class="">
+		<div class="tab-pane fade in active" id="tab1">
+		  <div>
+			<form class="">
+			   <table class="table table-bordered table-borderSelf2">
+			     <tr>
+			       <th style="width:15%">课题批准号</th>
+			       <td>121211 </td>
+			       <th style="width:15%">课题负责人</th>
+			       <td>王小</td>
+			     </tr>
+			     <tr>
+			       <th>课题名称</th>
+			       <td>关于西湖学的研究</td>
+			       <th>总结年份</th>
+			       <td>2016</td>
+			     </tr>
+			     <tr>
+			       <th>学科分类</th>
+			       <td>文学类</td>
+			       <th>起止时间</th>
+			       <td>2013-1至2015-12</td>
+			     </tr>
+			     <tr>
+			       <th>资助金额</th>
+			       <td>1232 万元</td>
+			       <th>工作单位</th>
+			       <td>杭州电子科技大学</td>
+			     </tr>
+			     <tr>
+			       <th>联系电话</th>
+			       <td>137********</td>
+			       <th>通讯地址</th>
+			       <td>杭州市</td>  
+			     </tr>
+			     <tr>
+			       <th>电子邮箱</th>
+			       <td>*****@***</td>
+			       <th>邮编</th>
+			       <td>361018</td>
+			     </tr>
+			     <tr>
+			       <th>主题词</th>
+			       <td colspan="3"><input type="text" style="width:70%"/>（多个用；隔开）</td>
+			     </tr>
+				<tr>
+					<th colspan="4">研究工作总结摘要（500字以内）</th>
+				</tr>
+				<tr>
+					<td colspan="4"><textarea style="width:100%" name="" id=""  rows="10"></textarea></td>
+				</tr>
+				<tr>
+					<th colspan="4">工作总结基本信息</th>
+				</tr>
+				<tr>
+					<td colspan="4"><textarea style="width:100%" name="" id=""  rows="10"></textarea></td>
+				</tr>
+			   </table>   
+			</form>
+			</div>
+		</div>
+		<!-- 第二个内容 -->
+		<!-- <div  class="tab-pane fade" id="tab2">
+			<form class="">
+			    <table class="table table-bordered table-borderSelf2">
+				    <tr>
+				       <th style="width:6%">序号</th>
+				       <th style="width:13%">经费开支科目</th>
+				       <th style="width:13%">金额（元）</th>
+				       <th style="width:19%">计费依据</th>
+				       <th style="width:6%">序号</th>
+				       <th style="width:13%">经费开支科目</th>
+				       <th style="width:13%">金额（元）</th>
+				       <th style="width:19%">计费依据</th>
+				    </tr>
+				    <tr>
+				       <td>1</td>
+				       <td>资料费</td>
+				       <td><input type="text" /></td>
+				       <td><textarea name="" id="" rows="10" ></textarea></td>
+				       <td>7</td>
+				       <td>专家咨询费</td>
+				       <td><input type="text" /></td>
+				       <td><textarea name="" id="" rows="10"></textarea></td>
+				    </tr>
+				    <tr>
+				       <td>2</td>
+				       <td>数据采集费</td>
+				       <td><input type="text" /></td>
+				       <td><textarea name="" id="" rows="10"></textarea></td>
+				       <td>8</td>
+				       <td>劳务费</td>
+				       <td><input type="text" /></td>
+				       <td><textarea name="" id="" rows="10"></textarea></td>
+				    </tr>
+				    <tr>
+				       <td>3</td>
+				       <td>差旅费</td>
+				       <td><input type="text" /></td>
+				       <td><textarea name="" id="" rows="10"></textarea></td>
+				       <td>9</td>
+				       <td>印刷费</td>
+				       <td><input type="text" /></td>
+				       <td><textarea name="" id="" rows="10"></textarea></td>
+				    </tr>
+				    <tr>
+				       <td>4</td>
+				       <td>会议费</td>
+				       <td><input type="text" /></td>
+				       <td><textarea name="" id="" rows="10"></textarea></td>
+				       <td>10</td>
+				       <td>管理费</td>
+				       <td><input type="text" /></td>
+				       <td><textarea name="" id="" rows="10"></textarea></td>
+				    </tr>
+				    <tr>
+				       <td>5</td>
+				       <td>国际合作与交流费</td>
+				       <td><input type="text" /></td>
+				       <td><textarea name="" id="" rows="10"></textarea></td>
+				       <td>11</td>
+				       <td>其他费</td>
+				       <td><input type="text" /></td>
+				       <td><textarea name="" id="" rows="10"></textarea></td>
+				    </tr>
+				    <tr>
+				       <td>6</td>
+				       <td>设备费</td>
+				       <td><input type="text" style="width:80%"/></td>
+				       <td><textarea name="" id="" rows="10"></textarea></td>
+				       <td></td>
+				       <td></td>
+				       <td></td>
+				       <td></td>
+				    </tr> 
+				</table>
+				<table class="table table-bordered">
+				   	<tr>
+				       <th>合计使用金额（元）</th>
+				       <td><input type="text"/></td>
+				       <th>剩余金额（元）</th>
+				       <td><input type="text"/></td>
+				    </tr>
+
+				</table>
+			    <table class="table table-bordered">
+				   	<tr>
+				       <th rowspan="2">年度预算</th>
+				       <td>年份</td>
+				       <td><input type="text" style="width:80%"/>年</td>
+				       <td><input type="text" style="width:80%"/>年</td>
+				       <td><input type="text" style="width:80%"/>年</td>
+				       <td><input type="text" style="width:80%"/>年</td>
+				    </tr>
+				    <tr>
+				       <td>金额（元）</td>
+				       <td><input type="text" style="width:80%"/></td>
+				       <td><input type="text" style="width:80%"/></td>
+				       <td><input type="text" style="width:80%"/></td>
+				       <td><input type="text" style="width:80%"/></td>
+				    </tr>
+				</table>
+			</form>
+		</div> -->
+        
+		<!-- 第三个内容 -->
+		<div  class="tab-pane fade" id="tab3">
+			<form class="">
+			   <table class="table table-bordered table-borderSelf3">
+			   	<thead>
+			     <tr>
+			       <th style="width:6%">序号</th>
+			       <th>成果名称 </th>
+			       <th style="width:15%">成果形式</th>
+			       <th style="width:15%">完成时间</th>
+			     </tr>
+			    </thead>
+			    <tbody>
+				    <tr>
+				       <td>1</td>
+				       <td><a href="viewResult.html">关于西湖学研究的报告</a></td>
+				       <td>论文</td>
+				       <td>2015-12-14</td>
+				     </tr>
+				     <tr>
+				       <td>2</td>
+				       <td><a href="viewResult.html">关于西湖学古生物发现的专利</a></td>
+				       <td>专利</td>
+				       <td>2015-10-14</td>
+				     </tr>
+			    </tbody>
+			   </table>
+			</form>
+		</div>
+        
+		<!-- 第四个内容 -->
+		<div  class="tab-pane fade" id="tab4">
+			<form class="">
+			   <table class="table table-bordered table-borderSelf3">
+			   	<thead>
+			     <tr>
+			       <th>序号</th>
+			       <th>操作 </th>
+			       <th>附件标题</th>
+			       <th>类型</th>
+			       <th>状态</th>
+			       <th>修改时间</th>
+			       <th>说明</th> 
+			     </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			       <td>1</td>
+			       <td>
+			       	<div class="fileUpload btn btn-primary back">
+   						<span>上传</span>
+   						<input id="uploadBtn" type="file" class="upload" />
+				   </div>
+				   <a class="btn btn-primary back">下载</a>
+				    </td>
+			       <td>结题申请书</td>
+			       <td>.pdf</td>
+			       <td>√</td>
+			       <td>2015-12-30 17:10</td>
+			       <td>负责人网上递交前请上传，需财务部门盖章</td> 
+			     </tr>
+			     <tr>
+			       <td>2</td>
+			       <td>
+			       	<div class="fileUpload btn btn-primary back">
+   						<span>上传</span>
+   						<input id="uploadBtn" type="file" class="upload" />
+				   </div>
+				   <a class="btn btn-primary back">下载</a>
+				    </td>
+			       <td>总结报告</td>
+			       <td>.pdf</td>
+			       <td>√</td>
+			       <td>2015-12-30 17:10</td>
+			       <td>填写参考文献或者共作总结报告</td> 
+			     </tr>
+			    </tbody>
+			   </table>   
+			</form>
+		</div>
+	</div>
+</div>
+</div>
+<script src="../resource/js/page/upload.js"></script>
+<script type="text/javascript" src="../resource/js/vendor/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="../resource/js/vendor/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="../resource/js/common/common.js"></script>
+<!-- 代码部分end -->
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>帮助</title>
+	<link rel="stylesheet" type="text/css" href="../resource/css/vendor/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../resource/css/page/index.css">
+</head>
+<body>
+   <div class="fillFormHelp">
+	<p>1. 本表要求一律用A4纸打印和复印。</p>
+	<p>2. 封面上“学科分类”、“成果形式”等栏目的填写应与数据表选择的内容一致。</p>
+	<p>3. 数据表“学科分类”以及“预期成果形式”等栏目的填写，请直接在选中的分类编号上打√</p>
+	<p>4. 本表提到的杭州西湖博物馆特指杭州西湖博物馆（西湖学研究院）。</p>
+	<p>5. 申报人必须严格按照公告要求提交申报书和有关材料。</p>
+	<p>6. 申报表一式10份，A4纸打印，左侧装订。同时须提交电子稿1份。</p>
+	<div class="acceptFill"><input id="acceptFillCheck" type="checkbox" /><span>我已阅读填表说明</span></div>
+	<button type="button" class="btn btn-primary btn-fillApplication">填写申报</button>
+	<a type="button" class="btn btn-primary btn-back" href="newApplication.html" target="right">返回</a>
+   </div>
+</body>
+<script type="text/javascript" src="../resource/js/vendor/jquery-2.1.4.js"></script>
+<script>
+  var accept = $("#acceptFillCheck"),btn = $(".btn-fillApplication"),back = $(".btn-back");
+  btn.prop("disabled", true);
+  accept.click(function(){
+  	if(accept.is(":checked")) btn.prop("disabled", false);
+  	else btn.prop("disabled", true);
+  })
+  btn.click(function(){
+	  window.location.href="newApplication.html";
+  });
+ 
+  var url = location.search;
+  var Request = new Object();
+  if(url.indexOf("?"!=-1)){
+	  var str = url.substr(1);
+	  strs = str.split("&");
+	  for(var i = 0;i<strs.length;i++){
+		  Request[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+	  }
+	  if(Request["argue"]==1){
+		  $(".acceptFill,.btn-fillApplication").css("display","none");
+		  $(".btn-back").css("display","block");
+	  }
+  }
+</script>
+</html>

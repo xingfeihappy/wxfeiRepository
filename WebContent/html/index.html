@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>首页</title>
+<link rel="stylesheet" type="text/css" href="../resource/css/common/reset.css">
+<link rel="stylesheet" type="text/css" href="../resource/css/vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../resource/css/page/index.css">
+
+</head>
+<body style="min-width:800px" onselectstart="return false;">
+   <div class="g-top">
+     <div class="f-clearSpace container">
+       <div class="row">
+          <div class="top">
+		    <ul class="nav clearfix">
+				    <li><span href="#" style="color: white;margin-left: 30px;"><i class="logo1" style="margin-right: 8px;"></i>当前用户：yihao</span></li>
+				
+               <li><span href="#" style="color: white;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>角色切换：</span></li>
+               <li>
+		           <select class="form-control f-ib roleChange" onchange="role_change(this)" style="width:90px; height:21px;padding:0;margin-top:-1px;" />
+		             <option value="申报人">申请人</option>
+		             <option value="评审员">专家</option>
+		             <option value="管理员">管理员</option>
+		           </select>
+        		</li>
+				<!-- <li><span href="#" style="color: white;margin-left: 30px;"><i class="logo2" style="margin-right: 8px;"></i>所在单位：杭州电子科技大学</span></li> -->
+				<li class="drop" style="height: 30px;"><span style="color: white;margin-left: 30px;cursor: pointer;position: relative;">我的工具</span>
+					<ul class="sub_menu">
+						<li><a href="modifyPassword.html"  target="right">密码修改</a></li>
+						<li><a href="personinformation.html"  target="right">个人信息修改</a></li>
+					</ul>
+				</li>
+				<li class="topright"><span onclick="login()" style="color: white;cursor:pointer"><i class="logo4" style="margin-right: 8px;"></i>退出</span></li>
+				<li class="topright" ><span style="color: white;"><i class="logo3" style="margin-right: 8px;"></i><span id="timer" style="color: white;">2016-01-10</span></span></li>
+			</ul>
+	     </div>
+       </div>
+     </div>
+   </div>
+   <div class="g-banner">
+     <div class="container">
+       <div class="row">
+         <div class="g-banner-content">
+          <a class="logo">
+            <div class="logo-img f-fl"></div>
+            <div class="logo-text f-fl">
+              <span class="logo-text-t1" style="font-size:25px; font-family: 微软雅黑, sans-serif;">西湖学研究科研项目管理系统</span><br />
+              <span class="logo-text-t2">Scientific research project management system of West Lake Science Research Association</span>
+            </div>
+          </a>
+          <!-- <form class="search_box f-fr">
+            <input type="text" class="search_input" placeholder="输入检索内容" />
+            <button class="btn-search">&nbsp;</button>
+          </form> -->
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="g-main">
+     <div class="container">
+       <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 f-clearPadding">
+         <div class="leftsidebar_box">    
+            <div class="roleUser" >			
+              <dl class="project_application">
+                <dt>课题申报<img src="../resource/image/select_xl01.png"></dt>
+                <dd class="first_dd"><a href="help.html" target="right" onclick="getclassname(this)">新建申报</a></dd>
+              </dl>
+             
+              <dl class="project_end">
+                <dt>课题结题<img src="../resource/image/select_xl01.png"></dt>
+                <dd class="first_dd"><a href="noconclusionList.html" target="right" onClick="getclassname(this)">结题申请</a></dd>
+                <!-- <dd><a href="conclusionCheck.html" target="right" onClick="getclassname(this)">结题验收</a></dd> -->
+              </dl>
+               <!-- <dl class="project_query">
+                <dt onClick="getclassname(this)"><a href="projectionSearch.html" target="right" style="display:block;">课题查询</a></dt>
+              </dl>  -->
+              <dl class="my_project">
+                <dt onClick="getclassname(this)"><a href="myProjection.html" target="right" style="display:block;" onfocus="this.blur();">我的课题</a></dt>
+              </dl>
+            </div>  
+            <div class="roleExpert" style="display:none;">
+              <dl class="project_review">
+                <dt onClick="getclassname(this)"><a href="projectReview.html" target="right" style="display:block;" onfocus="this.blur();">课题评审</a></dt>
+              </dl>
+              <dl class="end_review">
+                <dt onClick="getclassname(this)"><a href="endReview.html" target="right" style="display:block;" >结题评审</a></dt>
+              </dl>
+            </div>
+            <div class="roleManager"  style="display:none;">
+              <dl class="project_application_manage">
+                 <dt onClick="getclassname(this)"><a href="applyManage.html" target="right" style="display:block;" >课题申报管理</a></dt>
+              </dl>
+              <dl class="end_application_manage">
+                 <dt onClick="getclassname(this)"><a href="endApplyManage.html" target="right" style="display:block;" >结题申报管理</a></dt>
+              </dl>
+               <dl class="general_query">
+                 <a href="allSearch.html" target="right" style="text-decoration:none;" > <dt onClick="getclassname(this)"> 综合查询</dt></a>
+              </dl>
+              <dl class="tool">
+          			<dt>系统管理<img src="../resource/image/select_xl01.png"></dt>
+          			<dd class="first_dd"><a href="userManage.html" target="right" onClick="getclassname(this)">用户管理</a></dd>
+          			<dd><a href="professorManage.html" target="right" onClick="getclassname(this)">专家库管理</a></dd>
+          			<dd><a href="projectionManage.html" target="right" onClick="getclassname(this)">课题库管理</a></dd>
+          			<dd><a href="resultManage.html" target="right" onClick="getclassname(this)">成果库管理</a></dd>
+        		  </dl>
+          </div>
+	      </div>
+	     </div>
+	     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 kdLeft">
+		     <div class="right_content_box">
+		       <iframe name="right" src="userFace.html" id="iframe" scrolling="no"  marginWidth="0" onLoad="" frameborder="0" style="width: 100%;height:1000px;margin: 0px; padding: 0px;">
+		       </iframe> 
+		     </div>
+	    </div>
+       </div>
+     </div>
+   </div>
+   <!-- <div class="g-footer">
+      <div class="container f-clearSpace">
+       <div class="row">
+          iopopopop
+       </div>
+      </div>
+   </div> -->
+     <script>
+	   function getclassname(obj){
+		if(document.getElementsByClassName('link_onclick').length==0){
+			obj.className='link_onclick';
+			obj.id='link_onclick';
+			}else{
+				var obj1=document.getElementById('link_onclick');
+				obj1.className='111';
+				obj1.id='1';
+				obj.className='link_onclick';
+			   obj.id='link_onclick';
+			}
+		}
+	   function login(){
+		   location.href='login.html'
+	   }
+	   
+    </script>
+   <script type="text/javascript" src="../resource/js/vendor/jquery-2.1.4.js"></script>
+   <script type="text/javascript" src="../resource/js/common/common.js"></script>
+   <script>
+   /*角色切换*/
+   var iframe = $("#iframe");
+   function role_change(obj){
+   	if ($(".roleChange").val()=="申报人")
+   	{
+   		$(".roleUser").css( "display", "block" );
+   		$(".roleExpert,.roleManager").css( "display", "none" );
+   		iframe.attr("src","userFace.html")
+   	}
+   	else if ($(".roleChange").val()=="评审员") 
+   	{
+   		$(".roleUser,.roleManager").css( "display", "none" );
+   		$(".roleExpert").css( "display", "block" );
+   		iframe.attr("src","reviewerFace.html")
+   	}
+   	else if($(".roleChange").val()=="管理员")
+   	{
+   		$(".roleUser,.roleExpert").css( "display", "none" );
+   		$(".roleManager").css( "display", "block" );
+   		iframe.attr("src","adminFace.html")
+   	}
+   }
+   /*角色切换*/
+
+
+   </script>
+</body>
+</html>

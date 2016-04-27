@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>专家分派</title>
+<link rel="stylesheet" type="text/css" href="../resource/css/vendor/bootstrap/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../resource/css/page/index.css">
+</head>
+<body>
+    <form class="addProfessor">
+    	<a class="btn btn-default f-f1" onclick="history.go(-1)" target="right">返回</a>
+        <a class="btn btn-primary back f-ib" href="expertSearch.html">增 加</a>
+        <a class="btn btn-primary back f-ib deleteReview">移 除</a>
+        <a class="btn btn-primary back f-ib editReview">修改评审方式</a>
+    </form>
+    <br/>
+      <table class="table table-hover table-borderSelf">
+		<thead>
+			<tr>
+				<th></th>
+				<th width="5.6%">序号</th>
+				<th width="7.5%">姓名</th>
+				<th width="12%">出生年月</th>
+				<th width="11%">行政职务</th>
+				<th width="11%">研究专长</th>
+				<th width="7.3%">学历</th>
+				<th width="10.7%">工作单位</th>
+				<th>评审方式</th>
+				<th>管理操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input type="checkbox"  value="0"></td>
+				<td>1 </td>
+				<td>王晓</td>
+				<td>1987-12-09</td>
+				<td>评审员</td>
+				<td>西湖学</td>
+				<td>硕士</td>
+				<td>北京大学研究院</td>
+			    <td class="showReview1">
+			    	线上
+			    </td>
+			    <td>
+					<a class="btn" href="viewUser.html" target="right" title="查看用户详细信息">
+					<i class="icon-exclamation"></i></a>
+			    </td>
+			</tr>
+			<tr class="delete">
+				<td><input type="checkbox"  value="1"></td>
+				<td>1</td>
+				<td>王晓</td>
+				<td>1987-12-09</td>
+				<td>评审员</td>
+				<td>西湖学</td>
+				<td>硕士</td>
+				<td>北京大学研究院</td>
+				<td class="showReview">
+				线下	
+			    </td>
+				<td>
+					<a class="btn" href="viewUser.html" target="right" title="查看用户详细信息">
+					<i class="icon-exclamation"></i></a>
+			    </td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" value="2"></td>
+				<td>1</td>
+				<td>王晓</td>
+				<td>1987-12-09</td>
+				<td>评审员</td>
+				<td>西湖学</td>
+				<td>硕士</td>
+				<td>北京大学研究院</td>
+				<td class="showReview">
+					线上
+			    </td>
+				<td>
+					<a class="btn" href="viewUser.html" target="right" title="查看用户详细信息">
+					<i class="icon-exclamation"></i></a>
+			    </td>
+			</tr>
+		</tbody>
+	  </table>
+	<br />
+	<a class="btn btn-primary submit " onclick="history.go(-1)" target="right" style="float:right;">提   交</a>	
+	<a class="btn btn-primary submit " target="right" style="float:right;margin-right:10px;">暂   存</a>	
+</body>
+<script type="text/javascript" src="../resource/js/vendor/jquery-2.1.4.js"></script>
+<script type="text/javascript">
+	$(".editReview").click(function(){
+		$(".showReview1").empty();
+		$("<input name='review' type='radio' value='线上'>线上<input name='review' type='radio' value='线下'><span>线下</span>").appendTo(".showReview1");
+	})
+	$(".deleteReview").click(function(){
+		$(".delete").remove();
+	
+	})
+
+</script>
+</html>
