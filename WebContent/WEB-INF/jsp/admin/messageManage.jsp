@@ -14,7 +14,7 @@
 <body>
 	<div class="adminShow" >
 		<form method="post" action="DataBackupSingle" enctype="multipart/form-data" style="display:inline-block">
-	      <input type="submit" class="btn btn-primary addUser" style="width:80px;" value="备  份" />
+	      <input type="submit" class="btn btn-success" style="width:80px;" value="备  份" />
 	      <input type="hidden" name="check1" value="1" />
 	    </form>
 		<br /><br />
@@ -37,12 +37,11 @@
 			<td><s:property value="#index.index+1" /></td>
 			<td><s:property value="content"/></td>
 			<td><s:property value="grade"/></td>
-			<td><s:property value="telephone"/></td>
-			<td><s:property value="email"/></td>
+			<td><s:property value="user.username"/></td>
+			<td><s:property value="dishes.name"/></td>
 			<td>
-				<a class="btn btn-success" href="ViewMessage?message.id=<s:property value="id" />" target="right" title="查看详细信息">查看</a>
 				<a class="btn btn-danger" href="javascript:void(0);"  onclick="deleteOpe(this)" title="删除此信息">删除</a> 
-				<input type="hidden" value="<s:property value="message.id" />">
+				<input type="hidden" value="<s:property value="id" />">
 		    </td>
 		</tr>
 	  </s:iterator>

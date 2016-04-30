@@ -13,9 +13,9 @@
 </head>
 <body>
 	<div class="adminShow" >
-		<a class="btn btn-primary addUser" href="AddUserPage" target="right" style="width:80px;">新增用户</a>
+		<a class="btn btn-warning" href="AddUserPage" target="right" style="width:80px;">新增用户</a>
 		<form method="post" action="DataBackupSingle" enctype="multipart/form-data" style="display:inline-block">
-	      <input type="submit" class="btn btn-primary addUser" style="width:80px;" value="备  份" />
+	      <input type="submit" class="btn btn-success" style="width:80px;" value="备  份" />
 	      <input type="hidden" name="check1" value="1" />
 	    </form>
 		<br /><br />
@@ -46,7 +46,7 @@
 			    <a class="btn btn-warning" href="EditUserPage?user.id=<s:property value="id" />" target="right" title="修改用户信息">修改</a> 
 				<a class="btn btn-success" href="ViewUserPage?user.id=<s:property value="id" />" target="right" title="查看用户详细信息">查看</a>
 				<a class="btn btn-danger" href="javascript:void(0);"  onclick="deleteOpe(this)" title="删除此用户">删除</a> 
-				<input type="hidden" value="<s:property value="user.id" />">
+				<input type="hidden" value="<s:property value="id" />">
 		    </td>
 		</tr>
 	  </s:iterator>

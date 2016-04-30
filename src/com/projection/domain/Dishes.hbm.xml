@@ -19,6 +19,7 @@
 		<property name="price" column="price" type="double"/>
 		<property name="type" column="type" type="string"/>
 		<property name="describes" column="describes" type="string"/>
+		<property name="photo" column="photo" type="binary"/>
 
 	</class>
 </hibernate-mapping>

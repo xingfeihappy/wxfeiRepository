@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>用户首页</title>
+<title>管理员首页</title>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resource/css/common/reset.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resource/css/vendor/bootstrap/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resource/css/page/index.css">
@@ -19,30 +19,30 @@
           <div class="top">
           <!-- 普通用户 -->
 		    <%-- <ul class="nav clearfix">
-			   <li><span href="#" style="color: white;margin-left: 30px;"><i class="logo1" style="margin-right: 8px;"></i>welcome：yihao</span></li>
-               <li><span href="#" style="color: white;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>登录</span></li>
-               <li><span href="#" style="color: white;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>注册</span></li>
-               <li><span href="#" style="color: white;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>我的订单</span></li>
-			   <li class="drop" style="height: 30px;"><span style="color: white;margin-left: 30px;cursor: pointer;position: relative;">个人资料</span>
+			   <li><span href="#" style="color:#000;margin-left: 30px;"><i class="logo1" style="margin-right: 8px;"></i>welcome：yihao</span></li>
+               <li><span href="#" style="color:#000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>登录</span></li>
+               <li><span href="#" style="color:#000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>注册</span></li>
+               <li><span href="#" style="color:#000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>我的订单</span></li>
+			   <li class="drop" style="height: 30px;"><span style="color:#000;margin-left: 30px;cursor: pointer;position: relative;">个人资料</span>
 					<ul class="sub_menu">
 						<li><a href="modifyPassword.html"  target="right">修改密码</a></li>
 						<li><a href="personinformation.html"  target="right">修改资料</a></li>
 					</ul>
 				</li>
-				<li class="topright"><span onclick="login()" style="color: white;cursor:pointer"><i class="logo4" style="margin-right: 8px;"></i>退出</span></li>
-				<li class="topright" ><span style="color: white;"><i class="logo3" style="margin-right: 8px;"></i><span id="timer" style="color: white;">2016-01-10</span></span></li>
+				<li class="topright"><span onclick="login()" style="color:#000;cursor:pointer"><i class="logo4" style="margin-right: 8px;"></i>退出</span></li>
+				<li class="topright" ><span style="color:#000;"><i class="logo3" style="margin-right: 8px;"></i><span id="timer" style="color:#000;">2016-01-10</span></span></li>
 			</ul> --%>
 			<!-- 管理员 -->
 			<ul class="nav clearfix">
-			   <li><span href="#" style="color: white;margin-left: 30px;"><i class="logo1" style="margin-right: 8px;"></i>welcome：yihao</span></li>
-			   <li class="drop" style="height: 30px;"><span style="color: white;margin-left: 70px;cursor: pointer;position: relative;">个人资料</span>
+			   <li><span href="#" style="color:#000;margin-left: 30px;"><i class="logo1" style="margin-right: 8px;"></i>welcome：yihao</span></li>
+			   <li class="drop" style="height: 30px;"><span style="color:#000;margin-left: 70px;cursor: pointer;position: relative;">个人资料</span>
 					<ul class="sub_menu">
 						<li><a href="modifyPassword.html"  target="right">修改密码</a></li>
 						<li><a href="personinformation.html"  target="right">修改资料</a></li>
 					</ul>
 				</li>
-				<li class="topright"><span onclick="login()" style="color: white;cursor:pointer"><i class="logo4" style="margin-right: 8px;"></i>退出</span></li>
-				<li class="topright" ><span style="color: white;"><i class="logo3" style="margin-right: 8px;"></i><span id="timer" style="color: white;">2016-01-10</span></span></li>
+				<li class="topright"><span onclick="login()" style="color:#000;cursor:pointer"><i class="logo4" style="margin-right: 8px;"></i>退出</span></li>
+				<li class="topright" ><span style="color:#000;"><i class="logo3" style="margin-right: 8px;"></i><span id="timer" style="color:#000;">2016-01-10</span></span></li>
 			</ul>
 	     </div>
        </div>
@@ -135,32 +135,5 @@
     </script>
    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>
    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/common/common.js"></script>
-   <script>
-   /*角色切换*/
-   var iframe = $("#iframe");
-   function role_change(obj){
-   	if ($(".roleChange").val()=="申报人")
-   	{
-   		$(".roleUser").css( "display", "block" );
-   		$(".roleExpert,.roleManager").css( "display", "none" );
-   		iframe.attr("src","userFace.html")
-   	}
-   	else if ($(".roleChange").val()=="评审员") 
-   	{
-   		$(".roleUser,.roleManager").css( "display", "none" );
-   		$(".roleExpert").css( "display", "block" );
-   		iframe.attr("src","reviewerFace.html")
-   	}
-   	else if($(".roleChange").val()=="管理员")
-   	{
-   		$(".roleUser,.roleExpert").css( "display", "none" );
-   		$(".roleManager").css( "display", "block" );
-   		iframe.attr("src","adminFace.html")
-   	}
-   }
-   /*角色切换*/
-
-
-   </script>
 </body>
 </html>

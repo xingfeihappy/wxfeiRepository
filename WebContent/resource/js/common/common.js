@@ -83,18 +83,18 @@ function iFrameHeight(){
 
 /*左侧菜单的切换*/
 $(".leftsidebar_box dt,.leftsidebar_box dd").mouseover(function(){
-$(this).css( "background-color", "#317eb4" );
+$(this).css( "background-color", "#F0C64E" );
 });
 $(".leftsidebar_box dt,.leftsidebar_box dd").mouseout(function(){
-$(this).css( "background-color", "#3992d0" );
+$(this).css( "background-color", "#f0ad4e" );
 });
 
 $(".leftsidebar_box dt img").attr("src","resource/image/select_xl01.png");
 $(function(){
 $(".leftsidebar_box dd").hide();
 $(".leftsidebar_box dt").click(function(){
-	$(".leftsidebar_box dt").css({"background-color":"#3992d0"});
-	$(this).css({"background-color": "#317eb4"});
+	$(".leftsidebar_box dt").css({"background-color":"#f0ad4e"});
+	$(this).css({"background-color": "#f0ad4e"});
 	$(this).parent().find('dd').removeClass("menu_chioce");
 	$(".leftsidebar_box dt img").attr("src","resource/image/select_xl01.png");
 	$(this).parent().find('img').attr("src","resource/image/select_xl.png");

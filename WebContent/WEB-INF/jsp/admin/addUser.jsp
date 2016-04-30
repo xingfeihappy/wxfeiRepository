@@ -15,7 +15,7 @@
   <br/>
   <span id="sp" style="display:none"></span><br /><br />
   <form class="newApplication registerform" action="AddUserForm" method="post" onSubmit="return checkTelAndByname()">
-	   <table style="margin:0 auto;min-width:600px;">
+	   <table style="margin:0 auto;min-width:600px;" class="table table-hover table-borderSelf">
 	     <tr>
 	       <td width="12%" align="right"><font class="mustToWrite"> * </font>用户名：</td>
 	       <td width="36%"><input class="form-control f-ib" style="width:65%"  id="alias" placeholder="登录账号" name="user.username" datatype="*" value="<s:property value="user.username" />" errormsg="不能为空！" /><span class="Validform_checktip"></span></td>
@@ -44,14 +44,15 @@
 	       <td><input class="form-control f-ib" style="width:65%" datatype="m"  value="<s:property value="user.telephone" />" name="user.telephone" id="tel"><span class="Validform_checktip"></span></td>
 	       <td width="12%" align="right"><font class="mustToWrite"> * </font>用户类型：</td>
 	       <td>
-	         <input type="checkbox" name="user.userType" id="check1" <s:if test="user.userType ==0">checked</s:if> value="0" datatype="*"/><label class="labelFont" for="check1">VIP用户</label>
-	         <input type="checkbox" name="user.userType" id="check2" <s:if test="user.userType ==1">checked</s:if> value="1"/><label class="labelFont" for="check2">管理员</label>
+	         <input type="checkbox" name="user.userType" id="check3" <s:if test="user.userType ==0">checked</s:if> value="0" datatype="*"/><label class="labelFont" for="check3">普通用户</label>
+	         <input type="checkbox" name="user.userType" id="check1" <s:if test="user.userType ==1">checked</s:if> value="1" datatype="*"/><label class="labelFont" for="check1">VIP用户</label>
+	         <input type="checkbox" name="user.userType" id="check2" <s:if test="user.userType ==2">checked</s:if> value="2"/><label class="labelFont" for="check2">管理员</label>
 	       </td>
 	     </tr>
 	     <tr></tr>
 	   </table>
-	   <input type="hidden" name="user.name" value="<s:property value="user.id" />" />
-	   <input type="submit" class="btn btn-primary f-fr" target="right" style="width:70px;margin-right:17%" value="保 存" />
+	   <input type="hidden" name="user.id" value="<s:property value="user.id" />" />
+	   <input type="submit" class="btn btn-success f-fr" target="right" style="width:70px;margin-right:17%" value="保 存" />
 	 </form>
 </body>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>

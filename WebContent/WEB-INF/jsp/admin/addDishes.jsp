@@ -18,19 +18,32 @@
 	   <table class="table table-bordered">
 	     <tr>
 	       <td width="19%">名称</td>
-	       <td width="21%">单价</td>
-	       <td width="12%">种类</td>
-	       <td width="12%">描述</td>
+	       <td width="31%"><input type='text' name="dishes.name" value="<s:property value="dishes.name" />"/></td>
+	       <td width="19%">菜品编码</td>
+	       <td><input type='text' name="dishes.codes" value="<s:property value="dishes.codes" />"/></td>
 	     </tr>
 	     <tr>
-	       <td><input type='text' name="dishes.name" value="<s:property value="dishes.anem" />"/></td>
-	       <td><input type='text' /></td>
-	       <td><input type='text' /></td>
-	       <td><input type='text' /></td>
+	       <td width="19%">单价</td>
+	       <td width="31%"><input type='text' name="dishes.price" value="<s:property value="dishes.price" />"/></td>
+	       <td width="19%">菜品种类</td>
+	       <td><input type='text' name="dishes.type" value="<s:property value="dishes.type" />"/></td>
 	     </tr>
+	     <tr>
+	       <td rowspan="3" width="19%">菜品描述</td>
+	       <td rowspan="3" width="31%"><input type='text' name="dishes.describes" value="<s:property value="dishes.describes" />"/></td>
+	       <td rowspan="3" colspan="2">
+	         <div class="fileUpload btn btn-warning fileUpload2" style="width:70px">
+				<span>上传</span>
+				<input id="" type="file" name="file" class="upload" />
+			 </div>
+		   </td>
+	     </tr>
+	     <tr></tr>
+	     <tr></tr>
 	   </table>
 	   <input type="hidden" name="dishes.id" value="<s:property value="dishes.id" />" />
-	   <input type="submit" class="btn btn-primary f-fr" target="right" style="width:70px;margin-right:17%" value="保 存" />
+	   <br />
+	   <input type="submit" class="btn btn-success f-fr" target="right" style="width:70px;margin-right:17%" value="保 存" />
 	 </form>
 </body>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>

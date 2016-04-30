@@ -51,6 +51,7 @@ public class MessageAction extends BaseAction{
 			if(message == null){
 				throw new Exception("查询为空");
 			}
+			messageService.delete(message);
 			return SUCCESS;
 		}catch(Exception e){
 			/*logService.save(new Log(new User(

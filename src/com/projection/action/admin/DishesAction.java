@@ -39,6 +39,7 @@ public class DishesAction extends BaseAction{
 				oldDishes.setName(StringUtil.trim(dishes.getName()));
 				oldDishes.setPrice(dishes.getPrice());
 				oldDishes.setType(StringUtil.trim(dishes.getType()));
+				oldDishes.setDescribes(StringUtil.trim(dishes.getDescribes()));
 				dishes = oldDishes;
 			}
 			dishes.setCodes(StringUtil.trim(dishes.getCodes()));
@@ -46,6 +47,7 @@ public class DishesAction extends BaseAction{
 			dishes.setName(StringUtil.trim(dishes.getName()));
 			dishes.setPrice(dishes.getPrice());
 			dishes.setType(StringUtil.trim(dishes.getType()));
+			dishes.setDescribes(StringUtil.trim(dishes.getDescribes()));
 			if(dishes.getId() == null){
 				dishes.setId(dishesService.save(dishes));
 			}else{
@@ -79,6 +81,34 @@ public class DishesAction extends BaseAction{
 		}
 	}
 
+	public String DeleteDishes(){
+		try{
+			String logContent = "删除用户信息";
+			/*logService.save(new Log(new User(
+					(Integer) getValueFromSession(Constant.USER_ID)),
+					logContent, new Date(),
+					Constant.USER_LOG, Constant.DELETE_OPERATION, this
+							.getClass().getName()));*/
+			
+			if(dishes == null){
+				throw new Exception("参数为空");
+			}
+			dishes = dishesService.get(dishes.getId());
+			if(dishes == null){
+            	throw new Exception("查询结果为空");
+            }
+			dishesService.deleteUser(dishes);
+			return SUCCESS;
+	  }catch(Exception e){
+			/*logService.save(new Log(new User(
+					(Integer) getValueFromSession(Constant.USER_ID)),
+					ExceptionUtil.getExceptionAllinformation(e), new Date(),
+					Constant.EXCEPTION_LOG, Constant.SEE_OPERATION, this
+							.getClass().getName()));*/
+			e.printStackTrace();
+			return Constant.ERROR;
+		}
+	}
 	public Dishes getDishes() {
 		return dishes;
 	}

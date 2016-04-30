@@ -13,9 +13,9 @@
 </head>
 <body>
 	<div class="adminShow" >
-		<a class="btn btn-primary addUser" href="AddDishesPage" target="right" style="width:80px;">新增菜品</a>
+		<a class="btn btn-warning" href="AddDishesPage" target="right" style="width:80px;">新增菜品</a>
 		<form method="post" action="DataBackupSingle" enctype="multipart/form-data" style="display:inline-block">
-	      <input type="submit" class="btn btn-primary addUser" style="width:80px;" value="备  份" />
+	      <input type="submit" class="btn btn-success" style="width:80px;" value="备  份" />
 	      <input type="hidden" name="check1" value="1" />
 	    </form>
 		<br /><br />

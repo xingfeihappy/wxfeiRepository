@@ -39,6 +39,7 @@ public class LogAction extends BaseAction{
 			if(log == null){
 				throw new Exception("查询");
 			}
+			logService.delete(log);
 			return SUCCESS;
 		}catch(Exception e){
 			/*logService.save(new Log(new User(

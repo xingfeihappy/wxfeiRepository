@@ -12,7 +12,7 @@
 </head>
 <body>
       <form method="post" action="DataBackupSingle" enctype="multipart/form-data" style="display:inline-block">
-        <input type="submit" class="btn btn-primary addUser" style="width:80px;" value="备  份" />
+        <input type="submit" class="btn btn-success" style="width:80px;" value="备  份" />
         <input type="hidden" name="check5" value="5" />
       </form><br /><br />
       <table class="table table-hover table-borderSelf3">
@@ -44,7 +44,7 @@
 				<td><s:property value="type"/></td>
 				<td><s:property value="operationType"/></td>
 				<td>
-					<a class="btn btn-danger" href="DeleteLog?log.id=<s:property value="log.id" />" title="删除">删除</a> 
+					<a class="btn btn-danger" href="DeleteLog?log.id=<s:property value="id" />" title="删除">删除</a> 
 		        </td>
 			</tr>
 		  </s:iterator>

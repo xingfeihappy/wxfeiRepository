@@ -19,8 +19,8 @@
 
 /* CSS Document */
 #wrap{ width:990px; overflow:hidden; height:1200px;}
-#dvMsgBox,#dvMsgBox{display:none;position:absolute;font-size:12px;width:300px;overflow:hidden;z-index:10001; border-radius:3px; font-family:微软雅黑;border:1px solid rgb(57,146,208);}  
-#dvMsgBox .top{height:40px; border-bottom:1px solid rgb(57,146,208);padding-left:16px; float:left; width:100%;}  
+#dvMsgBox,#dvMsgBox{display:none;position:absolute;font-size:12px;width:300px;overflow:hidden;z-index:10001; border-radius:3px; font-family:微软雅黑;border:1px solid #f0ad4e;}  
+#dvMsgBox .top{height:40px; border-bottom:1px solid #f0ad4e;padding-left:16px; float:left; width:100%;}  
 #dvMsgBox .top .right{height:100%;padding-right:6px;}  
 #dvMsgBox .top .right .title{height:100%;line-height:40px;color:#000;vertical-align:middle;font-size:15px;overflow:hidden;font-weight:bold;}  
 #dvMsgBox .body{background-color:#fff;padding-left:10px;}  
@@ -31,11 +31,11 @@
   text-align: center;
   color:#000;
   font-size: 14px;}  
-#dvMsgBox .body .right .ct .pro{width:280px;border:solid 1px #6593cf;height:25px;background:#ffffff;line-height:23px;overflow:hidden;}  
+#dvMsgBox .body .right .ct .pro{width:280px;border:solid 1px #f0ad4e;height:25px;background:#ffffff;line-height:23px;overflow:hidden;}  
 #dvMsgBox .body .right .ct .pro .bg{width:0%;height:100%;background:#c9dffc;}  
 #dvMsgBox .bottom{background:#fff;margin-bottom:15px;}  
 #dvMsgBox .bottom .right{height:100%;/*background:transparent url(right-corners.png) no-repeat right bottom;*/}  
-#dvMsgBox input.btn{width:56px;border-radius: 3px; font-family:微软雅黑; cursor:pointer; color:#fff; border:none; height:30px; text-align:center;  background-color:rgb(57,146,208);}  
+#dvMsgBox input.btn{width:56px;border-radius: 3px; font-family:微软雅黑; cursor:pointer; color:#fff; border:none; height:30px; text-align:center;  background-color:#f0ad4e;}  
 #dvMsgBox input.btnfocus{ background-color:#EC6D51; font-family:微软雅黑;   border-radius: 3px;width:56px;margin:0px auto; border:none; height:30px; cursor:pointer; color:#fff;padding:6px 5px;margin-bottom:15px;}  
 #dvMsgBox .icon{width:32px;height:32px;float:left;margin-right:10px;}  
 #dvMsgBox .clear{clear:both;}  

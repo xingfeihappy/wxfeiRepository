@@ -21,8 +21,6 @@
 		<property name="orderTime" column="orderTime" type="date"/>
 		<property name="price" column="price" type="double"/>
 		<property name="remark" column="remark" type="string" />
-		<many-to-one name="user" column="userId" class="User" cascade="none"
-			lazy="proxy" fetch="select" />
 
 	</class>
 </hibernate-mapping>

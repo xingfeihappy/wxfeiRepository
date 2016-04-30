@@ -21,6 +21,9 @@
 		<action name="AdminIndex">
 			<result>/WEB-INF/jsp/admin/index.jsp</result>
 		</action>
+		<action name="UserIndex">
+			<result>/WEB-INF/jsp/user/index.jsp</result>
+		</action>
 	</package>
 <!-- ======================================================================================ADMIN -->
 	<package name="admin" extends="struts-default">
@@ -61,6 +64,9 @@
 		<action name="AddDishesForm" class="com.projection.action.admin.DishesAction" method="AddDishes">
 			<result type="redirect">DishesManage</result>
 		</action>
+		<action name="DeleteDishes" class="com.projection.action.admin.DishesAction" method="DeleteDishes">
+			<result type="redirect">DishesManage</result>
+		</action>
 		<!-- ==========================================================dishesManage -->
 		
 		<!-- ===========================================================orderManage -->
@@ -70,9 +76,10 @@
 		<!-- ===========================================================orderManage -->
 		
 		<!-- ============================================================seatManage -->
-		<action name="SeatManage">
+		<action name="SeatManage" class="com.projection.action.admin.SeatAction">
 			<result>/WEB-INF/jsp/admin/seatManage.jsp</result>
 		</action>
+		
 		<!-- ============================================================seatManage -->
 		
 		<!-- =========================================================messageManage -->

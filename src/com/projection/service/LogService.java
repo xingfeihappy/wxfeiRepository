@@ -19,6 +19,11 @@ public class LogService extends BaseService{
 	public Log get(Integer id) {
 		return logDao.get(id);
 	}
+
+	public void delete(Log log) {
+		logDao.delete(log);
+		
+	}
 	
 
 }

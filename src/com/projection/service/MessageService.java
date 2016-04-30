@@ -15,4 +15,9 @@ public class MessageService extends BaseService{
 		return messageDao.getAll();
 	}
 
+	public void delete(Message message) {
+		messageDao.delete(message);
+		
+	}
+
 }

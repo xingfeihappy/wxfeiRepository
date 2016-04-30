@@ -13,30 +13,36 @@
   <a class="btn btn-default f-fl"  onclick="history.go(-1)" target="right" style="width:70px;">返 回</a>&nbsp;&nbsp;
   <br/>
   <span id="sp" style="display:none"></span><br /><br />
-	   <table style="margin:0 auto;min-width:600px;">
+	   <table class="table table-hover table-borderSelf" style="margin:0 auto;min-width:600px;">
 	     <tr>
-	       <td width="12%" align="right"><font class="mustToWrite"> * </font>用户名：</td>
-	       <td width="36%"><input class="form-control f-ib" style="width:65%"  readOnly="true" id="alias" placeholder="登录账号" name="user.username" datatype="*" value="<s:property value="user.username" />" errormsg="不能为空！" /><span class="Validform_checktip"></span></td>
-	       <td width="12%" align="right"><font class="mustToWrite"> * </font>真实姓名：</td>
-	       <td width="36%"><input class="form-control f-ib" style="width:65%"   readOnly="true" placeholder="真实姓名" name="user.name" datatype="*" errormsg="不能为空！" value="<s:property value="user.name" />" /><span class="Validform_checktip"></span></td>
+	       <td width="12%" align="right">用户名：</td>
+	       <td width="36%"><s:property value="user.username" /></td>
+	       <td width="12%" align="right">真实姓名：</td>
+	       <td width="36%"><s:property value="user.name" /></td>
 	     </tr>
 	     <tr>
-	       <td style="width:12%;" align="right"><font class="mustToWrite"> * </font>出生日期：</td>
-	       <td><input style="width:65%" plugin='datepicker' id="TxtProduredDate" readOnly="true" name="user.birthday"  data-date-format="yyyy-mm-dd" class="datetimepicker form-control f-ib" value="<s:date name="user.birthday" format="yyyy-MM-dd" />" readonly="readonly" datatype="*"><span id="tip" class="Validform_checktip"></span></td>
+	       <td style="width:12%;" align="right">出生日期：</td>
+	       <td><s:date name="user.birthday" format="yyyy-MM-dd"/></td>
            <td width="12%" align="right">Email：</td>
-	       <td><input class="form-control f-ib" style="width:65%"  name="user.email" readOnly="true" datatype="e" value="<s:property value="user.email" />" ignore="ignore"><span class="Validform_checktip"></span></td>
+	       <td><s:property value="user.username" /></td>
          </tr>
 	     <tr>
 	       <td width="12%"  align="right">性别：</td>
 	       <td width="36%"><span><s:property value="user.sex" /></span></td>
-	       <td width="12%" align="right"><font class="mustToWrite"> * </font>通讯地址：</td>
-	       <td ><input class="form-control f-ib" style="width:65%"  readOnly="true" name="user.address" value="<s:property value="user.address" />" datatype="*"><span class="Validform_checktip"></span></td>
+	       <td width="12%" align="right">通讯地址：</td>
+	       <td ><s:property value="user.address" /></td>
 	     </tr>
 	     <tr>
-	       <td width="12%" align="right"><font class="mustToWrite"> * </font>手机：</td>
-	       <td><input class="form-control f-ib" style="width:65%" datatype="m"  readOnly="true" value="<s:property value="user.telephone" />" name="user.telephone" id="tel"><span class="Validform_checktip"></span></td>
-	       <td width="12%" align="right"><font class="mustToWrite"> * </font>用户类型：</td>
-	       <td><span><s:property value="user.userType" /></span></td>
+	       <td width="12%" align="right">手机：</td>
+	       <td><s:property value="user.telephone" /></td>
+	       <td width="12%" align="right">用户类型：</td>
+	       <td>
+	          <span>
+	             <s:if test="user.userType==0">普通用户</s:if>
+	             <s:elseif test="user.userType==1">VIP用户</s:elseif>
+	             <s:else>管理员</s:else>
+	          </span>
+	       </td>
 	     </tr>
 	     <tr></tr>
 	   </table>

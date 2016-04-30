@@ -7,7 +7,7 @@ public class Dishes {
 	private Double price;
 	private String type;
 	private String describes;
-	
+	private byte[] photo;
 	public Dishes(){
 		
 	}
@@ -59,5 +59,14 @@ public class Dishes {
 	public void setDescribes(String describes) {
 		this.describes = describes;
 	}
+
+	public byte[] getPhoto() {
+		return photo;
+	}
+
+	public void setPhoto(byte[] photo) {
+		this.photo = photo;
+	}
+	
 	
 }
