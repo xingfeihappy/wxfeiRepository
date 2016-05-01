@@ -1,5 +1,6 @@
 package com.projection.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.projection.domain.Dishes;
@@ -9,12 +10,13 @@ public class DishesService extends BaseService{
 
 	public List<Dishes> getAll() {
 		List<Dishes> dishes = dishesDao.getAll();
+		List<Dishes> result = new ArrayList<>();
 		for(Dishes dish : dishes){
-			if(dish.getValid() == 0){
-				dishes.remove(dish);
+			if(dish.getValid() == 1){
+				result.add(dish);
 			}
 		}
-		return dishesDao.getAll();
+		return result;
 	}
 
 	public Dishes get(Integer id) {
