@@ -26,13 +26,12 @@ public class DishesService extends BaseService{
 		
 	}
 
-	public void deleteUser(Dishes dishes) {
-		List<Message> messageList = messageDao.getMessageByDishes(dishes.getId());
-		List<Order> orderList = orderDao.getOrderByDishes(dishes.getId());
-		for(int i=0;i<messageList.size();i++){
-			
-			messageDao.delete(messageList.get(i));
-		}
+	public void deleteDishes(Dishes dishes) {
+		//List<Message> messageList = messageDao.getMessageByDishes(dishes.getId());
+		//List<Order> orderList = orderDao.getOrderByDishes(dishes.getId());
+		//for(int i=0;i<messageList.size();i++){
+		//	messageDao.delete(messageList.get(i));
+		//}
 		/*for(int i=0;i<orderList.size();i++){
 			List<User>
 			List<>
