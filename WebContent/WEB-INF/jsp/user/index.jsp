@@ -69,18 +69,94 @@
 			</ul>
 		</div>
 		
-		<div class="navcontent">
+       </div>
+     </div>
+   </div>
+   
+   <div class="g-main1" style="display:none">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 f-clearPadding">
+           <div class="navcontent">
 			<table>
 			  <tr>
 			  	<td>
 			  		<span>美食</span>
+			  		<div class="dishes-type">
+			  		  <ul>
+			  		     <li><a href="AllSearch">主食系列</a></li>
+			  		     <li><a>荤菜系列</a></li>
+			  		     <li><a>蔬菜系列</a></li>
+			  		     <li><a>海鲜系列</a></li>
+			  		     <li><a>凉菜系列</a></li>
+			  		     <li><a>点心系列</a></li>
+			  		     <li><a>汤羹系列</a></li>
+			  		     <li><a>饮料系列</a></li>
+			  		  </ul>
+			  		</div>
 			  	</td>
 			  </tr>
 			</table>
 		</div>
        </div>
+       <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 kdLeft">
+		     <div class="right_content_box" >
+		        <div class="rightcontent">
+		        wewew
+		        </div>
+		     </div>
+	    </div> 
+      </div>
      </div>
    </div>
+   
+   <div class="g-main-content">
+   	<div class="container">
+   		<div class="row">
+   			<div class="top-nav">
+   				<ul class="top-nav-ul">
+   					<li class="top-nav-ul-li">
+   						<i class="item1"></i>
+   						<a>全部</a>
+   					</li>
+   					<li class="top-nav-ul-li">
+   						<i></i>
+   						<a>主食</a>
+   					</li>
+   					<li class="top-nav-ul-li">
+   						<i></i>
+   						<a>荤菜</a>
+   					</li>
+   					<li class="top-nav-ul-li">
+   						<i></i>
+   						<a>蔬菜</a>
+   					</li>
+   					<li class="top-nav-ul-li">
+   						<i></i>
+   						<a>海鲜</a>
+   					</li>
+   					<li class="top-nav-ul-li">
+   						<i></i>
+   						<a>凉菜</a>
+   					</li>
+   					<li class="top-nav-ul-li">
+   						<i></i>
+   						<a>点心</a>
+   					</li>
+   					<li class="top-nav-ul-li">
+   						<i></i>
+   						<a>汤羹</a>
+   					</li>
+   					<li class="top-nav-ul-li">
+   						<i></i>
+   						<a>饮料</a>
+   					</li>
+   				</ul>
+   			</div>
+       	</div>
+   	</div>
+   </div>
+   
    <!-- <div class="g-footer">
       <div class="container f-clearSpace">
        <div class="row">
@@ -88,14 +164,24 @@
        </div>
       </div>
    </div> -->
-     <script>
-     
+   <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>
+   <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/common/common.js"></script>
+   <script>
 	   function login(){
 		   location.href='login.html'
 	   }
-	   
-    </script>
-   <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>
-   <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/common/common.js"></script>
+	   $(".navcontent table tr td").mouseover(function(){
+		   $(this).parent().css({"border-left":"2px solid #eee","border-right":"0px","border-bottom":"0px"})
+		   $(".dishes-type").fadeIn("3000");
+	   })
+	   $(".navcontent table tr td").mouseleave(function(){
+		   $(this).parent().css({"border": "1px solid #eee",
+				    "border-top": "2px solid #ff7200"})
+		   $(".dishes-type").fadeOut("3000");
+	   })
+	   $(".top-nav-ul-li").mouseover(function(){
+		   $(this).children(":eq(0)").css("backgrond","url(../../nav/)")
+	   })
+   </script>
 </body>
 </html>
