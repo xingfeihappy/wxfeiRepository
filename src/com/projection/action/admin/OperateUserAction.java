@@ -21,28 +21,6 @@ public class OperateUserAction extends BaseAction{
 	private List<User> userList;
 	private User user;
 	public String execute(){
-		
-		
-		
-		Order o = new Order();
-		o.setCodes("aabbcc");
-		o.setDinnerTime(new Date());
-		o.setFoodNum(5);
-		Dishes di = new Dishes();
-		di.setName("hongshaorou");
-		dishesService.save(di);
-		
-		
-		Set<Dishes> s = new HashSet<Dishes>();
-		s.add(di);
-		o.setDishesSet(s);
-		orderService.save(o);
-		
-		
-		
-		
-		
-		
 		try{
 			String logContent = "管理员查询全部用户信息";
 			userList = userService.getAll();
