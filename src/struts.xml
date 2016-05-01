@@ -5,6 +5,8 @@
 	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
 <!-- Struts2配置文件的根元素 -->
 <struts>
+
+<!-- just for testing -->
 	<constant name="struts.multipart.maxSize" value="52428800000"></constant>
 	<package name="default" extends="struts-default">
 	    <global-results>
