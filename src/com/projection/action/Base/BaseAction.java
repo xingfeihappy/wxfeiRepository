@@ -9,7 +9,6 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.projection.service.DishesService;
 import com.projection.service.LogService;
 import com.projection.service.MessageService;
-import com.projection.service.OrderDetailService;
 import com.projection.service.OrderService;
 import com.projection.service.SeatService;
 import com.projection.service.UserService;
@@ -18,7 +17,6 @@ import com.projection.service.UserService;
 public class BaseAction extends ActionSupport {
 	protected ActionContext ctx = ActionContext.getContext();
 	protected OrderService orderService;
-	protected OrderDetailService orderdetailService;
 	protected SeatService seatService;
 	protected UserService userService;
 	protected DishesService dishesService;
@@ -32,15 +30,6 @@ public class BaseAction extends ActionSupport {
 		this.orderService = orderService;
 	}
 
-	
-
-	public OrderDetailService getOrderdetailService() {
-		return orderdetailService;
-	}
-
-	public void setOrderdetailService(OrderDetailService orderdetailService) {
-		this.orderdetailService = orderdetailService;
-	}
 
 	public SeatService getSeatService() {
 		return seatService;

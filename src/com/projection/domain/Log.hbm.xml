@@ -5,7 +5,7 @@
 	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <!-- Hibernate映射文件的根元素 -->
 <hibernate-mapping package="com.projection.domain">
-	<class name="Log" table="Log">
+	<class name="Log" table="log">
 		<!-- 使用读写缓存 -->
 		<cache usage="read-write" />
 		<!-- 映射标识属性 -->

@@ -13,6 +13,7 @@ public class User {
 	private String email;
 	private String address;
 	private String userType;
+	private int valid;
 	
 	public User(){
 		
@@ -100,5 +101,13 @@ public class User {
 
 	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
+	}
+
+	public int getValid() {
+		return valid;
+	}
+
+	public void setValid(int valid) {
+		this.valid = valid;
 	}
 }

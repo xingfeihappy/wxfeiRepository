@@ -34,18 +34,18 @@ public class DishesAction extends BaseAction{
 			}
 			if(dishes.getId() != null){
 				Dishes oldDishes = dishesService.get(dishes.getId());
-				oldDishes.setDescribes(StringUtil.trim(dishes.getDescribes()));
+				oldDishes.setDescription(StringUtil.trim(dishes.getDescription()));
 				oldDishes.setName(StringUtil.trim(dishes.getName()));
 				oldDishes.setPrice(dishes.getPrice());
 				oldDishes.setType(StringUtil.trim(dishes.getType()));
-				oldDishes.setDescribes(StringUtil.trim(dishes.getDescribes()));
+				oldDishes.setDescription(StringUtil.trim(dishes.getDescription()));
 				dishes = oldDishes;
 			}
-			dishes.setDescribes(StringUtil.trim(dishes.getDescribes()));
+			dishes.setDescription(StringUtil.trim(dishes.getDescription()));
 			dishes.setName(StringUtil.trim(dishes.getName()));
 			dishes.setPrice(dishes.getPrice());
 			dishes.setType(StringUtil.trim(dishes.getType()));
-			dishes.setDescribes(StringUtil.trim(dishes.getDescribes()));
+			dishes.setDescription(StringUtil.trim(dishes.getDescription()));
 			if(dishes.getId() == null){
 				dishes.setId(dishesService.save(dishes));
 			}else{

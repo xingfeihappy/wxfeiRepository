@@ -5,7 +5,7 @@
 	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <!-- Hibernate映射文件的根元素 -->
 <hibernate-mapping package="com.projection.domain">
-	<class name="Dishes" table="Dishes">
+	<class name="Dishes" table="dishes">
 		<!-- 使用读写缓存 -->
 		<cache usage="read-write" />
 		<!-- 映射标识属性 -->
@@ -17,8 +17,11 @@
 		<property name="name" column="name" type="string" />
 		<property name="price" column="price" type="double"/>
 		<property name="type" column="type" type="string"/>
-		<property name="describes" column="describes" type="string"/>
+		<property name="description" column="description" type="string"/>
 		<property name="photo" column="photo" type="binary"/>
+		<property name="updateTime" column="updateTime" type="date"/>
+		<property name="valid" column="valid" type="int"/>
+		
 
 	</class>
 </hibernate-mapping>

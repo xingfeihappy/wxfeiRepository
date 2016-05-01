@@ -29,24 +29,15 @@ DROP TABLE IF EXISTS `dishes`;
 CREATE TABLE `dishes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
-  `codes` varchar(255) DEFAULT NULL,
   `price` double DEFAULT NULL,
   `type` varchar(255) DEFAULT NULL,
-  `describes` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
   `photo` longblob,
+  `updateTime` date DEFAULT NULL,
+  `valid` int(11) DEFAULT 1,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `dishes`
---
-
-LOCK TABLES `dishes` WRITE;
-/*!40000 ALTER TABLE `dishes` DISABLE KEYS */;
-INSERT INTO `dishes` VALUES (1,'1111','1',1,'1','1',NULL),(2,'111222','22',22,'22','22',NULL),(3,'111','111',111,'111','11111',NULL);
-/*!40000 ALTER TABLE `dishes` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `log`
@@ -70,15 +61,6 @@ CREATE TABLE `log` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `log`
---
-
-LOCK TABLES `log` WRITE;
-/*!40000 ALTER TABLE `log` DISABLE KEYS */;
-/*!40000 ALTER TABLE `log` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `message`
 --
 
@@ -86,27 +68,19 @@ DROP TABLE IF EXISTS `message`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `message` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `userId` int(11) DEFAULT NULL,
-  `dishesId` int(11) DEFAULT NULL,
+  `orderId` int(11) DEFAULT NULL,
   `content` text,
-  `grade` varchar(255) DEFAULT NULL,
+  `grade` float(10,1) DEFAULT NULL,
+  `recommendation` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `FK_Reference_3` (`dishesId`),
+  KEY `FK_Reference_3` (`orderId`),
   KEY `FK_Reference_4` (`userId`),
-  CONSTRAINT `FK_Reference_3` FOREIGN KEY (`dishesId`) REFERENCES `dishes` (`id`),
+  CONSTRAINT `FK_Reference_3` FOREIGN KEY (`orderId`) REFERENCES `order` (`id`),
   CONSTRAINT `FK_Reference_4` FOREIGN KEY (`userId`) REFERENCES `user` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `message`
---
-
-LOCK TABLES `message` WRITE;
-/*!40000 ALTER TABLE `message` DISABLE KEYS */;
-/*!40000 ALTER TABLE `message` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `order`
@@ -115,57 +89,43 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `order`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `order` (
-  `id` int(11) NOT NULL,
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `codes` varchar(255) DEFAULT NULL,
   `userId` int(11) DEFAULT NULL,
-  `seat` int(11) DEFAULT NULL,
+  `seatId` int(11) DEFAULT NULL,
   `foodNum` int(11) DEFAULT NULL,
   `totalMoney` double DEFAULT NULL,
   `dinnerTime` date DEFAULT NULL,
   `state` varchar(255) DEFAULT NULL,
+  
   PRIMARY KEY (`id`),
   KEY `FK_Reference_6` (`userId`),
-  CONSTRAINT `FK_Reference_6` FOREIGN KEY (`userId`) REFERENCES `user` (`id`)
+  KEY `FK_Reference_7` (`seatId`),
+
+  CONSTRAINT `FK_Reference_6` FOREIGN KEY (`userId`) REFERENCES `user` (`id`),
+  CONSTRAINT `FK_Reference_7` FOREIGN KEY (`seatId`) REFERENCES `seat` (`id`)
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `order`
---
-
-LOCK TABLES `order` WRITE;
-/*!40000 ALTER TABLE `order` DISABLE KEYS */;
-/*!40000 ALTER TABLE `order` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `orderdetail`
 --
 
-DROP TABLE IF EXISTS `orderdetail`;
+DROP TABLE IF EXISTS `order_dishes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `orderdetail` (
-  `id` int(11) NOT NULL,
+CREATE TABLE `order_dishes` (
   `dishesId` int(11) DEFAULT NULL,
   `orderId` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
   KEY `FK_Reference_1` (`dishesId`),
   KEY `FK_Reference_2` (`orderId`),
   CONSTRAINT `FK_Reference_1` FOREIGN KEY (`dishesId`) REFERENCES `dishes` (`id`),
-  CONSTRAINT `FK_Reference_2` FOREIGN KEY (`orderId`) REFERENCES `order` (`id`)
+  CONSTRAINT `FK_Reference_2` FOREIGN KEY (`orderId`) REFERENCES `orders` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `orderdetail`
---
-
-LOCK TABLES `orderdetail` WRITE;
-/*!40000 ALTER TABLE `orderdetail` DISABLE KEYS */;
-/*!40000 ALTER TABLE `orderdetail` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `seat`
@@ -175,26 +135,13 @@ DROP TABLE IF EXISTS `seat`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seat` (
-  `id` int(11) NOT NULL,
-  `codes` varchar(255) DEFAULT NULL,
-  `position` varchar(255) DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `containPeople` varchar(255) DEFAULT NULL,
   `state` varchar(255) DEFAULT NULL,
-  `orderTime` date DEFAULT NULL,
-  `price` double DEFAULT NULL,
   `remark` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `seat`
---
-
-LOCK TABLES `seat` WRITE;
-/*!40000 ALTER TABLE `seat` DISABLE KEYS */;
-/*!40000 ALTER TABLE `seat` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `user`
@@ -214,27 +161,8 @@ CREATE TABLE `user` (
   `address` varchar(255) DEFAULT NULL,
   `userType` varchar(255) DEFAULT NULL COMMENT '0,VIP,1管理员，2普通',
   `birthday` date DEFAULT NULL,
+  `valid` int(11) DEFAULT 1,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `user`
---
-
-LOCK TABLES `user` WRITE;
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (7,'123','13212','202CB962AC59075B964B07152D234B70','0','18868876785','123@qq.com','123','0','2016-03-31'),(8,'admin','admin','202CB962AC59075B964B07152D234B70','1','18868876784','','admin','0','2016-03-31');
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2016-05-01 18:44:26

@@ -1,15 +1,17 @@
 package com.projection.domain;
 
 import java.util.Date;
+import java.util.Set;
 public class Order {
 	private Integer id;
 	private String codes;
 	private User user;
-	private Integer seat;
+	private Seat seat;
 	private Integer foodNum;
 	private Double totalMoney;
 	private Date dinnerTime;
 	private String state;
+	private Set<Dishes> dishesSet;
 	
 	public Order(){
 		
@@ -37,14 +39,6 @@ public class Order {
 
 	public void setUser(User user) {
 		this.user = user;
-	}
-
-	public Integer getSeat() {
-		return seat;
-	}
-
-	public void setSeat(Integer seat) {
-		this.seat = seat;
 	}
 
 	public Integer getFoodNum() {
@@ -77,6 +71,22 @@ public class Order {
 
 	public void setState(String state) {
 		this.state = state;
+	}
+
+	public Seat getSeat() {
+		return seat;
+	}
+
+	public void setSeat(Seat seat) {
+		this.seat = seat;
+	}
+
+	public Set<Dishes> getDishesSet() {
+		return dishesSet;
+	}
+
+	public void setDishesSet(Set<Dishes> dishesSet) {
+		this.dishesSet = dishesSet;
 	}
 	
 }

@@ -3,10 +3,11 @@ package com.projection.domain;
 public class Message {
 	private Integer id;
 	private User user;
-	private Dishes dishes;
+	private Order order;
 	private String content;
-	private String grade;
-
+	private Double grade;
+	private String recommendation;
+	
 	public Message(){
 		
 	}
@@ -27,14 +28,6 @@ public class Message {
 		this.user = user;
 	}
 
-	public Dishes getDishes() {
-		return dishes;
-	}
-
-	public void setDishes(Dishes dishes) {
-		this.dishes = dishes;
-	}
-
 	public String getContent() {
 		return content;
 	}
@@ -43,12 +36,28 @@ public class Message {
 		this.content = content;
 	}
 
-	public String getGrade() {
+	public Double getGrade() {
 		return grade;
 	}
 
-	public void setGrade(String grade) {
+	public void setGrade(Double grade) {
 		this.grade = grade;
+	}
+
+	public Order getOrder() {
+		return order;
+	}
+
+	public void setOrder(Order order) {
+		this.order = order;
+	}
+
+	public String getRecommendation() {
+		return recommendation;
+	}
+
+	public void setRecommendation(String recommendation) {
+		this.recommendation = recommendation;
 	}
 	
 }

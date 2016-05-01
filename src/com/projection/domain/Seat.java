@@ -1,32 +1,15 @@
 package com.projection.domain;
 
-import java.util.Date;
 public class Seat {
 	private Integer id;
-	private String codes;
-	private String position;
 	private String containPeople;
 	private String state;
-	private Date orderTime;
-	private Double price;
 	private String remark;
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
-	}
-	public String getCodes() {
-		return codes;
-	}
-	public void setCodes(String codes) {
-		this.codes = codes;
-	}
-	public String getPosition() {
-		return position;
-	}
-	public void setPosition(String position) {
-		this.position = position;
 	}
 	public String getContainPeople() {
 		return containPeople;
@@ -39,19 +22,6 @@ public class Seat {
 	}
 	public void setState(String state) {
 		this.state = state;
-	}
-	
-	public Date getOrderTime() {
-		return orderTime;
-	}
-	public void setOrderTime(Date orderTime) {
-		this.orderTime = orderTime;
-	}
-	public Double getPrice() {
-		return price;
-	}
-	public void setPrice(Double price) {
-		this.price = price;
 	}
 	public String getRemark() {
 		return remark;

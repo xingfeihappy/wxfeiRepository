@@ -1,12 +1,16 @@
 package com.projection.domain;
 
+import java.util.Date;
+
 public class Dishes {
 	private Integer id;
 	private String name;
 	private Double price;
 	private String type;
-	private String describes;
+	private String description;
 	private byte[] photo;
+	private Date updateTime;
+	private int valid = 1;
 	public Dishes(){
 		
 	}
@@ -43,20 +47,36 @@ public class Dishes {
 		this.type = type;
 	}
 
-	public String getDescribes() {
-		return describes;
-	}
-
-	public void setDescribes(String describes) {
-		this.describes = describes;
-	}
-
 	public byte[] getPhoto() {
 		return photo;
 	}
 
 	public void setPhoto(byte[] photo) {
 		this.photo = photo;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
+
+	public int getValid() {
+		return valid;
+	}
+
+	public void setValid(int valid) {
+		this.valid = valid;
 	}
 	
 	

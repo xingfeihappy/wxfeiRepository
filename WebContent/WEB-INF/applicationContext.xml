@@ -34,7 +34,6 @@
 				<value>com/projection/domain/Dishes.hbm.xml</value>
 				<value>com/projection/domain/Message.hbm.xml</value>
 				<value>com/projection/domain/Order.hbm.xml</value>
-				<value>com/projection/domain/Orderdetail.hbm.xml</value>
 				<value>com/projection/domain/Seat.hbm.xml</value>
 				<value>com/projection/domain/Log.hbm.xml</value>
 			</list>
@@ -43,9 +42,9 @@
 		<property name="hibernateProperties">
 			<!-- 指定数据库方言、是否自动建表 是否生成SQL语句等 -->
 			<value>
-				hibernate.dialect=org.hibernate.dialect.MySQLInnoDBDialect
-				hibernate.hbm2ddl.auto=none
-				hibernate.show_sql=false
+				hibernate.dialect=org.hibernate.dialect.MySQLDialect
+				hibernate.hbm2ddl.auto=update
+				hibernate.show_sql=true
 				hibernate.format_sql=true
 				hibernate.autoReconnect=true
 				#开启二级缓存
@@ -80,7 +79,7 @@
 	<bean id="serviceTemplate" abstract="true" lazy-init="true"
 		p:dishesDao-ref="dishesDao" p:messageDao-ref="messageDao"
 		p:orderDao-ref="orderDao"
-		p:orderdetailDao-ref="orderdetailDao" p:seatDao-ref="seatDao"
+		p:seatDao-ref="seatDao"
 		p:userDao-ref="userDao" p:logDao-ref="logDao"/>
 
     <bean id="userService" name="userService"
@@ -91,9 +90,6 @@
 	
 	<bean id="orderService" name="orderService"
 		class="com.projection.service.OrderService" parent="serviceTemplate" />
-	
-	<bean id="orderdetailService" name="orderdetailService"
-		class="com.projection.service.OrderDetailService" parent="serviceTemplate" />
 	
 	<bean id="messageService" name="messageService"
 		class="com.projection.service.MessageService" parent="serviceTemplate" />

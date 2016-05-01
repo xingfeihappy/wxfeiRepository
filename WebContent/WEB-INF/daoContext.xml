@@ -15,8 +15,6 @@
 		parent="daoTemplate" />
     <bean id="orderDao" class="com.projection.dao.OrderDao"
 		parent="daoTemplate" />
-    <bean id="orderdetailDao" class="com.projection.dao.OrderDetailDao"
-		parent="daoTemplate" />
     <bean id="seatDao" class="com.projection.dao.SeatDao"
 		parent="daoTemplate" />
     <bean id="userDao" class="com.projection.dao.UserDao"
