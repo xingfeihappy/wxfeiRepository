@@ -6,6 +6,7 @@
 <!-- Struts2配置文件的根元素 -->
 <struts>
 <!-- testAAAAA -->
+<!-- testBBBB -->
 	<constant name="struts.multipart.maxSize" value="52428800000"></constant>
 	<package name="default" extends="struts-default">
 	    <global-results>
