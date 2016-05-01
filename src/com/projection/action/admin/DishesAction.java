@@ -83,7 +83,7 @@ public class DishesAction extends BaseAction{
 
 	public String DeleteDishes(){
 		try{
-			String logContent = "删除用户信息";
+			String logContent = "删除菜品信息";
 			/*logService.save(new Log(new User(
 					(Integer) getValueFromSession(Constant.USER_ID)),
 					logContent, new Date(),
@@ -97,7 +97,7 @@ public class DishesAction extends BaseAction{
 			if(dishes == null){
             	throw new Exception("查询结果为空");
             }
-			dishesService.deleteUser(dishes);
+			dishesService.deleteDishes(dishes);
 			return SUCCESS;
 	  }catch(Exception e){
 			/*logService.save(new Log(new User(
