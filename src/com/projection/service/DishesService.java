@@ -30,6 +30,7 @@ public class DishesService extends BaseService{
 		List<Message> messageList = messageDao.getMessageByDishes(dishes.getId());
 		List<Order> orderList = orderDao.getOrderByDishes(dishes.getId());
 		for(int i=0;i<messageList.size();i++){
+			
 			messageDao.delete(messageList.get(i));
 		}
 		/*for(int i=0;i<orderList.size();i++){
