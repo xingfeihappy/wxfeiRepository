@@ -3,7 +3,6 @@ package com.projection.domain;
 public class Dishes {
 	private Integer id;
 	private String name;
-	private String codes;
 	private Double price;
 	private String type;
 	private String describes;
@@ -26,14 +25,6 @@ public class Dishes {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getCodes() {
-		return codes;
-	}
-
-	public void setCodes(String codes) {
-		this.codes = codes;
 	}
 
 	public Double getPrice() {

@@ -15,7 +15,6 @@
 		</id>
 
 		<property name="name" column="name" type="string" />
-		<property name="codes" column="codes" type="string"/>
 		<property name="price" column="price" type="double"/>
 		<property name="type" column="type" type="string"/>
 		<property name="describes" column="describes" type="string"/>

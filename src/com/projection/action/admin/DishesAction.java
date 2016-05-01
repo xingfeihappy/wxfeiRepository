@@ -34,7 +34,6 @@ public class DishesAction extends BaseAction{
 			}
 			if(dishes.getId() != null){
 				Dishes oldDishes = dishesService.get(dishes.getId());
-				oldDishes.setCodes(StringUtil.trim(dishes.getCodes()));
 				oldDishes.setDescribes(StringUtil.trim(dishes.getDescribes()));
 				oldDishes.setName(StringUtil.trim(dishes.getName()));
 				oldDishes.setPrice(dishes.getPrice());
@@ -42,7 +41,6 @@ public class DishesAction extends BaseAction{
 				oldDishes.setDescribes(StringUtil.trim(dishes.getDescribes()));
 				dishes = oldDishes;
 			}
-			dishes.setCodes(StringUtil.trim(dishes.getCodes()));
 			dishes.setDescribes(StringUtil.trim(dishes.getDescribes()));
 			dishes.setName(StringUtil.trim(dishes.getName()));
 			dishes.setPrice(dishes.getPrice());
