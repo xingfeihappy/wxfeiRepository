@@ -7,11 +7,13 @@ import com.projection.domain.Message;
 import com.projection.util.Constant;
 
 public class MessageAction extends BaseAction{
+	private static final long serialVersionUID = -5200857075098978637L;
+	private String logContent;
 	private List<Message> messageList;
 	private Message message;
 	public String execute(){
 		try{
-			String logContent = "查询全部留言信息";
+			logContent = "查询全部留言信息";
 			messageList = messageService.getAll();
 			return SUCCESS;
 		}catch(Exception e){
@@ -27,7 +29,7 @@ public class MessageAction extends BaseAction{
 	
 	public String GetAMessage(){
 		try{
-			String logContent = "留言信息";
+			logContent = "留言信息";
 			message = messageService.get(message.getId());
 			return SUCCESS;
 		}catch(Exception e){
@@ -43,7 +45,7 @@ public class MessageAction extends BaseAction{
 	
 	public String DeleteMessage(){
 		try{
-			String logContent = "留言信息";
+			logContent = "留言信息";
 			if(message == null){
 				throw new Exception("参数为空");
 			}

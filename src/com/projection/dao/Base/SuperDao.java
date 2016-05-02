@@ -20,12 +20,11 @@ public abstract class SuperDao<T> extends HibernateDaoSupport implements BaseDao
 	/**
 	 * 根据主键ID查找
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public T get(int id) {
 		// 实体类名
-		Class entityClass = getEntityClass();
-
-		
+		Class<?> entityClass = getEntityClass();
 		return (T) getHibernateTemplate().get(entityClass, id);
 	}
 	
@@ -33,6 +32,7 @@ public abstract class SuperDao<T> extends HibernateDaoSupport implements BaseDao
 	/**
 	 * 查询出全部
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<T> getAll() {
 		
@@ -52,6 +52,7 @@ public abstract class SuperDao<T> extends HibernateDaoSupport implements BaseDao
 	 * @param count
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public List<T> findByPage(int start,int count){
 		String entityName = getEntityName();
 		String hql = "from %s";
@@ -67,7 +68,6 @@ public abstract class SuperDao<T> extends HibernateDaoSupport implements BaseDao
 	 */
 	@Override
 	public int save(T e) {
-		Object obj = null;
 		return  (Integer) getHibernateTemplate().save(e);
 	}
 

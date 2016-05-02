@@ -8,11 +8,13 @@ import com.projection.util.Constant;
 import com.projection.util.StringUtil;
 
 public class DishesAction extends BaseAction{
+	private static final long serialVersionUID = 7974198552914942825L;
+	private String logContent;
 	private Dishes dishes;
 	private List<Dishes> dishesList;
 	public String execute(){
 		try{
-			String logContent = "查询全部菜品信息";
+			logContent = "查询全部菜品信息";
 			dishesList = dishesService.getAll();
 			return SUCCESS;
 		}catch(Exception e){
@@ -28,7 +30,7 @@ public class DishesAction extends BaseAction{
 	
 	public String AddDishes(){
 		try{
-			String logContent = "更新菜品信息";
+			logContent = "更新菜品信息";
 			if(dishes == null){
 				throw new NullPointerException("参数为空");
 			}
@@ -65,7 +67,7 @@ public class DishesAction extends BaseAction{
 	
 	public String GetADishes(){
 		try{
-			String logContent = "查询菜品信息";
+			logContent = "查询菜品信息";
 			dishes = dishesService.get(dishes.getId());
 			return SUCCESS;
 		}catch(Exception e){
@@ -81,7 +83,7 @@ public class DishesAction extends BaseAction{
 
 	public String DeleteDishes(){
 		try{
-			String logContent = "删除菜品信息";
+			logContent = "删除菜品信息";
 			/*logService.save(new Log(new User(
 					(Integer) getValueFromSession(Constant.USER_ID)),
 					logContent, new Date(),
@@ -95,7 +97,7 @@ public class DishesAction extends BaseAction{
 			if(dishes == null){
             	throw new Exception("查询结果为空");
             }
-			dishesService.deleteDishes(dishes);
+			dishesService.delete(dishes);
 			return SUCCESS;
 	  }catch(Exception e){
 			/*logService.save(new Log(new User(

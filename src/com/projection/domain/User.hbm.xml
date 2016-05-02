@@ -18,7 +18,7 @@
 		<property name="username" column="username" type="string"/>
 		<property name="password" column="password" type="string" />
         <property name="sex" column="sex" type="string" />
-		<property name="telephone" column="telephone" type="string"/>
+		<property name="telephone" column="telephone" type="string" />
 		<property name="email" column="email" type="string"/>
 		<property name="address" column="address" type="string" />
 		<property name="userType" column="userType" type="string" />

@@ -6,13 +6,13 @@ import java.util.List;
 import com.projection.domain.Dishes;
 import com.projection.service.Base.BaseService;
 
-public class DishesService extends BaseService{
+public class DishesService extends BaseService {
 
 	public List<Dishes> getAll() {
 		List<Dishes> dishes = dishesDao.getAll();
 		List<Dishes> result = new ArrayList<>();
-		for(Dishes dish : dishes){
-			if(dish.getValid() == 1){
+		for (Dishes dish : dishes) {
+			if (dish.getValid() == 1) {
 				result.add(dish);
 			}
 		}
@@ -31,10 +31,9 @@ public class DishesService extends BaseService{
 		dishesDao.update(dishes);
 	}
 
-	public void deleteDishes(Dishes dishes) {
+	public void delete(Dishes dishes) {
 		dishes.setValid(0);
 		dishesDao.update(dishes);
-		
 	}
 
 }

@@ -14,39 +14,51 @@ public class BaseService {
 	protected OrderDao orderDao;
 	protected SeatDao seatDao;
 	protected LogDao logDao;
+
 	public UserDao getUserDao() {
 		return userDao;
 	}
+
 	public void setUserDao(UserDao userDao) {
 		this.userDao = userDao;
 	}
+
 	public DishesDao getDishesDao() {
 		return dishesDao;
 	}
+
 	public void setDishesDao(DishesDao dishesDao) {
 		this.dishesDao = dishesDao;
 	}
+
 	public MessageDao getMessageDao() {
 		return messageDao;
 	}
+
 	public void setMessageDao(MessageDao messageDao) {
 		this.messageDao = messageDao;
 	}
+
 	public OrderDao getOrderDao() {
 		return orderDao;
 	}
+
 	public void setOrderDao(OrderDao orderDao) {
 		this.orderDao = orderDao;
 	}
+
 	public SeatDao getSeatDao() {
 		return seatDao;
 	}
+
 	public void setSeatDao(SeatDao seatDao) {
 		this.seatDao = seatDao;
 	}
+
 	public LogDao getLogDao() {
 		return logDao;
 	}
+
 	public void setLogDao(LogDao logDao) {
 		this.logDao = logDao;
 	}
