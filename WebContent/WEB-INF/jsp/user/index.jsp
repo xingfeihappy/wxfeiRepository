@@ -62,10 +62,10 @@
          <div class="navmenu">
 			<ul>
 				<li class="mainlevel"><a href="" target="main">首页</a></li>
-				<li class="mainlevel"><a href="" target="main">推荐菜</a></li>
-				<li class="mainlevel"><a href="" target="main">新上新</a></li>
-				<li class="mainlevel"><a href="" target="main">评分高</a></li>
-				<li class="mainlevel"><a href="" target="main">大酬宾</a></li>
+				<li class="mainlevel"><a>推荐菜</a></li>
+				<li class="mainlevel"><a>新上新</a></li>
+				<li class="mainlevel"><a>评分高</a></li>
+				<li class="mainlevel"><a>大酬宾</a></li>
 			</ul>
 		</div>
 		
@@ -73,7 +73,7 @@
      </div>
    </div>
    
-   <div class="g-main1" style="display:none">
+   <div class="g-main1" style="">
      <div class="container">
        <div class="row">
          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 f-clearPadding">
@@ -84,7 +84,7 @@
 			  		<span>美食</span>
 			  		<div class="dishes-type">
 			  		  <ul>
-			  		     <li><a href="AllSearch">主食系列</a></li>
+			  		     <li><a>主食系列</a></li>
 			  		     <li><a>荤菜系列</a></li>
 			  		     <li><a>蔬菜系列</a></li>
 			  		     <li><a>海鲜系列</a></li>
@@ -102,7 +102,46 @@
        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 kdLeft">
 		     <div class="right_content_box" >
 		        <div class="rightcontent">
-		        wewew
+		        	<div class="content-box1 f-fl">
+		        		<div class="face-box-img">
+							<img src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" />
+		        		</div>
+		        		<div class="face-box-text">
+		        			<div class="facetext-name">酸辣土豆丝</div>
+		        			<div class="facetext-price">￥20.9</div>
+		        			<div class="facetext-grade">8分</div>
+		        		</div>
+		        	</div>
+		        	<div class="content-box1 f-fl">
+		        		<div class="face-box-img">
+							<img src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" />
+		        		</div>
+		        		<div class="face-box-text">
+		        			<div class="facetext-name">酸辣土豆丝</div>
+		        			<div class="facetext-price">￥20.9</div>
+		        			<div class="facetext-grade">8分</div>
+		        		</div>
+		        	</div>
+		        	<div class="content-box1 f-fl">
+		        		<div class="face-box-img">
+							<img src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" />
+		        		</div>
+		        		<div class="face-box-text">
+		        			<div class="facetext-name">酸辣土豆丝</div>
+		        			<div class="facetext-price">￥20.9</div>
+		        			<div class="facetext-grade">8分</div>
+		        		</div>
+		        	</div>
+		        	<div class="content-box1 f-fl">
+		        		<div class="face-box-img">
+							<img src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" />
+		        		</div>
+		        		<div class="face-box-text">
+		        			<div class="facetext-name">酸辣土豆丝</div>
+		        			<div class="facetext-price">￥20.9</div>
+		        			<div class="facetext-grade">8分</div>
+		        		</div>
+		        	</div>
 		        </div>
 		     </div>
 	    </div> 
@@ -110,48 +149,107 @@
      </div>
    </div>
    
-   <div class="g-main-content">
+   <div class="g-main-content" style="display:none">
    	<div class="container">
    		<div class="row">
    			<div class="top-nav">
    				<ul class="top-nav-ul">
    					<li class="top-nav-ul-li">
-   						<i class="item1"></i>
-   						<a>全部</a>
+   						<a>
+   							<i class="item1"></i>
+   							<span>全部</span>
+   						</a>
    					</li>
    					<li class="top-nav-ul-li">
-   						<i></i>
-   						<a>主食</a>
+   						<a>
+	   						<i class="item2"></i>
+	   						<span>主食</span>
+   						</a>
    					</li>
    					<li class="top-nav-ul-li">
-   						<i></i>
-   						<a>荤菜</a>
+   						<a>
+   							<i class="item3"></i>
+   							<span>荤菜</span>
+   						</a>
+   						
    					</li>
    					<li class="top-nav-ul-li">
-   						<i></i>
-   						<a>蔬菜</a>
+   						<a>
+   							<i class="item4"></i>
+   							<span>蔬菜</span>
+   						</a>
    					</li>
    					<li class="top-nav-ul-li">
-   						<i></i>
-   						<a>海鲜</a>
+   						<a>
+   							<i class="item5"></i>
+   							<span>海鲜</span>
+   						</a>
+   						
    					</li>
    					<li class="top-nav-ul-li">
-   						<i></i>
-   						<a>凉菜</a>
+   						<a>
+   							<i class="item6"></i>
+   							<span>凉菜</span>
+   						</a>
    					</li>
    					<li class="top-nav-ul-li">
-   						<i></i>
-   						<a>点心</a>
+   						<a>
+   							<i class="item7"></i>
+   							<span>点心</span>
+   						</a>
    					</li>
    					<li class="top-nav-ul-li">
-   						<i></i>
-   						<a>汤羹</a>
+   						<a>
+   							<i class="item8"></i>
+   							<span>汤羹</span>
+   						</a>
    					</li>
    					<li class="top-nav-ul-li">
-   						<i></i>
-   						<a>饮料</a>
+   						<a>
+   							<i class="item9"></i>
+   							<span>饮料</span>
+   						</a>
    					</li>
    				</ul>
+   			</div>
+   			
+   		    <div class="nav-content">
+				<div class="content-box">
+					<ul>
+						<li class="content-box-li">
+							<div class="content-box-img f-fl">
+								<a>
+									<img src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" />
+								</a>
+							</div>
+							<div class="content-box-text f-fl">
+								<div class="text-title"><a>包心菜</a></div><br />
+								<div class="text-grade">
+									<span>333</span>
+									<span><a>406条评价</a></span>
+								</div>
+								<br />
+								<div class="text-type">
+									<span>zhushi</span>
+								</div>
+								<br />
+							</div>
+							<div class="content-box-price f-fl">
+								<div class="text-price">
+									<span>￥2.0</span>
+								</div>
+							</div>
+							<div class="content-box-count f-fl">
+								<button class="denis" style="color:#fff;width:20px;border:0;background-color:#ff7200"> - </button>
+								<input type="text" class="dishcount" style="width:60px" value="0"/>
+								<button class="plus" style="color:#fff;width:20px;border:0;background-color:#ff7200"> + </button>
+							</div>
+							<div class="content-box-join f-fl">
+								<input type="submit" class="btn" style="background-color:#ff7200;color:#fff" value="加入餐车" />
+							</div>
+						</li>
+					</ul>
+				</div>   		    	
    			</div>
        	</div>
    	</div>
@@ -170,17 +268,18 @@
 	   function login(){
 		   location.href='login.html'
 	   }
-	   $(".navcontent table tr td").mouseover(function(){
+	   $(".navcontent table tr").mouseover(function(){
 		   $(this).parent().css({"border-left":"2px solid #eee","border-right":"0px","border-bottom":"0px"})
 		   $(".dishes-type").fadeIn("3000");
 	   })
-	   $(".navcontent table tr td").mouseleave(function(){
+	   $(".navcontent table tr").mouseleave(function(){
 		   $(this).parent().css({"border": "1px solid #eee",
 				    "border-top": "2px solid #ff7200"})
 		   $(".dishes-type").fadeOut("3000");
 	   })
-	   $(".top-nav-ul-li").mouseover(function(){
-		   $(this).children(":eq(0)").css("backgrond","url(../../nav/)")
+	   $(".dishes-type ul li a,.navmenu ul li a").click(function(){
+		   $(".g-main1").css("display","none");
+		   $(".g-main-content").css("display","");
 	   })
    </script>
 </body>
