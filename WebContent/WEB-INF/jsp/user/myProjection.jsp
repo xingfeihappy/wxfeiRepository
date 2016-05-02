@@ -15,7 +15,7 @@
 <!-- <a class="btn btn-primary back" href="UserFace" target="right" style="width:80px;">返回首页</a><br /><br /> -->
 <font>状态切换</font>
 <select class="form-control f-ib myProjectionChange" style="width:30%;margin-bottom:10px;margin-left:2%">
-  <option value="0">全部</option>
+<%--   <option value="0">全部</option>
   <option value="1" <s:if test="id==1">selected</s:if>><%=Constant.STATE2%></option>
   <option value="2" <s:if test="id==2">selected</s:if>><%=Constant.STATE4%></option>
   <option value="3" <s:if test="id==3">selected</s:if>><%=Constant.STATE3%></option>
@@ -27,7 +27,7 @@
   <option value="9" <s:if test="id==9">selected</s:if>><%=Constant.STATE8%></option>
   <option value="10" <s:if test="id==10">selected</s:if>><%=Constant.STATE10%></option>
   <option value="11" <s:if test="id==11">selected</s:if>><%=Constant.STATE11%></option>
-  <option value="12" <s:if test="id==12">selected</s:if>><%=Constant.STATE12%></option>
+  <option value="12" <s:if test="id==12">selected</s:if>><%=Constant.STATE12%></option> --%>
 </select>
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="tab1">
