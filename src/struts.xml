@@ -110,4 +110,15 @@
 		<!-- =============================================================allSearch -->
 	</package>
 	<!-- ======================================================================================ADMIN -->
+	<package name="user" extends="struts-default">
+		<action name="dishDetail">
+			<result>/WEB-INF/jsp/user/dishDetail.jsp</result>
+		</action>
+		<action name="myOrders">
+			<result>/WEB-INF/jsp/user/myOrders.jsp</result>
+		</action>
+		<action name="seeCar">
+			<result>/WEB-INF/jsp/user/seeCar.jsp</result>
+		</action>
+	</package>
 </struts>

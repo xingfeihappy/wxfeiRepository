@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>用户首页</title>
+<title>菜品的详细信息</title>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resource/css/common/reset.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resource/css/vendor/bootstrap/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resource/css/page/index.css">
@@ -62,7 +62,7 @@
        <div class="row">
          <div class="navmenu">
 			<ul>
-				<li class="mainlevel"><a href="UserIndex">首页</a></li>
+				<li class="mainlevel"><a href="" target="main">首页</a></li>
 				<li class="mainlevel"><a>推荐菜</a></li>
 				<li class="mainlevel"><a>新上新</a></li>
 				<li class="mainlevel"><a>评分高</a></li>
@@ -74,144 +74,9 @@
      </div>
    </div>
    
-   <div class="g-main1" style="">
-     <div class="container">
-       <div class="row">
-         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 f-clearPadding">
-           <div class="navcontent">
-			<table>
-			  <tr>
-			  	<td>
-			  		<span>美食</span>
-			  		<div class="dishes-type">
-			  		  <ul>
-			  		     <li><a>主食系列</a></li>
-			  		     <li><a>荤菜系列</a></li>
-			  		     <li><a>蔬菜系列</a></li>
-			  		     <li><a>海鲜系列</a></li>
-			  		     <li><a>凉菜系列</a></li>
-			  		     <li><a>点心系列</a></li>
-			  		     <li><a>汤羹系列</a></li>
-			  		     <li><a>饮料系列</a></li>
-			  		  </ul>
-			  		</div>
-			  	</td>
-			  </tr>
-			</table>
-		</div>
-       </div>
-       <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 kdLeft">
-		     <div class="right_content_box" >
-		        <div class="rightcontent">
-		        	<div class="content-box1 f-fl">
-		        		<div class="face-box-img">
-							<a href="dishDetail"><img src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" /></a>
-		        		</div>
-		        		<div class="face-box-text">
-		        			<div class="facetext-name">酸辣土豆丝</div>
-		        			<div class="facetext-price">￥20.9</div>
-		        			<div class="facetext-grade">8分</div>
-		        		</div>
-		        	</div>
-		        	<div class="content-box1 f-fl">
-		        		<div class="face-box-img">
-							<a href="dishDetail"><img src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" /></a>
-		        		</div>
-		        		<div class="face-box-text">
-		        			<div class="facetext-name">酸辣土豆丝</div>
-		        			<div class="facetext-price">￥20.9</div>
-		        			<div class="facetext-grade">8分</div>
-		        		</div>
-		        	</div>
-		        	<div class="content-box1 f-fl">
-		        		<div class="face-box-img">
-							<a href="dishDetail"><img src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" /></a>				        		</div>
-		        		<div class="face-box-text">
-		        			<div class="facetext-name">酸辣土豆丝</div>
-		        			<div class="facetext-price">￥20.9</div>
-		        			<div class="facetext-grade">8分</div>
-		        		</div>
-		        	</div>
-		        	<div class="content-box1 f-fl">
-		        		<div class="face-box-img">
-							<a href="dishDetail"><img src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" /></a>		        		</div>
-		        		<div class="face-box-text">
-		        			<div class="facetext-name">酸辣土豆丝</div>
-		        			<div class="facetext-price">￥20.9</div>
-		        			<div class="facetext-grade">8分</div>
-		        		</div>
-		        	</div>
-		        </div>
-		     </div>
-	    </div> 
-      </div>
-     </div>
-   </div>
-   
-   <div class="g-main-content" style="display:none">
+   <div class="g-main-content">
    	<div class="container">
    		<div class="row">
-   			<div class="top-nav">
-   				<ul class="top-nav-ul">
-   					<li class="top-nav-ul-li">
-   						<a>
-   							<i class="item1"></i>
-   							<span>全部</span>
-   						</a>
-   					</li>
-   					<li class="top-nav-ul-li">
-   						<a>
-	   						<i class="item2"></i>
-	   						<span>主食</span>
-   						</a>
-   					</li>
-   					<li class="top-nav-ul-li">
-   						<a>
-   							<i class="item3"></i>
-   							<span>荤菜</span>
-   						</a>
-   						
-   					</li>
-   					<li class="top-nav-ul-li">
-   						<a>
-   							<i class="item4"></i>
-   							<span>蔬菜</span>
-   						</a>
-   					</li>
-   					<li class="top-nav-ul-li">
-   						<a>
-   							<i class="item5"></i>
-   							<span>海鲜</span>
-   						</a>
-   						
-   					</li>
-   					<li class="top-nav-ul-li">
-   						<a>
-   							<i class="item6"></i>
-   							<span>凉菜</span>
-   						</a>
-   					</li>
-   					<li class="top-nav-ul-li">
-   						<a>
-   							<i class="item7"></i>
-   							<span>点心</span>
-   						</a>
-   					</li>
-   					<li class="top-nav-ul-li">
-   						<a>
-   							<i class="item8"></i>
-   							<span>汤羹</span>
-   						</a>
-   					</li>
-   					<li class="top-nav-ul-li">
-   						<a>
-   							<i class="item9"></i>
-   							<span>饮料</span>
-   						</a>
-   					</li>
-   				</ul>
-   			</div>
-   			
    		    <div class="nav-content">
 				<div class="content-box">
 					<ul>
@@ -294,22 +159,44 @@
    
    
    <!-- 评价的页面 -->
-   <%-- <div class="appraise-box">
+   <div class="appraise-box">
    	<div class="container">
    	 <div class="row">
    		<div class="appraise-box-common">
+   			<div class="appraise-box-avg">
+   				<div class="avg-grade f-fl">
+   					<span class="avg-grade-grade">3.7分</span>
+   					<div class="avg-grade-countPeople">共<span style="color:#f76120">123</span>人评价</div>
+   				</div>
+   				<div class="avg-people f-fl">
+   					<div style="color:#999">大家都在说</div>
+   					<ul>
+   						<li>味道好 2</li>
+   						<li>量大 3</li>
+   						<li>环境好 3</li>
+   					</ul>
+   				</div>
+   			</div>
+   			<div class="appraise-box-title"></div>
    			<ul class="appraise-box-ul">
    				<li>
    					<p><s:property value="user.username" />wxf</p>
    					<p><img src="" />8分</p>
    					<p><s:property value="content" />真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃</p>
-   					<p><span>推荐的菜</span><s:property value="recommendation" />担保肉，我的天，哈哈哈</p>
+   				</li>
+   			</ul>
+   			<div class="appraise-box-title"></div>
+   			<ul class="appraise-box-ul">
+   				<li>
+   					<p><s:property value="user.username" />wxf</p>
+   					<p><img src="" />8分</p>
+   					<p><s:property value="content" />真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃</p>
    				</li>
    			</ul>
    		</div>
    	</div>
    </div>
-  </div> --%>
+  </div>
    <!-- <div class="g-footer">
       <div class="container f-clearSpace">
        <div class="row">
