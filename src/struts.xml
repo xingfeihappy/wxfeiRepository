@@ -18,12 +18,32 @@
 		<action name="LoginPage">
 			<result>/WEB-INF/jsp/login.jsp</result>
 		</action>
+		<action name="LoginForm" class="com.projection.action.login.LoginForm">
+			<result name="user">/WEB-INF/jsp/user/index.jsp</result>
+			<result name="admin">/WEB-INF/jsp/admin/index.jsp</result>
+		</action>
 		<action name="AdminIndex">
 			<result>/WEB-INF/jsp/admin/index.jsp</result>
 		</action>
 		<action name="UserIndex">
 			<result>/WEB-INF/jsp/user/index.jsp</result>
 		</action>
+		<!-- 我的工具 -->
+		<action name="ModifyPassword" class="com.projection.action.user.GetUserByIdAction">
+			<result >/WEB-INF/jsp/modifyPassword.jsp</result>
+		</action>
+		<action name="ModifyPasswordSuccess" class="com.projection.action.user.ModifyPasswordSuccessAction">
+			<result name="rightPassword">/WEB-INF/jsp/modifyPswSuccess.jsp</result>
+			<!-- <result name="errorPassword" >/WEB-INF/jsp/modifyPswSuccess.jsp</result> -->
+		</action>
+		<action name="PersonInformation" class="com.projection.action.user.GetUserByIdAction">
+			<result >/WEB-INF/jsp/personInformation.jsp</result>
+		</action>
+		<action name="SuccessModifyImfo" class="com.projection.action.user.ModifyUserInformationAction">
+			<result name="success">/WEB-INF/jsp/saveSuccess.jsp</result>
+			<!-- <result type="redirect" name="ModifyPsw" >ModifyPassword</result>  -->
+		</action>
+		<!-- end我的工具 -->
 	</package>
 <!-- ======================================================================================ADMIN -->
 	<package name="admin" extends="struts-default">

@@ -26,7 +26,7 @@
 						alt="餐饮管理系统" />
 					<h4>Welcome</h4>
 				</div>
-				<form class="login-form" action="Login" method="post">
+				<form class="login-form" action="LoginForm" method="post">
 					<div class="form-group">
 						<input type="text" class="form-control login-field"
 							name="username" placeholder="输入您的账号" id="login-name" /> <label

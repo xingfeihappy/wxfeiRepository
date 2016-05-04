@@ -35,4 +35,8 @@ public class UserService extends BaseService {
 		user.setValid(0);
 		userDao.update(user);
 	}
+
+	public User getUserByUsername(String username) {
+		return userDao.getUserByUsername(username);
+	}
 }

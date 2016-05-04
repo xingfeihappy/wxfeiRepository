@@ -20,14 +20,13 @@
           <div class="top">
           <!-- 普通用户 -->
 		    <ul class="nav clearfix">
-			   <li><span href="#" style="color: #000;margin-left: 30px;"><i class="logo1" style="margin-right: 8px;"></i>welcome：yihao</span></li>
-               <li><span href="#" style="color: #000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>登录</span></li>
+			   <li><span href="#" style="color: #000;margin-left: 30px;"><i class="logo1" style="margin-right: 8px;"></i>welcome：<%=session.getAttribute(Constant.USER_NAME) %></span></li>
+               <s:if test="user.userType.length <0"><li><span href="#" style="color: #000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>登录</span></li></s:if>
                <li><span href="#" style="color: #000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>注册</span></li>
                <li><span href="#" style="color: #000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>我的订单</span></li>
 			   <li class="drop" style="height: 30px;"><span style="color: #000;margin-left: 30px;cursor: pointer;position: relative;">个人资料</span>
 					<ul class="sub_menu">
-						<li><a href="modifyPassword.html"  target="right">修改密码</a></li>
-						<li><a href="personinformation.html"  target="right">修改资料</a></li>
+						<li><a href="ModifyPassword"  target="right">密码修改</a></li>
 					</ul>
 				</li>
 				<li class="topright"><span onclick="login()" style="color: #000;cursor:pointer"><i class="logo4" style="margin-right: 8px;"></i>退出</span></li>
@@ -322,7 +321,7 @@
    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/showBo.js"></script>
    <script>
 	   function login(){
-		   location.href='login.html'
+		   location.href='LoginPage'
 	   }
 	   $(".navcontent table tr").mouseover(function(){
 		   $(this).parent().css({"border-left":"2px solid #eee","border-right":"0px","border-bottom":"0px"})

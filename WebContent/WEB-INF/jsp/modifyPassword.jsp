@@ -119,7 +119,7 @@ function conf(){
     $("#" + formSpan + "Tip").append(errorText);;
     $("#" + formSpan + "Tip").css({"display":"inline"});
   }
-  var password='${user.passwords}';
+  var password='${user.password}';
   function confirmModifyPassword(){
 	 /*  var oldpass = $("#oldpass").val();
         if(oldpass =='') {

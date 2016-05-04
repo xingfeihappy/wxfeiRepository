@@ -14,5 +14,5 @@ public class Constant {
 	public static String DELETE_OPERATION = "删除操作";
 	public static String UPDATE_OPERATION = "更新操作";
 	public static String DOWNLOAD_OPERATION = "下载操作";
-	public static String LOGIN_PAGE = "login";
+	public static String LOGIN_PAGE = "LoginPage";
 }
