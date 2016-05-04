@@ -24,11 +24,11 @@
 	       <td style="width:12%;" align="right">出生日期：</td>
 	       <td><s:date name="user.birthday" format="yyyy-MM-dd"/></td>
            <td width="12%" align="right">Email：</td>
-	       <td><s:property value="user.username" /></td>
+	       <td><s:property value="user.email" /></td>
          </tr>
 	     <tr>
 	       <td width="12%"  align="right">性别：</td>
-	       <td width="36%"><span><s:property value="user.sex" /></span></td>
+	       <td width="36%"><span><s:if test="user.sex ==0">男</s:if><s:else>女</s:else></span></td>
 	       <td width="12%" align="right">通讯地址：</td>
 	       <td ><s:property value="user.address" /></td>
 	     </tr>

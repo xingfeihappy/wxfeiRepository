@@ -26,7 +26,6 @@
 		<tr>
 			<th width="7.5%">序号</th>
 			<th width="7.5%">名称</th>
-			<th width="">菜品编号</th>
 			<th width="">单价</th>
 			<th width="">菜品种类</th>
 			<th width="18%">管理操作</th>
@@ -37,7 +36,6 @@
 		<tr>
 			<td><s:property value="#index.index+1" /></td>
 			<td><s:property value="name"/></td>
-			<td><s:property value="codes"/></td>
 			<td><s:property value="price"/></td>
 			<td><s:property value="type"/></td>
 			<td>
@@ -56,7 +54,7 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/showBo.js"></script>
 <script>
 function deleteOpe(e){
-	Showbo.Msg.confirm('是否删除该条用户记录？',function(flag){
+	Showbo.Msg.confirm('是否删除该条记录？',function(flag){
 		if(flag=='yes'){
 			var id = $(e).next().attr("value");
 			location.href ="DeleteDishes?dishes.id="+id;		

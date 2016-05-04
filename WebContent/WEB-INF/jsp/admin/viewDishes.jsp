@@ -18,9 +18,7 @@
 	   <table class="table table-bordered">
 	     <tr>
 	       <td width="19%">名称</td>
-	       <td width="31%"><s:property value="dishes.name" /></td>
-	       <td width="19%">菜品编码</td>
-	       <td><s:property value="dishes.codes" /></td>
+	       <td width="31%" colspan="3"><s:property value="dishes.name" /></td>
 	     </tr>
 	     <tr>
 	       <td width="19%">单价</td>

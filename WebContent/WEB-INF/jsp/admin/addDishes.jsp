@@ -14,13 +14,11 @@
   <a class="btn btn-default f-fl"  onclick="history.go(-1)" target="right" style="width:70px;">返 回</a>&nbsp;&nbsp;
   <br/>
   <span id="sp" style="display:none"></span><br /><br />
-  <form class="newApplication registerform" action="AddDishesForm" method="post">
+  <form class="newApplication registerform" action="AddDishesForm" method="post" enctype="multipart/form-data">
 	   <table class="table table-bordered">
 	     <tr>
 	       <td width="19%">名称</td>
-	       <td width="31%"><input type='text' name="dishes.name" value="<s:property value="dishes.name" />"/></td>
-	       <td width="19%">菜品编码</td>
-	       <td><input type='text' name="dishes.codes" value="<s:property value="dishes.codes" />"/></td>
+	       <td width="31%" colspan="3"><input type='text' name="dishes.name" value="<s:property value="dishes.name" />"/></td>
 	     </tr>
 	     <tr>
 	       <td width="19%">单价</td>
