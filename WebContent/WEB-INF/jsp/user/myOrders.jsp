@@ -96,7 +96,7 @@
 								订单状态：<span>已付款</span>
 							</div>
 							<div class="content-box-see-car f-fl">
-								评价：<a class="btn seeCar" style="background-color:#ff7200;color:#fff">去评价</a>
+								评价：<a class="btn seeCar" href="goToAppraise" style="background-color:#ff7200;color:#fff">去评价</a>
 							</div>
 							<div class="content-box-see-car f-fl">
 								操作：<a class="btn seeCar" style="background-color:#ff7200;color:#fff">删除</a>

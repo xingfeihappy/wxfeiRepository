@@ -302,3 +302,7 @@ textarea{
 .avg-people ul li{cursor:pointer;padding:4px;width:100px;border:1px solid #ffebd7;color:#FA5D2F;float:left;margin-top:20px;margin-right:4%}
 .avg-people ul li:hover{border:2px solid #FA5D2F;padding:3px}
 .content-box-li1 span{color:#FA5D2F;font-size:30px;}
+.appraise-total{padding:50px 0 10px 10%;font-size:16px}
+.appraise-ul{text-align: center;}
+.appraise-ul li{width:10%;border:1px solid #eee;float:left;padding:5px;cursor:pointer;margin-right:5px}
+.appraise-ul li:hover{background-color:#FA5D2F;color:#fff;border:0;padding:6px}

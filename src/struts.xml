@@ -120,5 +120,8 @@
 		<action name="seeCar">
 			<result>/WEB-INF/jsp/user/seeCar.jsp</result>
 		</action>
+		<action name="goToAppraise">
+			<result>/WEB-INF/jsp/user/goToAppraise.jsp</result>
+		</action>
 	</package>
 </struts>

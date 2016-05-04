@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>菜品的详细信息</title>
+<title>评价页面</title>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resource/css/common/reset.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resource/css/vendor/bootstrap/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resource/css/page/index.css">
@@ -62,7 +62,7 @@
        <div class="row">
          <div class="navmenu">
 			<ul>
-				<li class="mainlevel"><a href="" target="main">首页</a></li>
+				<li class="mainlevel"><a href="UserIndex">首页</a></li>
 				<li class="mainlevel"><a>推荐菜</a></li>
 				<li class="mainlevel"><a>新上新</a></li>
 				<li class="mainlevel"><a>评分高</a></li>
@@ -74,94 +74,30 @@
      </div>
    </div>
    
-   <div class="g-main-content">
-   	<div class="container">
-   		<div class="row">
-   		    <div class="nav-content">
-				<div class="content-box">
-					<ul>
-						<li class="content-box-li">
-							<div class="content-box-img f-fl">
-								<a href="dishDetail">
-									<img src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" />
-								</a>
-							</div>
-							<div class="content-box-text f-fl">
-								<div class="text-title"><a>包心菜</a></div><br />
-								<div class="text-grade">
-									<span>333</span>
-									<span><a>406条评价</a></span>
-								</div>
-								<br />
-								<div class="text-type">
-									<span>zhushi</span>
-								</div>
-								<br />
-							</div>
-							<div class="content-box-price f-fl">
-								<div class="text-price">
-									<span>￥2.0</span>
-								</div>
-							</div>
-							<div class="content-box-count f-fl">
-								<button class="denis" style="color:#fff;width:20px;border:0;background-color:#ff7200"> - </button>
-								<input type="text" readonly="true" class="dishcount" style="width:60px" value="0"/>
-								<button class="plus" style="color:#fff;width:20px;border:0;background-color:#ff7200"> + </button>
-							</div>
-							<div class="content-box-join f-fl">
-								<input type="submit" class="btn addCar" style="background-color:#ff7200;color:#fff" value="加入餐车" />
-							</div>
-							<div class="content-box-see-car f-fl">
-								<a class="btn seeCar" style="background-color:#ff7200;color:#fff">查看餐车(0件)</a>
-							</div>
-						</li>
-					</ul>
-				</div>   		    	
-   			</div>
-       	</div>
-   	</div>
+   <div class="g-main1" style="">
+     <div class="container">
+       <div class="row">
+         	<div class="appraise-total">我的总体评价：</div>
+         	<ul class="appraise-ul" style="padding:10px 0 10px 10%;">
+         		<li>强烈推荐</li>
+         		<li>很满意</li>
+         		<li>满意</li>
+         		<li>一般</li>
+         		<li>差</li>
+         	</ul>
+         	<div>&nbsp;</div>
+         	<div style="padding:10px 0 10px 10%;">
+	         	<div>菜品口味如何？服务周到吗？环境如何？（写够15字，才是好同志~）</div>
+	         	<br />
+	         	<table style="width:60%;">
+	         		<tr><td><textarea style="border:2px solid #eee" rows="10">232</textarea></td></tr>
+	         	</table>
+	         	<input type="submit" class="btn addCar" style="margin-top:10px;background-color:#ff7200;color:#fff" value="提交评价" />
+	         	<div style="color:#999;margin-top:10px">* 提交后即不能修改</div>
+         	</div>
+        </div>
+     </div>
    </div>
-   
-   
-   <!-- 评价的页面 -->
-   <div class="appraise-box">
-   	<div class="container">
-   	 <div class="row">
-   		<div class="appraise-box-common">
-   			<div class="appraise-box-avg">
-   				<div class="avg-grade f-fl">
-   					<span class="avg-grade-grade">3.7分</span>
-   					<div class="avg-grade-countPeople">共<span style="color:#f76120">123</span>人评价</div>
-   				</div>
-   				<div class="avg-people f-fl">
-   					<div style="color:#999">大家都在说</div>
-   					<ul>
-   						<li>味道好 2</li>
-   						<li>量大 3</li>
-   						<li>环境好 3</li>
-   					</ul>
-   				</div>
-   			</div>
-   			<div class="appraise-box-title"></div>
-   			<ul class="appraise-box-ul">
-   				<li>
-   					<p><s:property value="user.username" />wxf</p>
-   					<p><img src="" />8分</p>
-   					<p><s:property value="content" />真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃</p>
-   				</li>
-   			</ul>
-   			<div class="appraise-box-title"></div>
-   			<ul class="appraise-box-ul">
-   				<li>
-   					<p><s:property value="user.username" />wxf</p>
-   					<p><img src="" />8分</p>
-   					<p><s:property value="content" />真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃</p>
-   				</li>
-   			</ul>
-   		</div>
-   	</div>
-   </div>
-  </div>
    <!-- <div class="g-footer">
       <div class="container f-clearSpace">
        <div class="row">
