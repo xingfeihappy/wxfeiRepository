@@ -32,7 +32,7 @@
 	       <td width="12%"  align="right">性别：</td>
 	       <td width="36%">
 	       <select name="user.sex" style="width:65%;border:1px solid #ccc;" class="form-control f-ib" >
-	         <option>--请选择--</option>
+	         <option value="0">--请选择--</option>
              <option value="0" <s:if test="user.sex ==0">selected</s:if>>男</option>
              <option value="1" <s:if test="user.sex ==1">selected</s:if>>女</option>
            </select></td>

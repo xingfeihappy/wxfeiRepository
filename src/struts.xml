@@ -87,6 +87,12 @@
 		<action name="DeleteDishes" class="com.projection.action.admin.DishesAction" method="DeleteDishes">
 			<result type="redirect">DishesManage</result>
 		</action>
+		<action name="ShowDishesPhoto" class="com.projection.action.admin.DishesAction" method="ShowDishesPhoto">
+			<result name="photo" type="stream">
+				<param name="inputName">ips</param>
+				<param name="bufferSize">1024</param>
+			</result>
+		</action>
 		<!-- ==========================================================dishesManage -->
 		
 		<!-- ===========================================================orderManage -->

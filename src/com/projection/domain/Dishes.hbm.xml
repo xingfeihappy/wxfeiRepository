@@ -18,7 +18,8 @@
 		<property name="price" column="price" type="double"/>
 		<property name="type" column="type" type="string"/>
 		<property name="description" column="description" type="string"/>
-		<property name="photo" column="photo" type="binary"/>
+		
+		<property name="photo" lazy="true" column="photo" type="org.springframework.orm.hibernate3.support.BlobByteArrayType" />
 		<property name="updateTime" column="updateTime" type="date"/>
 		<property name="valid" column="valid" type="int"/>
 		

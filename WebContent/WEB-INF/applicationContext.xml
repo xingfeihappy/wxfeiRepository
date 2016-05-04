@@ -21,11 +21,14 @@
 		p:testConnectionOnCheckout="false" />
 
 
+	<bean id="lobHandler" class="org.springframework.jdbc.support.lob.DefaultLobHandler" lazy-init="true" />
+
 	<!-- 定义Hibernate的SessionFactory -->
 	<!-- 依赖注入数据源，注入正是上面定义的dataSource ,把数据源注入给Session工	厂-->
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean"
 		p:dataSource-ref="dataSource">
+		<property name="lobHandler" ref="lobHandler"/>
 		<!-- mappingResouces属性用来列出全部映射文件 -->
 		<property name="mappingResources">
 			<list>
