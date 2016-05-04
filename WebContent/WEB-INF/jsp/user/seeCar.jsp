@@ -86,9 +86,9 @@
 								</div>
 							</div>
 							<div class="content-box-count f-fl">
-								数量：&nbsp;&nbsp;<button class="denis" style="color:#fff;width:20px;border:0;background-color:#ff7200"> - </button>
+								数量：&nbsp;&nbsp;<button type="button" class="denis" style="color:#fff;width:20px;border:0;background-color:#ff7200"> - </button>
 								<input type="text" readonly="true" class="dishcount" style="width:60px" value="0"/>
-								<button class="plus" style="color:#fff;width:20px;border:0;background-color:#ff7200"> + </button>
+								<button class="plus" type="button" style="color:#fff;width:20px;border:0;background-color:#ff7200"> + </button>
 							</div>
 							<div class="content-box-join f-fl">
 								<div class="text-price" style="margin-top:0;padding-top:0">
@@ -122,9 +122,9 @@
 								</div>
 							</div>
 							<div class="content-box-count f-fl">
-								数量：&nbsp;&nbsp;<button class="denis" style="color:#fff;width:20px;border:0;background-color:#ff7200"> - </button>
+								数量：&nbsp;&nbsp;<button type="button" class="denis" style="color:#fff;width:20px;border:0;background-color:#ff7200"> - </button>
 								<input type="text" readonly="true" class="dishcount" style="width:60px" value="0"/>
-								<button class="plus" style="color:#fff;width:20px;border:0;background-color:#ff7200"> + </button>
+								<button type="button" class="plus" style="color:#fff;width:20px;border:0;background-color:#ff7200"> + </button>
 							</div>
 							<div class="content-box-join f-fl">
 								<div class="text-price" style="margin-top:0;padding-top:0">
@@ -179,16 +179,16 @@
 		   dishcount = $(".dishcount").attr("value");
 		   if(dishcount <= 0){
 			   count = 0;
-			   $(".dishcount").attr("value",count);
+			   $(this).next().attr("value",count);
 		   }else{
 			   count--;
-			   $(".dishcount").attr("value",count);
+			   $(this).next().attr("value",count);
 		   }
 	   })
 	   $(".plus").click(function(){
 		   dishcount = $(".dishcount").attr("value");
 		   count++;
-		   $(".dishcount").attr("value",count);
+		   $(this).prev().attr("value",count);
 	   })
 	    /* 判断加入购物车 前判断数量*/
 	   $(".addCar").click(function(){
