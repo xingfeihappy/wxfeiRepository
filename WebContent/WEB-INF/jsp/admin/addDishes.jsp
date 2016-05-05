@@ -30,12 +30,11 @@
 	       <td rowspan="3" width="19%">菜品描述</td>
 	       <td rowspan="3" width="31%"><input type='text' name="dishes.description" value="<s:property value="dishes.description" />"/></td>
 	       <td rowspan="3" colspan="2">
-	         <img src="ShowDishesPhoto?dishes.id=${dishes.id }" id="fileInput" width="80%" height="100%" alt="" />
-	         <div class="fileUpload btn btn-warning fileUpload2" style="width:70px">
-				<span>上传</span>
-				
-				<input id="" type="file" name="file" class="upload"/>
-			 </div>
+		   <img src="ShowDishesPhoto?dishes.id=${dishes.id }" id="fileInput" width="200" height="100" alt="" />
+	       <div class="fileUpload btn btn-warning fileUpload2" style="width:70px">
+			   <span>上传</span>
+			   <input id="" type="file" name="file" class="upload"/>
+		   </div>
 		   </td>
 	     </tr>
 	     <tr></tr>

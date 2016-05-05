@@ -41,12 +41,12 @@ public class DishesAction extends BaseAction {
 
 	public String AddDishes() {
 		try {
-			logContent = "更新菜品信息";
 			if (dishes == null) {
 				throw new NullPointerException("参数为空");
 			}
 			System.out.println("jsfdkajsdkflasjdkl");
 			if (dishes.getId() != null) {
+				logContent = "更新菜品信息";
 				Dishes oldDishes = dishesService.get(dishes.getId());
 				oldDishes.setDescription(StringUtil.trim(dishes.getDescription()));
 				oldDishes.setName(StringUtil.trim(dishes.getName()));
@@ -56,6 +56,7 @@ public class DishesAction extends BaseAction {
 				oldDishes.setUpdateTime(new Date());
 				dishes = oldDishes;
 			} else {
+				logContent = "新增菜品信息";
 				dishes.setDescription(StringUtil.trim(dishes.getDescription()));
 				dishes.setName(StringUtil.trim(dishes.getName()));
 				dishes.setPrice(dishes.getPrice());
