@@ -20,13 +20,13 @@ body{font-size:15px ! important; font-family:"Microsoft YAHEI"}
     <div class="form-group">
       <label for="byname" class="col-sm-2 control-label">用户名</label>
       <div class="col-sm-10">
-        <span  class="form-control" style="width:250px;" id="byname" name="user.byname"><s:property value="user.byname" /></span>
+        <span  class="form-control" style="width:250px;" id="byname"><s:property value="#session.user.username" /></span>
       </div>
     </div>
     <div class="form-group">
       <label for="telephone" class="col-sm-2 control-label">手机号</label>
       <div class="col-sm-10">
-        <span  class="form-control" style="width:250px;" id="telephone" name="user.telephone"><s:property value="user.telephone" /></span>
+        <span  class="form-control" style="width:250px;" id="telephone"><s:property value="#session.user.telephone" /></span>
       </div>
     </div>
 <%--     <div class="form-group">

@@ -19,7 +19,7 @@
 	<div style="font-size: 12pt; line-height: 180%; width: 500px; margin: 10px auto;
 		border: solid 1px #e0e0e0; padding: 20px; background-color: #f6f6f6;">
 		&nbsp; &nbsp;
-		密码已修改成功，请使用您的手机号和新密码重新登录。
+		密码已修改成功，请使用您的用户名和新密码重新登录。
 		<p align="center" style="font-size: 9pt;">
 			<!-- [<a href="LoginPage" targat="_blank">去登录?</a>]&nbsp; -->
 			[ <s:if test="#session.userType==@com.projection.util.Constant@USER">

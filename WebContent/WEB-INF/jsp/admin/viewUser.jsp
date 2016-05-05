@@ -39,7 +39,7 @@
 	       <td>
 	          <span>
 	             <s:if test="user.userType==0">普通用户</s:if>
-	             <s:elseif test="user.userType==1">VIP用户</s:elseif>
+	             <s:elseif test="user.userType==1">管理员</s:elseif>
 	             <s:else>管理员</s:else>
 	          </span>
 	       </td>

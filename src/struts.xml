@@ -29,7 +29,7 @@
 			<result>/WEB-INF/jsp/user/index.jsp</result>
 		</action>
 		<!-- 我的工具 -->
-		<action name="ModifyPassword" class="com.projection.action.user.GetUserByIdAction">
+		<action name="ModifyPassword">
 			<result >/WEB-INF/jsp/modifyPassword.jsp</result>
 		</action>
 		<action name="ModifyPasswordSuccess" class="com.projection.action.user.ModifyPasswordSuccessAction">
@@ -105,6 +105,15 @@
 		<action name="SeatManage" class="com.projection.action.admin.SeatAction">
 			<result>/WEB-INF/jsp/admin/seatManage.jsp</result>
 		</action>
+		
+		<action name="AddSeatPage">
+			<result>/WEB-INF/jsp/admin/addSeat.jsp</result>
+		</action>
+		
+		<action name="AddSeatForm" class="com.projection.action.admin.SeatAction" method="AddSeat">
+			<result type="redirect">SeatManage</result>
+		</action>
+		
 		
 		<!-- ============================================================seatManage -->
 		

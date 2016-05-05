@@ -25,10 +25,9 @@
 	<thead>
 		<tr>
 			<th width="7.5%">序号</th>
-			<th width="7.5%">餐位编码</th>
-			<th width="">位置</th>
-			<th width="">容乃人数</th>
+			<th width="">容纳人数</th>
 			<th width="">状态</th>
+			<th width="">备注</th>
 			<th width="18%">管理操作</th>
 		</tr>
 	</thead>
@@ -36,10 +35,10 @@
 	 <s:iterator value="seatList" status="index">
 		<tr>
 			<td><s:property value="#index.index+1" /></td>
-			<td><s:property value="codes"/></td>
-			<td><s:property value="position"/></td>
 			<td><s:property value="containPeople"/></td>
 			<td><s:property value="state"/></td>
+			<td><s:property value="remark"/></td>
+			
 			<td>
 			    <a class="btn btn-warning" href="EditSeatPage?user.id=<s:property value="id" />" target="right" title="修改信息">修改</a> 
 				<a class="btn btn-success" href="ViewSeatPage?user.id=<s:property value="id" />" target="right" title="查看详细信息">查看</a>

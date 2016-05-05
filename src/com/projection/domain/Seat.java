@@ -2,8 +2,8 @@ package com.projection.domain;
 
 public class Seat {
 	private Integer id;
-	private String containPeople;
-	private String state;
+	private Integer containPeople;
+	private Integer state = 0;
 	private String remark;
 	public Integer getId() {
 		return id;
@@ -11,16 +11,16 @@ public class Seat {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getContainPeople() {
+	public Integer getContainPeople() {
 		return containPeople;
 	}
-	public void setContainPeople(String containPeople) {
+	public void setContainPeople(Integer containPeople) {
 		this.containPeople = containPeople;
 	}
-	public String getState() {
+	public Integer getState() {
 		return state;
 	}
-	public void setState(String state) {
+	public void setState(Integer state) {
 		this.state = state;
 	}
 	public String getRemark() {
@@ -28,6 +28,10 @@ public class Seat {
 	}
 	public void setRemark(String remark) {
 		this.remark = remark;
+	}
+	@Override
+	public String toString() {
+		return "Seat [id=" + id + ", containPeople=" + containPeople + ", state=" + state + ", remark=" + remark + "]";
 	}
 	
 

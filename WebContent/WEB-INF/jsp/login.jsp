@@ -29,12 +29,12 @@
 				<form class="login-form" action="LoginForm" method="post">
 					<div class="form-group">
 						<input type="text" class="form-control login-field"
-							name="username" placeholder="输入您的账号" id="login-name" /> <label
+							name="user.username" placeholder="输入您的账号" id="login-name" /> <label
 							class="login-field-icon fui-user" for="login-name"></label>
 					</div>
 					<div class="form-group">
 						<input type="password" class="form-control login-field"
-							name="password" placeholder="输入您的密码" id="login-pass" /> <label
+							name="user.password" placeholder="输入您的密码" id="login-pass" /> <label
 							class="login-field-icon fui-lock" for="login-pass"></label>
 					</div>
 					<input type="submit" class="btn btn-primary btn-lg btn-block">

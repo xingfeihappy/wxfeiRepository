@@ -39,4 +39,8 @@ public class UserService extends BaseService {
 	public User getUserByUsername(String username) {
 		return userDao.getUserByUsername(username);
 	}
+	
+	public User loginCheck(String username, String password) {
+		return userDao.getUserByUsernameAndPassword(username, password);
+	}
 }

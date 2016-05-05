@@ -14,8 +14,8 @@
 			<generator class="identity" />
 		</id>
 
-		<property name="containPeople" column="containPeople" type="string" />
-        <property name="state" column="state" type="string" />
+		<property name="containPeople" column="containPeople" type="int" />
+        <property name="state" column="state" type="int" />
 		<property name="remark" column="remark" type="string" />
 
 	</class>

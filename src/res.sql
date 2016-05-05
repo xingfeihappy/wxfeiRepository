@@ -136,8 +136,8 @@ DROP TABLE IF EXISTS `seat`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seat` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `containPeople` varchar(255) DEFAULT NULL,
-  `state` varchar(255) DEFAULT NULL,
+  `containPeople` int(11) DEFAULT NULL,
+  `state` int(11) DEFAULT NULL,
   `remark` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

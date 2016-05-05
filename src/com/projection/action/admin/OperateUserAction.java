@@ -50,7 +50,6 @@ public class OperateUserAction extends BaseAction {
 				User oldUser = userService.get(user.getId());
 				oldUser.setUsername(StringUtil.trim(user.getUsername()));
 				oldUser.setName(StringUtil.trim(user.getName()));
-				oldUser.setPassword(MD5Util.MD5(Constant.DEFAULT_PASSWORD));
 				oldUser.setBirthday(user.getBirthday());
 				oldUser.setEmail(StringUtil.trim(user.getEmail()));
 				oldUser.setSex(StringUtil.trim(user.getSex()));

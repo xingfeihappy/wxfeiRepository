@@ -3,6 +3,7 @@ package com.projection.util;
 public class Constant {
 	public static String DEFAULT_PASSWORD = "123";
 	public static String ERROR = "error";
+	public static String LOGIN_USER = "user";
 	public static String USER_TYPE = "userType";
 	public static String USER_ID = "userId";
 	public static String USER_NAME = "username";
@@ -14,5 +15,5 @@ public class Constant {
 	public static String DELETE_OPERATION = "删除操作";
 	public static String UPDATE_OPERATION = "更新操作";
 	public static String DOWNLOAD_OPERATION = "下载操作";
-	public static String LOGIN_PAGE = "LoginPage";
+	public static String LOGIN_PAGE = "login";
 }
