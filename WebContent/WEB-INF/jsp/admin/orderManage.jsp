@@ -13,8 +13,8 @@
 </head>
 <body>
 	<div class="adminShow" >
-		<form method="post" action="DataBackupSingle" enctype="multipart/form-data" style="display:inline-block">
-	      <input type="submit" class="btn btn-primary addUser" style="width:80px;" value="备  份" />
+		<form method="post" action="DataBackupSingle" style="display:inline-block">
+	      <input type="submit" class="btn btn-primary btn-success" style="width:80px;" value="备  份" />
 	      <input type="hidden" name="check1" value="1" />
 	    </form>
 		<br /><br />
@@ -27,22 +27,24 @@
 			<th width="7.5%">内容</th>
 			<th width="">评价星级</th>
 			<th width="">评价用户</th>
-			<th width="">评价菜品</th>
+			<th width="">状态</th>
 			<th width="18%">管理操作</th>
 		</tr>
 	</thead>
 	<tbody>
-	 <s:iterator value="userList" status="index">
+	 <s:iterator value="orderList" status="index">
 		<tr>
 			<td><s:property value="#index.index+1" /></td>
 			<td><s:property value="content"/></td>
 			<td><s:property value="grade"/></td>
-			<td><s:property value="telephone"/></td>
-			<td><s:property value="email"/></td>
+			<td><s:property value="user.username"/></td>
+			<td><s:property value="state"/></td>
 			<td>
-			    <a class="btn" href="EditUser?user.id=<s:property value="id" />" target="right" title="修改用户信息">修改</a> 
-				<a class="btn" href="ViewUser?user.id=<s:property value="id" />" target="right" title="查看用户详细信息">查看</a>
-				<a class="btn" href="javascript:void(0);"  onclick="deleteOpe(this)" title="删除此用户">删除</a> 
+				<s:if test="state.equals('未处理')">
+				    <a class="btn" href="EditOrder?order.id=<s:property value="id" />" target="right" title="修改信息">修改</a> 
+				</s:if>
+				<a class="btn" href="ViewOrder?order.id=<s:property value="id" />" target="right" title="查看详细信息">查看</a>
+				<a class="btn" href="javascript:void(0);"  onclick="deleteOpe(this)" title="删除">删除</a> 
 				<input type="hidden" value="<s:property value="id" />">
 		    </td>
 		</tr>
@@ -55,35 +57,12 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/showBo.js"></script>
 <script>
 function deleteOpe(e){
-	var type = $(e).next().next().next().attr("value");
-	if(type=="管理员"){
-		Showbo.Msg.alert("不能删除管理员噢！");
-	}else{
-		Showbo.Msg.confirm('是否删除该条用户记录？',function(flag){
-			if(flag=='yes'){
-				Showbo.Msg.confirm('是否删除该用户负责的课题？',function(flag){
-					if(flag=='yes'){
-						Showbo.Msg.confirm('是否删除该课题的成果信息？',function(flag){
-							if(flag=='yes'){
-								var id = $(e).next().next().attr("value");
-								location.href ="DeleteUser?user.id="+id;
-							}
-						});
-					}
-				});			
-			}				
-		}); 
-	}
-};
-
-function fun(e){
-	Showbo.Msg.confirm('确定重置密码吗？',function(flag){
-			if(flag=='yes'){
-				var id = $(e).next().attr("value");
-				location.href ="ResetPassword?user.id="+id;
-			}
-				
-		}); 
+	Showbo.Msg.confirm('是否删除该条订单记录？',function(flag){
+		if(flag=='yes'){
+			var id = $(e).next().attr("value");
+			location.href ="DeleteOrder?order.id="+id;		
+		}				
+	}); 
 };
 </script>
 </html>

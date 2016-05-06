@@ -79,7 +79,7 @@
                  <dt onClick="getclassname(this)"><a href="LogManage" target="right" style="display:block;" >日志管理</a></dt>
               </dl>
                <dl class="general_query">
-                 <a href="AllSearch target="right" style="text-decoration:none;" > <dt onClick="getclassname(this)">汇总查询</dt></a>
+                 <a href="AllSearch" target="right" style="text-decoration:none;" > <dt onClick="getclassname(this)">汇总查询</dt></a>
               </dl>
            </div>
 	      </div>

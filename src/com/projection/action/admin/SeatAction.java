@@ -44,6 +44,53 @@ public class SeatAction extends BaseAction{
 		return SUCCESS;
 	}
 	
+	public String GetASeat(){
+		try{
+			if (seat == null) {
+				throw new Exception("参数为空");
+			}
+			seat = seatService.get(seat.getId());
+			if (seat == null) {
+				throw new Exception("查询结果为空");
+			}
+			return SUCCESS;
+		}catch(Exception e){
+			e.printStackTrace();
+			return Constant.ERROR;
+		}
+	}
+	
+	public String DeleteSeat() {
+		try {
+			String logContent = "删除餐位信息";
+			/*
+			 * logService.save(new Log(new User( (Integer)
+			 * getValueFromSession(Constant.USER_ID)), logContent, new Date(),
+			 * Constant.USER_LOG, Constant.DELETE_OPERATION, this
+			 * .getClass().getName()));
+			 */
+
+			if (seat == null) {
+				throw new Exception("参数为空");
+			}
+			seat = seatService.get(seat.getId());
+			if (seat == null) {
+				throw new Exception("查询结果为空");
+			}
+			seatService.delete(seat);
+			return SUCCESS;
+		} catch (Exception e) {
+			/*
+			 * logService.save(new Log(new User( (Integer)
+			 * getValueFromSession(Constant.USER_ID)),
+			 * ExceptionUtil.getExceptionAllinformation(e), new Date(),
+			 * Constant.EXCEPTION_LOG, Constant.SEE_OPERATION, this
+			 * .getClass().getName()));
+			 */
+			e.printStackTrace();
+			return Constant.ERROR;
+		}
+	}
 	public Seat getSeat() {
 		return seat;
 	}

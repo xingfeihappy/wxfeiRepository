@@ -109,7 +109,8 @@
 		<action name="AddSeatPage">
 			<result>/WEB-INF/jsp/admin/addSeat.jsp</result>
 		</action>
-		<action name="EditSeatPage">
+		
+		<action name="EditSeatPage" class="com.projection.action.admin.SeatAction" method="GetASeat">
 			<result>/WEB-INF/jsp/admin/addSeat.jsp</result>
 		</action>
 		
@@ -117,6 +118,9 @@
 			<result type="redirect">SeatManage</result>
 		</action>
 		
+		<action name="DeleteSeat" class="com.projection.action.admin.SeatAction" method="DeleteSeat">
+			<result type="redirect">SeatManage</result>
+		</action>
 		
 		<!-- ============================================================seatManage -->
 		
