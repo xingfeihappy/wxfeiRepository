@@ -8,7 +8,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>订单管理</title>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resource/css/vendor/bootstrap/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resource/css/vendor/bootstrap/dataTables.bootstrap.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resource/css/page/index.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resource/css/vendor/showBo.css">
 </head>
@@ -21,7 +20,7 @@
 		<br /><br />
 	</div>
 
-    <table class="table table-hover table-borderSelf3 datatable">
+    <table class="table table-hover table-borderSelf3">
 	<thead>
 		<tr>
 			<th width="7.5%">序号</th>
@@ -53,9 +52,6 @@
 
 <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/bootstrap/bootstrap.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/bootstrap/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/bootstrap/dataTables.bootstrap.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/common/table.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/showBo.js"></script>
 <script>
 function deleteOpe(e){

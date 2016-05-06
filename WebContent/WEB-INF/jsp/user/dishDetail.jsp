@@ -56,23 +56,6 @@
        </div>
      </div>
    </div>
-   <!-- 管理员 -->
-   <div class="g-main">
-     <div class="container">
-       <div class="row">
-         <div class="navmenu">
-			<ul>
-				<li class="mainlevel"><a href="" target="main">首页</a></li>
-				<li class="mainlevel"><a>推荐菜</a></li>
-				<li class="mainlevel"><a>新上新</a></li>
-				<li class="mainlevel"><a>评分高</a></li>
-				<li class="mainlevel"><a>大酬宾</a></li>
-			</ul>
-		</div>
-		
-       </div>
-     </div>
-   </div>
    
    <div class="g-main-content">
    	<div class="container">

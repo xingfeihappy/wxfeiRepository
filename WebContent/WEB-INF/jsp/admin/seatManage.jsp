@@ -40,8 +40,8 @@
 			<td><s:property value="remark"/></td>
 			
 			<td>
-			    <a class="btn btn-warning" href="EditSeatPage?user.id=<s:property value="id" />" target="right" title="修改信息">修改</a> 
-				<a class="btn btn-success" href="ViewSeatPage?user.id=<s:property value="id" />" target="right" title="查看详细信息">查看</a>
+			    <a class="btn btn-warning" href="EditSeatPage?seat.id=<s:property value="id" />" target="right" title="修改信息">修改</a> 
+				<a class="btn btn-success" href="ViewSeatPage?seat.id=<s:property value="id" />" target="right" title="查看详细信息">查看</a>
 				<a class="btn btn-danger" href="javascript:void(0);"  onclick="deleteOpe(this)" title="删除信息">删除</a> 
 				<input type="hidden" value="<s:property value="id" />">
 		    </td>
@@ -50,7 +50,6 @@
 	</table>
 </body>
 
-<script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/bootstrap/bootstrap.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/showBo.js"></script>

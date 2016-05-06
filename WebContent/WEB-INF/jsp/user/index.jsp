@@ -20,7 +20,7 @@
           <div class="top">
           <!-- 普通用户 -->
 		    <ul class="nav clearfix">
-			   <li><span href="#" style="color: #000;margin-left: 30px;"><i class="logo1" style="margin-right: 8px;"></i>welcome：<%=session.getAttribute(Constant.USER_NAME) %></span></li>
+			   <li><span href="#" style="color: #000;margin-left: 30px;"><i class="logo1" style="margin-right: 8px;"></i>welcome：<s:property value="#session.user.username"/><%-- <%=session.getAttribute(Constant.USER_NAME) %> --%></span></li>
                <s:if test="user.userType.length <0"><li><span href="#" style="color: #000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>登录</span></li></s:if>
                <li><span href="#" style="color: #000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>注册</span></li>
                <li><span href="#" style="color: #000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>我的订单</span></li>
@@ -61,265 +61,68 @@
        <div class="row">
          <div class="navmenu">
 			<ul>
-				<li class="mainlevel"><a href="UserIndex">首页</a></li>
-				<li class="mainlevel"><a>推荐菜</a></li>
-				<li class="mainlevel"><a>新上新</a></li>
-				<li class="mainlevel"><a>评分高</a></li>
-				<li class="mainlevel"><a>大酬宾</a></li>
+				<li class="mainlevel"><a href="filterDish" target="right">首页</a></li>
+				<li class="mainlevel"><a href="filterDish" target="right">推荐菜</a></li>
+				<li class="mainlevel"><a href="filterDish" target="right">新上新</a></li>
+				<li class="mainlevel"><a href="filterDish" target="right">评分高</a></li>
+				<li class="mainlevel"><a href="filterDish" target="right">大酬宾</a></li>
 			</ul>
 		</div>
 		
        </div>
      </div>
    </div>
-   
-   <div class="g-main1" style="">
-     <div class="container">
-       <div class="row">
-         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 f-clearPadding">
-           <div class="navcontent">
-			<table>
-			  <tr>
-			  	<td>
-			  		<span>美食</span>
-			  		<div class="dishes-type">
-			  		  <ul>
-			  		     <li><a>主食系列</a></li>
-			  		     <li><a>荤菜系列</a></li>
-			  		     <li><a>蔬菜系列</a></li>
-			  		     <li><a>海鲜系列</a></li>
-			  		     <li><a>凉菜系列</a></li>
-			  		     <li><a>点心系列</a></li>
-			  		     <li><a>汤羹系列</a></li>
-			  		     <li><a>饮料系列</a></li>
-			  		  </ul>
-			  		</div>
-			  	</td>
-			  </tr>
-			</table>
-		</div>
-       </div>
-       <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 kdLeft">
-		     <div class="right_content_box" >
-		        <div class="rightcontent">
-		        	<div class="content-box1 f-fl">
-		        		<div class="face-box-img">
-							<a href="dishDetail"><img src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" /></a>
-		        		</div>
-		        		<div class="face-box-text">
-		        			<div class="facetext-name">酸辣土豆丝</div>
-		        			<div class="facetext-price">￥20.9</div>
-		        			<div class="facetext-grade">8分</div>
-		        		</div>
-		        	</div>
-		        	<div class="content-box1 f-fl">
-		        		<div class="face-box-img">
-							<a href="dishDetail"><img src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" /></a>
-		        		</div>
-		        		<div class="face-box-text">
-		        			<div class="facetext-name">酸辣土豆丝</div>
-		        			<div class="facetext-price">￥20.9</div>
-		        			<div class="facetext-grade">8分</div>
-		        		</div>
-		        	</div>
-		        	<div class="content-box1 f-fl">
-		        		<div class="face-box-img">
-							<a href="dishDetail"><img src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" /></a>				        		</div>
-		        		<div class="face-box-text">
-		        			<div class="facetext-name">酸辣土豆丝</div>
-		        			<div class="facetext-price">￥20.9</div>
-		        			<div class="facetext-grade">8分</div>
-		        		</div>
-		        	</div>
-		        	<div class="content-box1 f-fl">
-		        		<div class="face-box-img">
-							<a href="dishDetail"><img src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" /></a>		        		</div>
-		        		<div class="face-box-text">
-		        			<div class="facetext-name">酸辣土豆丝</div>
-		        			<div class="facetext-price">￥20.9</div>
-		        			<div class="facetext-grade">8分</div>
-		        		</div>
-		        	</div>
-		        </div>
-		     </div>
-	    </div> 
-      </div>
-     </div>
-   </div>
-   
-   <div class="g-main-content" style="display:none">
-   	<div class="container">
-   		<div class="row">
-   			<div class="top-nav">
-   				<ul class="top-nav-ul">
-   					<li class="top-nav-ul-li">
-   						<a>
-   							<i class="item1"></i>
-   							<span>全部</span>
-   						</a>
-   					</li>
-   					<li class="top-nav-ul-li">
-   						<a>
-	   						<i class="item2"></i>
-	   						<span>主食</span>
-   						</a>
-   					</li>
-   					<li class="top-nav-ul-li">
-   						<a>
-   							<i class="item3"></i>
-   							<span>荤菜</span>
-   						</a>
-   						
-   					</li>
-   					<li class="top-nav-ul-li">
-   						<a>
-   							<i class="item4"></i>
-   							<span>蔬菜</span>
-   						</a>
-   					</li>
-   					<li class="top-nav-ul-li">
-   						<a>
-   							<i class="item5"></i>
-   							<span>海鲜</span>
-   						</a>
-   						
-   					</li>
-   					<li class="top-nav-ul-li">
-   						<a>
-   							<i class="item6"></i>
-   							<span>凉菜</span>
-   						</a>
-   					</li>
-   					<li class="top-nav-ul-li">
-   						<a>
-   							<i class="item7"></i>
-   							<span>点心</span>
-   						</a>
-   					</li>
-   					<li class="top-nav-ul-li">
-   						<a>
-   							<i class="item8"></i>
-   							<span>汤羹</span>
-   						</a>
-   					</li>
-   					<li class="top-nav-ul-li">
-   						<a>
-   							<i class="item9"></i>
-   							<span>饮料</span>
-   						</a>
-   					</li>
-   				</ul>
-   			</div>
-   			
-   		    <div class="nav-content">
-				<div class="content-box">
-					<ul>
-						<li class="content-box-li">
-							<div class="content-box-img f-fl">
-								<a href="dishDetail">
-									<img src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" />
-								</a>
-							</div>
-							<div class="content-box-text f-fl">
-								<div class="text-title"><a>包心菜</a></div><br />
-								<div class="text-grade">
-									<span>333</span>
-									<span><a>406条评价</a></span>
-								</div>
-								<br />
-								<div class="text-type">
-									<span>zhushi</span>
-								</div>
-								<br />
-							</div>
-							<div class="content-box-price f-fl">
-								<div class="text-price">
-									<span>￥2.0</span>
-								</div>
-							</div>
-							<div class="content-box-count f-fl">
-								<button class="denis" style="color:#fff;width:20px;border:0;background-color:#ff7200"> - </button>
-								<input type="text" readonly="true" class="dishcount" style="width:60px" value="0"/>
-								<button class="plus" style="color:#fff;width:20px;border:0;background-color:#ff7200"> + </button>
-							</div>
-							<div class="content-box-join f-fl">
-								<input type="submit" class="btn addCar" style="background-color:#ff7200;color:#fff" value="加入餐车" />
-							</div>
-							<div class="content-box-see-car f-fl">
-								<a class="btn seeCar" style="background-color:#ff7200;color:#fff">查看餐车(0件)</a>
-							</div>
-						</li>
-						<li class="content-box-li">
-							<div class="content-box-img f-fl">
-								<a href="dishDetail">
-									<img src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" />
-								</a>
-							</div>
-							<div class="content-box-text f-fl">
-								<div class="text-title"><a>包心菜</a></div><br />
-								<div class="text-grade">
-									<span>333</span>
-									<span><a>406条评价</a></span>
-								</div>
-								<br />
-								<div class="text-type">
-									<span>zhushi</span>
-								</div>
-								<br />
-							</div>
-							<div class="content-box-price f-fl">
-								<div class="text-price">
-									<span>￥2.0</span>
-								</div>
-							</div>
-							<div class="content-box-count f-fl">
-								<button class="denis" style="color:#fff;width:20px;border:0;background-color:#ff7200"> - </button>
-								<input type="text" readonly="true" class="dishcount" style="width:60px" value="0"/>
-								<button class="plus" style="color:#fff;width:20px;border:0;background-color:#ff7200"> + </button>
-							</div>
-							<div class="content-box-join f-fl">
-								<input type="submit" class="btn addCar" style="background-color:#ff7200;color:#fff" value="加入餐车" />
-							</div>
-							<div class="content-box-see-car f-fl">
-								<a class="btn seeCar" style="background-color:#ff7200;color:#fff">查看餐车(0件)</a>
-							</div>
-						</li>
+	<div class="g-main-content" style="">
+		<div class="container">
+			<div class="row">
+				<div class="top-nav">
+					<ul class="top-nav-ul">
+						<li class="top-nav-ul-li"><a href="filterDish" target="right">
+								<i class="item1"></i> <span>全部</span>
+						</a></li>
+						<li class="top-nav-ul-li"><a href="filterDish" target="right">
+								<i class="item2"></i> <span>主食</span>
+						</a></li>
+						<li class="top-nav-ul-li"><a href="filterDish" target="right">
+								<i class="item3"></i> <span>荤菜</span>
+						</a></li>
+						<li class="top-nav-ul-li"><a href="filterDish" target="right">
+								<i class="item4"></i> <span>蔬菜</span>
+						</a></li>
+						<li class="top-nav-ul-li"><a href="filterDish" target="right">
+								<i class="item5"></i> <span>海鲜</span>
+						</a></li>
+						<li class="top-nav-ul-li"><a href="filterDish" target="right">
+								<i class="item6"></i> <span>凉菜</span>
+						</a></li>
+						<li class="top-nav-ul-li"><a href="filterDish" target="right">
+								<i class="item7"></i> <span>点心</span>
+						</a></li>
+						<li class="top-nav-ul-li"><a href="filterDish" target="right">
+								<i class="item8"></i> <span>汤羹</span>
+						</a></li>
+						<li class="top-nav-ul-li"><a href="filterDish" target="right">
+								<i class="item9"></i> <span>饮料</span>
+						</a></li>
 					</ul>
-				</div>   		    	
-   			</div>
-       	</div>
-   	</div>
-   </div>
-   
-   
-   <!-- 评价的页面 -->
-   <%-- <div class="appraise-box">
-   	<div class="container">
-   	 <div class="row">
-   		<div class="appraise-box-common">
-   			<ul class="appraise-box-ul">
-   				<li>
-   					<p><s:property value="user.username" />wxf</p>
-   					<p><img src="" />8分</p>
-   					<p><s:property value="content" />真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃</p>
-   					<p><span>推荐的菜</span><s:property value="recommendation" />担保肉，我的天，哈哈哈</p>
-   				</li>
-   			</ul>
-   		</div>
-   	</div>
-   </div>
-  </div> --%>
-   <!-- <div class="g-footer">
+				</div>
+				<iframe name="right" src="filterDish" id="iframe" scrolling="no"
+					marginWidth="0" onLoad="" frameborder="0"
+					style="width: 100%; height: 3000px; margin: 0px; padding: 0px;"></iframe>
+				<!-- <div class="g-footer">
       <div class="container f-clearSpace">
        <div class="row">
           iopopopop
        </div>
       </div>
    </div> -->
-   <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>
-   <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/common/common.js"></script>
-   <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/showBo.js"></script>
-   <script>
+				<script type="text/javascript"
+					src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>
+				<script type="text/javascript"
+					src="${pageContext.request.contextPath}/resource/js/common/common.js"></script>
+				<script type="text/javascript"
+					src="${pageContext.request.contextPath}/resource/js/vendor/showBo.js"></script>
+				<script>
 	   function login(){
 		   location.href='LoginPage'
 	   }
@@ -335,24 +138,6 @@
 	   $(".dishes-type ul li a,.navmenu ul li a").click(function(){
 		   $(".g-main1").css("display","none");
 		   $(".g-main-content").css("display","");
-	   })
-	   /* 数量的加减 */
-	   var dishcount;
-	   var count = 0;
-	   $(".denis").click(function(){
-		   dishcount = $(".dishcount").attr("value");
-		   if(dishcount <= 0){
-			   count = 0;
-			   $(".dishcount").attr("value",count);
-		   }else{
-			   count--;
-			   $(".dishcount").attr("value",count);
-		   }
-	   })
-	   $(".plus").click(function(){
-		   dishcount = $(".dishcount").attr("value");
-		   count++;
-		   $(".dishcount").attr("value",count);
 	   })
 	    /* 判断加入购物车 前判断数量*/
 	   $(".addCar").click(function(){

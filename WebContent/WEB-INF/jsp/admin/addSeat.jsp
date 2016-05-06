@@ -14,34 +14,21 @@
   <a class="btn btn-default f-fl"  onclick="history.go(-1)" target="right" style="width:70px;">返 回</a>&nbsp;&nbsp;
   <br/>
   <span id="sp" style="display:none"></span><br /><br />
-  <form class="newApplication registerform" action="AddDishesForm" method="post">
+  <form class="newApplication registerform" action="AddSeatForm" method="post">
 	   <table class="table table-bordered">
 	     <tr>
-	       <td width="19%">名称</td>
-	       <td width="31%"><input type='text' name="dishes.name" value="<s:property value="dishes.name" />"/></td>
-	       <td width="19%">菜品编码</td>
-	       <td><input type='text' name="dishes.codes" value="<s:property value="dishes.codes" />"/></td>
+	       <td width="19%">容纳人数</td>
+	       <td width="31%"><input type='text' name="seat.containPeople" value="<s:property value="seat.containPeople" />"/></td>
+	       <td width="19%">状态</td>
+	       <td><input type='text' name="seat.state" value="<s:property value="seat.state" />"/></td>
 	     </tr>
 	     <tr>
-	       <td width="19%">单价</td>
-	       <td width="31%"><input type='text' name="dishes.price" value="<s:property value="dishes.price" />"/></td>
-	       <td width="19%">菜品种类</td>
-	       <td><input type='text' name="dishes.type" value="<s:property value="dishes.type" />"/></td>
+	       <td width="19%">备注</td>
+	       <td width="31%" colspan="3"><input type='text' name="seat.remark" value="<s:property value="seat.remark" />"/></td>
 	     </tr>
-	     <tr>
-	       <td rowspan="3" width="19%">菜品描述</td>
-	       <td rowspan="3" width="31%"><input type='text' name="dishes.description" value="<s:property value="dishes.description" />"/></td>
-	       <td rowspan="3" colspan="2">
-	         <div class="fileUpload btn btn-warning fileUpload2" style="width:70px">
-				<span>上传</span>
-				<input id="" type="file" name="file" class="upload" />
-			 </div>
-		   </td>
-	     </tr>
-	     <tr></tr>
 	     <tr></tr>
 	   </table>
-	   <input type="hidden" name="dishes.id" value="<s:property value="dishes.id" />" />
+	   <input type="hidden" name="seat.id" value="<s:property value="seat.id" />" />
 	   <br />
 	   <input type="submit" class="btn btn-success f-fr" target="right" style="width:70px;margin-right:17%" value="保 存" />
 	 </form>

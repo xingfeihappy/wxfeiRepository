@@ -109,6 +109,9 @@
 		<action name="AddSeatPage">
 			<result>/WEB-INF/jsp/admin/addSeat.jsp</result>
 		</action>
+		<action name="EditSeatPage">
+			<result>/WEB-INF/jsp/admin/addSeat.jsp</result>
+		</action>
 		
 		<action name="AddSeatForm" class="com.projection.action.admin.SeatAction" method="AddSeat">
 			<result type="redirect">SeatManage</result>
@@ -157,6 +160,9 @@
 		</action>
 		<action name="goToAppraise">
 			<result>/WEB-INF/jsp/user/goToAppraise.jsp</result>
+		</action>
+		<action name="filterDish">
+			<result>/WEB-INF/jsp/user/filterDish.jsp</result>
 		</action>
 	</package>
 </struts>

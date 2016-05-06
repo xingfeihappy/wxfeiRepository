@@ -19,7 +19,7 @@
           <div class="top">
 			<!-- 管理员 -->
 			<ul class="nav clearfix">
-			   <li><span href="#" style="color:#000;margin-left: 30px;"><i class="logo1" style="margin-right: 8px;"></i>welcome：<%=session.getAttribute(Constant.USER_NAME) %></span></li>
+			   <li><span href="#" style="color:#000;margin-left: 30px;"><i class="logo1" style="margin-right: 8px;"></i>welcome：<s:property value="#session.user.username"/></span></li>
 			   <li class="drop" style="height: 30px;"><span style="color:#000;margin-left: 70px;cursor: pointer;position: relative;">个人资料</span>
 					<ul class="sub_menu">
 						<li><a href="ModifyPassword"  target="right">密码修改</a></li>

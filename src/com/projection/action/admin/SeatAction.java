@@ -17,9 +17,8 @@ public class SeatAction extends BaseAction{
 	private List<Seat> seatList;
 	public String execute(){
 		try{
-			String logContent = "管理员查询全部用户信息";
+			String logContent = "管理员查询全部餐位信息";
 			seatList = seatService.getAll();
-			System.out.println(seatList.get(0));
 			
 			return SUCCESS;
 		}catch(Exception e){
