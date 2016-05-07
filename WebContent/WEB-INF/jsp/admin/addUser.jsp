@@ -86,12 +86,16 @@
 					<s:if test="user.userType ==1">checked</s:if> value="1"
 					datatype="*" /><label class="labelFont" for="check1">管理员</label></td>
 			</tr>
+			<tr>
+				<td colspan="4"><span style="color:#449d44;font-size:12px">(初始密码：123)</span></td>
+			</tr>
 			<tr></tr>
 		</table>
 		<input type="hidden" name="user.id"
 			value="<s:property value="user.id" />" /> <input type="submit"
 			class="btn btn-success f-fr" target="right"
 			style="width: 70px; margin-right: 17%" value="保 存" />
+			
 	</form>
 </body>
 <script type="text/javascript"

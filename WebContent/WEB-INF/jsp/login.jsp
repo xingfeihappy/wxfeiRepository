@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>管理员登录</title>
+<title>登录</title>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resource/css/vendor/bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/page/login.css">
 <script language="JavaScript"> 
@@ -41,7 +41,7 @@
 							class="login-field-icon fui-lock" for="login-pass"></label>
 					</div>
 					<input type="submit" class="btn btn-primary btn-lg btn-block">
-					<a class="login-link1" href="registerPage" target="_blank">没有帐号，注册一个</a>
+					<a class="login-link1" href="registerPage" target="_self">没有帐号，注册一个</a>
 				</form>
 			</div>
 		</div>

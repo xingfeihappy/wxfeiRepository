@@ -21,6 +21,9 @@
 		<action name="registerPage">
 			<result>/WEB-INF/jsp/register.jsp</result>
 		</action>
+		<action name="registerForm" class="com.projection.action.admin.OperateUserAction" method="AddUser">
+			<result>/WEB-INF/jsp/registerSuccess.jsp</result>
+		</action>
 		<action name="LoginForm" class="com.projection.action.login.LoginForm">
 			<result name="user">/WEB-INF/jsp/user/index.jsp</result>
 			<result name="admin">/WEB-INF/jsp/admin/index.jsp</result>

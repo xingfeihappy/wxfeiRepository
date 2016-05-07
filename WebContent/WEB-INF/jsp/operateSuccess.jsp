@@ -12,7 +12,7 @@
     <a class="btn btn-primary back f-fl" onclick="history.go(-1)" target="right">返 回</a><br /><br /><br />
 	<br>
 	<div style="margin: 10px auto; text-align: center;">
-		<img src="${pageContext.request.contextPath}/resource/image/messok.gif" align="absmiddle" style="border-width:0px;">&nbsp;
+		<img src="${pageContext.request.contextPath}/resource/image/success.png" align="absmiddle" style="border-width:0px;">&nbsp;
 		<span style="font-size:16px;font-weight:bold;">操作成功！</span>
 	</div>
 </body>

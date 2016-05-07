@@ -64,7 +64,7 @@ body {
 	<div class="container">
 		<div class="content">
 			<div class="idealsteps-container">
-				<form id="form1" action="submitRegister" novalidate
+				<form id="form1" action="registerForm" novalidate
 					autocomplete="off" class="idealforms" style="margin-left: 20px;">
 					<div class="idealsteps-wrap">
 						<!-- 步骤 1 -->
@@ -93,8 +93,8 @@ body {
 
 						<div class="field">
 							<label class="main">性别:</label> <label><input
-								name="user.sex" type="radio" value="男">男</label> <label><input
-								name="user.sex" type="radio" value="女">女</label> <span
+								name="user.sex" type="radio" value="0">男</label> <label><input
+								name="user.sex" type="radio" value="1">女</label> <span
 								class="error"></span>
 						</div>
 						<div class="field">

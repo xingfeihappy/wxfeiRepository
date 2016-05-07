@@ -12,17 +12,15 @@
 <form>
 	<br>
 	<div style="margin: 10px auto; text-align: center;">
-		<img src="${pageContext.request.contextPath}/resource/image/messok.gif" align="absmiddle" style="border-width:0px;">&nbsp;
+		<img src="${pageContext.request.contextPath}/resource/image/success.png" align="absmiddle" style="border-width:0px;">&nbsp;
 		<span style="font-size:16px;font-weight:bold;">注册成功！</span>
 	</div>
 	<div align="center" style="font-size: 12pt; line-height: 180%; width: 500px; margin: 10px auto;
 		border: solid 1px #e0e0e0; padding: 20px; background-color: #f6f6f6;">
 		&nbsp; &nbsp;
-		您已经注册成功，请使用您的手机号登录。
-		<p align="center" style="font-size: 9pt;"><a href="LoginPage">去登录？</a></p>
+		您已经注册成功，请使用您的用户名登录。
+		<p align="center" style="font-size: 9pt;"><a href="LoginPage">登录一下？</a></p>
 	</div>
-
 	</form>
-
 </body>
 </html>

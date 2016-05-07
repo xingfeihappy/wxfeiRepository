@@ -45,6 +45,7 @@ public class OperateUserAction extends BaseAction {
 				throw new NullPointerException("参数为空");
 			}
 
+			
 			//user.id exist, update user information
 			if(user.getId() != null){
 				User oldUser = userService.get(user.getId());
@@ -63,14 +64,22 @@ public class OperateUserAction extends BaseAction {
 			}else{
 				user.setUsername(StringUtil.trim(user.getUsername()));
 				user.setName(StringUtil.trim(user.getName()));
-				user.setPassword(MD5Util.MD5(Constant.DEFAULT_PASSWORD));
+				if(user.getPassword().equals("") || user.getPassword() == null){
+					user.setPassword(MD5Util.MD5(Constant.DEFAULT_PASSWORD));
+				}else{
+					user.setPassword(MD5Util.MD5(StringUtil.trim(user.getPassword())));
+				}
 				user.setBirthday(user.getBirthday());
 				user.setEmail(StringUtil.trim(user.getEmail()));
 				user.setSex(StringUtil.trim(user.getSex()));
 				user.setAddress(StringUtil.trim(user.getAddress()));
 				user.setTelephone(StringUtil.trim(user.getTelephone()));
-				user.setUserType(StringUtil.trim(user.getUserType()));
 				
+				if(user.getUserType() == null || user.getUserType() == ""){
+					user.setUserType("0");
+				}else{
+					user.setUserType(StringUtil.trim(user.getUserType()));
+				}
 				//add user and get userId
 				user.setId(userService.save(user));
 				
