@@ -60,13 +60,10 @@
 		</div>
    		<a class="btn btn-primary f-ib filter"  style="margin-left:230px;margin-right:20px;
    		margin-top:10px;width:80px;color:#fff;">搜 索</a>
-   		<!-- <button type="submit" class="btn btn-primary f-ib filter"  
-   		style="margin-left:230px;margin-right:30px;margin-top:10px;width:80px;color:#fff;">搜 索</button> -->
 		<a class="btn btn-primary f-ib clear" style="width:80px;margin-top:10px;color:#fff;">清 除</a>
 	</div>
 	</fieldset>	
     <br/> <br /> 
-    <button type="submit" class="btn btn-primary f-ib export" style="width:100px;padding:6px 0;margin-left:1.5%" href="AggregateQuerySearch?">导出到Excel</button><br /><br />
 	<div class="container-fluid">
 		<div class="row-fluid">
 			<table class="table table-hover table-borderSelf3 datatable" width="100%">

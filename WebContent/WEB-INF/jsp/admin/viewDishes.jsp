@@ -14,7 +14,7 @@
   <a class="btn btn-default f-fl"  onclick="history.go(-1)" target="right" style="width:70px;">返 回</a>&nbsp;&nbsp;
   <br/>
   <span id="sp" style="display:none"></span><br /><br />
-  <form class="newApplication registerform" action="AddDishesForm" method="post">
+    <div class="newApplication registerform" >
 	   <table class="table table-bordered">
 	     <tr>
 	       <td width="19%">名称</td>
@@ -24,7 +24,7 @@
 	       <td width="19%">单价</td>
 	       <td width="31%"><s:property value="dishes.price" /></td>
 	       <td width="19%">菜品种类</td>
-	       <td><s:property value="dishes.type.type" /></td>
+	       <td><s:property value="dishes.type" /></td>
 	     </tr>
 	     <tr>
 	       <td rowspan="3" width="19%">菜品描述</td>
@@ -36,9 +36,9 @@
 	     <tr></tr>
 	     <tr></tr>
 	   </table>
+	   </div>
 	   <input type="hidden" name="dishes.id" value="<s:property value="dishes.id" />" />
 	   <br />
-	 </form>
 </body>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/bootstrap/bootstrap-datetimepicker.js"></script>

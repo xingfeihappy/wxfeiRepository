@@ -23,13 +23,13 @@ i{display:inline-block;}
 .top .nav li i.logo2 {background-image: url(../../image/glyphicons-halflings-white.png);background-repeat: no-repeat;background-position: -315px -27px;background-size: 513px 174px;height: 16px;width: 16px;vertical-align: middle;}
 .top .nav li i.logo3 {background-image: url(../../image/glyphicons-halflings.png);background-repeat: no-repeat;background-position: -52px -27px;background-size: 513px 174px;height: 16px;width: 16px;vertical-align: middle;}
 .top .nav li i.logo4 {background-image: url(../../image/glyphicons-halflings.png);background-repeat: no-repeat;background-position: -132px -80px;background-size: 513px 174px;height: 16px;width: 16px;vertical-align: middle;}
-.top .nav li.drop ul{ display: none;position: absolute; top: 29px; left: 20px; width: 112px;z-index: 1000;  border: 1px solid rgb(122,156,211);}
+.top .nav li.drop ul{ display: none;position: absolute; top: 29px; left: 20px; width: 112px;z-index: 1000;  border: 1px solid rgb(240, 173, 78);}
 .top .nav li.drop:hover ul, .top .nav li a:hover ul {display: block;}
 .top .nav li.drop ul li {  background-color: #fff;  color: #000; width: 110px; text-align: center; height: 30px;line-height: 30px;
 padding: 0;border-bottom: 1px solid #ccc; vertical-align: baseline;}
 .top .nav li.drop ul li a{ display: block; height: 30px;color: #000 !important;text-decoration: none;} 
 
-.top .nav li.drop ul li a:hover{display: block; background: rgb(30,144,255) !important;color: #fff !important;} 
+.top .nav li.drop ul li a:hover{display: block; background: rgb(240, 173, 78) !important;color: #fff !important;} 
 /* 头部 */
 
 /* banner */
@@ -306,3 +306,5 @@ textarea{
 .appraise-ul{text-align: center;}
 .appraise-ul li{width:10%;border:1px solid #eee;float:left;padding:5px;cursor:pointer;margin-right:5px}
 .appraise-ul li:hover{background-color:#FA5D2F;color:#fff;border:0;padding:6px}
+.content-box-li{list-style: none}
+.table-width tr{height:30px !important}

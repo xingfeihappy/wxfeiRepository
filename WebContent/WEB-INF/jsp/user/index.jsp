@@ -47,10 +47,10 @@
               <span class="logo-text-t2">sea </span>
             </div>
           </a>
-           <form class="search_box f-fr">
+           <!-- <form class="search_box f-fr">
             <input type="text" class="search_input" placeholder="  输入检索内容" />
             <button class="btn-search">&nbsp;</button>
-          </form>
+          </form> -->
          </div>
        </div>
      </div>
@@ -116,13 +116,13 @@
        </div>
       </div>
    </div> -->
-				<script type="text/javascript"
-					src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>
-				<script type="text/javascript"
-					src="${pageContext.request.contextPath}/resource/js/common/common.js"></script>
-				<script type="text/javascript"
-					src="${pageContext.request.contextPath}/resource/js/vendor/showBo.js"></script>
-				<script>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/resource/js/common/common.js"></script>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/resource/js/vendor/showBo.js"></script>
+	<script>
 	   function login(){
 		   location.href='LoginPage'
 	   }

@@ -43,10 +43,10 @@
               <span class="logo-text-t2">sea </span>
             </div>
           </a>
-           <form class="search_box f-fr">
+           <!-- <form class="search_box f-fr">
             <input type="text" class="search_input" placeholder="  输入检索内容" />
             <button class="btn-search">&nbsp;</button>
-          </form>
+          </form> -->
          </div>
        </div>
      </div>

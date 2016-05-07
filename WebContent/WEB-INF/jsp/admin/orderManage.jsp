@@ -24,27 +24,33 @@
 	<thead>
 		<tr>
 			<th width="7.5%">序号</th>
-			<th width="7.5%">内容</th>
-			<th width="">评价星级</th>
-			<th width="">评价用户</th>
+			<th width="7.5%">订单编码</th>
+			<th width="">菜量</th>
+			<th width="">总计消费</th>
+			<th width="">下单时间</th>
 			<th width="">状态</th>
-			<th width="18%">管理操作</th>
+			<th width="">下单人</th>
+			<th width="">餐位</th>
+			<th width="">管理操作</th>
 		</tr>
 	</thead>
 	<tbody>
 	 <s:iterator value="orderList" status="index">
 		<tr>
 			<td><s:property value="#index.index+1" /></td>
-			<td><s:property value="content"/></td>
-			<td><s:property value="grade"/></td>
-			<td><s:property value="user.username"/></td>
+			<td><s:property value="codes"/></td>
+			<td><s:property value="foodNum"/></td>
+			<td><s:property value="totalMoney"/></td>
+			<td><s:date name="dinnerTime" format="yyyy-MM-dd"/></td>
 			<td><s:property value="state"/></td>
+			<td><s:property value="user.username"/></td>
+			<td><s:property value="seat.id"/></td>
 			<td>
-				<s:if test="state.equals('未处理')">
+				<%-- <s:if test="state.equals('未处理')">
 				    <a class="btn" href="EditOrder?order.id=<s:property value="id" />" target="right" title="修改信息">修改</a> 
-				</s:if>
-				<a class="btn" href="ViewOrder?order.id=<s:property value="id" />" target="right" title="查看详细信息">查看</a>
-				<a class="btn" href="javascript:void(0);"  onclick="deleteOpe(this)" title="删除">删除</a> 
+				</s:if> --%>
+				<a class="btn btn-success" href="ViewOrder?order.id=<s:property value="id" />" target="right" title="查看详细信息">查看</a>
+				<a class="btn btn-danger" href="javascript:void(0);"  onclick="deleteOpe(this)" title="删除">删除</a> 
 				<input type="hidden" value="<s:property value="id" />">
 		    </td>
 		</tr>
