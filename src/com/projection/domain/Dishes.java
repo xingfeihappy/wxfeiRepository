@@ -78,6 +78,15 @@ public class Dishes {
 	public void setValid(int valid) {
 		this.valid = valid;
 	}
+
+	@Override
+	public String toString() {
+		return "Dishes [id=" + id + ", name=" + name + ", price=" + price + ", type=" + type.getType() + ", description="
+				+ description + ", updateTime=" + updateTime + ", valid=" + valid
+				+ "]";
+	}
+	
+	
 	
 	
 }

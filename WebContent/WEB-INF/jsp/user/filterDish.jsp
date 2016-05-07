@@ -16,36 +16,40 @@
 <body onselectstart="return false;">
 	<div class="content-box">
 		<ul>
-			<li class="content-box-li">
+		<s:iterator value="dishesList" id="dishes">
+		<form action="addCar" method="post">
+		<input type="hidden" name="dishes.id" value="<s:property value='#dishes.id'/>" />
+	
+		<li class="content-box-li">
 				<div class="content-box-img f-fl">
 					<a href="dishDetail" target="_top"> <img
-						src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" />
+						src="ShowDishesPhoto?dishes.id=<s:property value='#dishes.id'/>" />
 					</a>
 				</div>
 				<div class="content-box-text f-fl">
 					<div class="text-title">
-						<a>包心菜</a>
+						<a><s:property value="#dishes.name"/></a>
 					</div>
 					<br />
 					<div class="text-grade">
-						<span>333</span> <span><a>406条评价</a></span>
+						<span><a><s:property value="#dishes.description"/></a></span>
 					</div>
 					<br />
 					<div class="text-type">
-						<span>zhushi</span>
+						<span><s:property value="#dishes.type.type"/></span>
 					</div>
 					<br />
 				</div>
 				<div class="content-box-price f-fl">
 					<div class="text-price">
-						<span>￥2.0</span>
+						<span><s:property value="#dishes.price"/></span>
 					</div>
 				</div>
 				<div class="content-box-count f-fl">
 					<button class="denis"
 						style="color: #fff; width: 20px; border: 0; background-color: #ff7200">
 						-</button>
-					<input type="text" readonly="true" class="dishcount"
+					<input type="text" readonly="true" name="amount" class="dishcount"
 						style="width: 60px" value="0" />
 					<button class="plus"
 						style="color: #fff; width: 20px; border: 0; background-color: #ff7200">
@@ -56,54 +60,12 @@
 						style="background-color: #ff7200; color: #fff" value="加入餐车" />
 				</div>
 				<div class="content-box-see-car f-fl">
-					<a class="btn seeCar"
-						style="background-color: #ff7200; color: #fff">查看餐车(0件)</a>
+					<a class="btn seeCar" href="seeCar"
+						style="background-color: #ff7200; color: #fff">查看餐车(<s:property value="#session.car.size" />件)</a>
 				</div>
 			</li>
-			<li class="content-box-li">
-				<div class="content-box-img f-fl">
-					<a href="dishDetail"> <img
-						src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" />
-					</a>
-				</div>
-				<div class="content-box-text f-fl">
-					<div class="text-title">
-						<a>包心菜</a>
-					</div>
-					<br />
-					<div class="text-grade">
-						<span>333</span> <span><a>406条评价</a></span>
-					</div>
-					<br />
-					<div class="text-type">
-						<span>zhushi</span>
-					</div>
-					<br />
-				</div>
-				<div class="content-box-price f-fl">
-					<div class="text-price">
-						<span>￥2.0</span>
-					</div>
-				</div>
-				<div class="content-box-count f-fl">
-					<button class="denis"
-						style="color: #fff; width: 20px; border: 0; background-color: #ff7200">
-						-</button>
-					<input type="text" readonly="true" class="dishcount"
-						style="width: 60px" value="0" />
-					<button class="plus"
-						style="color: #fff; width: 20px; border: 0; background-color: #ff7200">
-						+</button>
-				</div>
-				<div class="content-box-join f-fl">
-					<input type="submit" class="btn addCar"
-						style="background-color: #ff7200; color: #fff" value="加入餐车" />
-				</div>
-				<div class="content-box-see-car f-fl">
-					<a class="btn seeCar"
-						style="background-color: #ff7200; color: #fff">查看餐车(0件)</a>
-				</div>
-			</li>
+			</form>
+		</s:iterator>
 		</ul>
 	</div>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>

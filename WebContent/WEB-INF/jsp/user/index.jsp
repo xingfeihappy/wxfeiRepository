@@ -80,30 +80,10 @@
 						<li class="top-nav-ul-li"><a href="filterDish" target="right">
 								<i class="item1"></i> <span>全部</span>
 						</a></li>
-						<li class="top-nav-ul-li"><a href="filterDish" target="right">
-								<i class="item2"></i> <span>主食</span>
-						</a></li>
-						<li class="top-nav-ul-li"><a href="filterDish" target="right">
-								<i class="item3"></i> <span>荤菜</span>
-						</a></li>
-						<li class="top-nav-ul-li"><a href="filterDish" target="right">
-								<i class="item4"></i> <span>蔬菜</span>
-						</a></li>
-						<li class="top-nav-ul-li"><a href="filterDish" target="right">
-								<i class="item5"></i> <span>海鲜</span>
-						</a></li>
-						<li class="top-nav-ul-li"><a href="filterDish" target="right">
-								<i class="item6"></i> <span>凉菜</span>
-						</a></li>
-						<li class="top-nav-ul-li"><a href="filterDish" target="right">
-								<i class="item7"></i> <span>点心</span>
-						</a></li>
-						<li class="top-nav-ul-li"><a href="filterDish" target="right">
-								<i class="item8"></i> <span>汤羹</span>
-						</a></li>
-						<li class="top-nav-ul-li"><a href="filterDish" target="right">
-								<i class="item9"></i> <span>饮料</span>
-						</a></li>
+						<s:iterator value="#session.dishesTypes" status="index" >
+						<li class="top-nav-ul-li"><a href="filterDish?type=<s:property value='id'/>" target="right">
+								<i class="item<s:property value='#index.index+2'/>"></i> <span><s:property value="type" /></span></a></li>
+						</s:iterator>
 					</ul>
 				</div>
 				<iframe name="right" src="filterDish" id="iframe" scrolling="no"

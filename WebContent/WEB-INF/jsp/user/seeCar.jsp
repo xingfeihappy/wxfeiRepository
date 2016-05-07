@@ -44,78 +44,44 @@
    		    <div class="nav-content">
 				<div class="content-box">
 					<ul>
+					<s:iterator value="#session.car" id="entry">
 						<li class="content-box-li">
 							<div class="content-box-img f-fl">
 								<a href="dishDetail">
-									<img src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" />
+									<img src="ShowDishesPhoto?dishes.id=<s:property value='key.id'/>" />
 								</a>
 							</div>
 							<div class="content-box-text f-fl">
-								<div class="text-title"><a>包心菜</a></div><br />
+								<div class="text-title"><a><s:property value="key.name"/></a></div><br />
 								<div class="text-grade">
-									<span>333</span>
-									<span><a>406条评价</a></span>
+									<span><a><s:property value="#dishes.description"/></a></span>
 								</div>
 								<br />
 								<div class="text-type">
-									<span>zhushi</span>
+									<span><s:property value='key.type.type'/></span>
 								</div>
 								<br />
 							</div>
 							<div class="content-box-price f-fl">
 								<div class="text-price">
-									单价：&nbsp;&nbsp;<span>￥2.0</span>
+									单价：&nbsp;&nbsp;<span><s:property value='key.price'/></span>
 								</div>
 							</div>
 							<div class="content-box-count f-fl">
 								数量：&nbsp;&nbsp;<button type="button" class="denis" style="color:#fff;width:20px;border:0;background-color:#ff7200"> - </button>
-								<input type="text" readonly="true" class="dishcount" style="width:60px" value="0"/>
+								<input type="text" value="<s:property value='value' />" readonly="true" class="dishcount" style="width:60px" value="0"/>
 								<button class="plus" type="button" style="color:#fff;width:20px;border:0;background-color:#ff7200"> + </button>
 							</div>
 							<div class="content-box-join f-fl">
 								<div class="text-price" style="margin-top:0;padding-top:0">
-									小计：&nbsp;&nbsp;<span>￥2.0</span>
+									小计：&nbsp;&nbsp;<span><s:property value='key.price*value'/></span>
 								</div>							</div>
 							<div class="content-box-see-car f-fl">
-								<a class="btn seeCar" style="background-color:#ff7200;color:#fff">删除</a>
+								<a class="btn seeCar" href="deleteFromCar?dishes.id=<s:property value='key.id'/>" style="background-color:#ff7200;color:#fff">删除</a>
 							</div>
 						</li>
-						<li class="content-box-li">
-							<div class="content-box-img f-fl">
-								<a href="dishDetail">
-									<img src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" />
-								</a>
-							</div>
-							<div class="content-box-text f-fl">
-								<div class="text-title"><a>包心菜</a></div><br />
-								<div class="text-grade">
-									<span>333</span>
-									<span><a>406条评价</a></span>
-								</div>
-								<br />
-								<div class="text-type">
-									<span>zhushi</span>
-								</div>
-								<br />
-							</div>
-							<div class="content-box-price f-fl">
-								<div class="text-price">
-									单价：&nbsp;&nbsp;<span>￥2.0</span>
-								</div>
-							</div>
-							<div class="content-box-count f-fl">
-								数量：&nbsp;&nbsp;<button type="button" class="denis" style="color:#fff;width:20px;border:0;background-color:#ff7200"> - </button>
-								<input type="text" readonly="true" class="dishcount" style="width:60px" value="0"/>
-								<button type="button" class="plus" style="color:#fff;width:20px;border:0;background-color:#ff7200"> + </button>
-							</div>
-							<div class="content-box-join f-fl">
-								<div class="text-price" style="margin-top:0;padding-top:0">
-									小计：&nbsp;&nbsp;<span>￥2.0</span>
-								</div>							</div>
-							<div class="content-box-see-car f-fl">
-								<a class="btn seeCar" style="background-color:#ff7200;color:#fff">删除</a>
-							</div>
-						</li>
+						</s:iterator>
+						
 						<li class="content-box-li1">
 							<div>应付金额：<span class="">￥23</span></div>
 						</li>

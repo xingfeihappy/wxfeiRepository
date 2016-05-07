@@ -172,13 +172,19 @@
 		<action name="myOrders">
 			<result>/WEB-INF/jsp/user/myOrders.jsp</result>
 		</action>
+		<action name="addCar" class="com.projection.action.car.CarAction" method="addCar">
+			<result type="redirect">filterDish</result>
+		</action>
 		<action name="seeCar">
 			<result>/WEB-INF/jsp/user/seeCar.jsp</result>
+		</action>
+		<action name="deleteFromCar" class="com.projection.action.car.CarAction" method="deleteFromCar">
+			<result type="redirect">seeCar</result>
 		</action>
 		<action name="goToAppraise">
 			<result>/WEB-INF/jsp/user/goToAppraise.jsp</result>
 		</action>
-		<action name="filterDish">
+		<action name="filterDish" class="com.projection.action.dishes.DishesAction">
 			<result>/WEB-INF/jsp/user/filterDish.jsp</result>
 		</action>
 	</package>

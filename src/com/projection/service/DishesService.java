@@ -19,6 +19,17 @@ public class DishesService extends BaseService {
 		}
 		return result;
 	}
+	
+	public List<Dishes> getByType(Integer type) {
+		List<Dishes> dishes = dishesDao.getAll();
+		List<Dishes> result = new ArrayList<>();
+		for (Dishes dish : dishes) {
+			if (dish.getValid() == 1 && dish.getType().getId() == type) {
+				result.add(dish);
+			}
+		}
+		return result;
+	}
 
 	public Dishes get(Integer id) {
 		return dishesDao.get(id);
