@@ -23,7 +23,7 @@
 			   <li><span href="#" style="color: #000;margin-left: 30px;"><i class="logo1" style="margin-right: 8px;"></i>welcome：<s:property value="#session.user.username"/><%-- <%=session.getAttribute(Constant.USER_NAME) %> --%></span></li>
                <s:if test="user.userType.length <0"><li><span href="#" style="color: #000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>登录</span></li></s:if>
                <li><span href="#" style="color: #000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>注册</span></li>
-               <li><span href="#" style="color: #000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>我的订单</span></li>
+               <li><a style="padding:0;cursor:pointer" href="myOrders" target="_self"><span href="#" style="color: #000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>我的订单</span></a></li>
 			   <li class="drop" style="height: 30px;"><span style="color: #000;margin-left: 30px;cursor: pointer;position: relative;">个人资料</span>
 					<ul class="sub_menu">
 						<li><a href="ModifyPassword"  target="right">密码修改</a></li>
