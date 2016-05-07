@@ -307,4 +307,4 @@ textarea{
 .appraise-ul li{width:10%;border:1px solid #eee;float:left;padding:5px;cursor:pointer;margin-right:5px}
 .appraise-ul li:hover{background-color:#FA5D2F;color:#fff;border:0;padding:6px}
 .content-box-li{list-style: none}
-.table-width tr{height:30px !important}
+.table-width tbody tr,.table-width thead tr{height:45px !important}

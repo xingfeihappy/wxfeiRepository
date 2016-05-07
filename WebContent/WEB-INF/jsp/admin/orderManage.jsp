@@ -15,7 +15,7 @@
 	<div class="adminShow" >
 		<form method="post" action="DataBackupSingle" style="display:inline-block">
 	      <input type="submit" class="btn btn-primary btn-success" style="width:80px;" value="备  份" />
-	      <input type="hidden" name="check1" value="1" />
+	      <input type="hidden" name="check4" value="4" />
 	    </form>
 		<br /><br />
 	</div>

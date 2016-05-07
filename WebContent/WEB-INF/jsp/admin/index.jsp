@@ -77,16 +77,16 @@
               </dl>
               <dl class="end_application_manage">
                  <dt onClick="getclassname(this)"><a href="LogManage" target="right" style="display:block;" >日志管理</a></dt>
-              </dl>
+              </dl><!-- 
                <dl class="general_query">
                  <a href="AllSearch" target="right" style="text-decoration:none;" > <dt onClick="getclassname(this)">汇总查询</dt></a>
-              </dl>
+              </dl> -->
            </div>
 	      </div>
 	      </div>
 	     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 kdLeft">
 		     <div class="right_content_box">
-		       <iframe name="right" src="AllSearch" id="iframe" scrolling="no"  marginWidth="0" onLoad="" frameborder="0" style="width: 100%;height:1000px;margin: 0px; padding: 0px;">
+		       <iframe name="right" src="AdminFace" id="iframe" scrolling="no"  marginWidth="0" onLoad="" frameborder="0" style="width: 100%;height:1000px;margin: 0px; padding: 0px;">
 		       </iframe> 
 		     </div>
 	    </div> 

@@ -96,8 +96,14 @@
 		<!-- ==========================================================dishesManage -->
 		
 		<!-- ===========================================================orderManage -->
-		<action name="OrderManage">
+		<action name="OrderManage" class="com.projection.action.admin.OrderAction">
 			<result>/WEB-INF/jsp/admin/orderManage.jsp</result>
+		</action>
+		<action name="DeleteOrder" class="com.projection.action.admin.OrderAction" method="DeleteOrder">
+			<result type="redirect">OrderManage</result>
+		</action>
+		<action name="ViewOrder" class="com.projection.action.admin.OrderAction" method="GetAOrder">
+			<result>/WEB-INF/jsp/admin/viewOrder.jsp</result>
 		</action>
 		<!-- ===========================================================orderManage -->
 		
@@ -146,8 +152,15 @@
 		<!-- =============================================================logManage -->
 		
 		<!-- =============================================================allSearch -->
-		<action name="AllSearch">
-			<result>/WEB-INF/jsp/admin/allSearch.jsp</result>
+		<action name="AdminFace">
+			<result>/WEB-INF/jsp/admin/adminFace.jsp</result>
+		</action>
+		<action name="DataBackupSingle" class="com.projection.action.admin.ExportAction">
+			<result name="success" type="stream">
+			  <param name="contentType">application/vnd.ms-excel</param>
+			  <param name="contentDisposition">attachment;filename="backup.xls"</param>
+			  <param name="inputName">inputStream</param>
+			</result>
 		</action>
 		<!-- =============================================================allSearch -->
 	</package>
