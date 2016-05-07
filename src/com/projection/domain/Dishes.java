@@ -6,7 +6,7 @@ public class Dishes {
 	private Integer id;
 	private String name;
 	private Double price;
-	private String type;
+	private DishesType type;
 	private String description;
 	private byte[] photo;
 	private Date updateTime;
@@ -39,11 +39,11 @@ public class Dishes {
 		this.price = price;
 	}
 
-	public String getType() {
+	public DishesType getType() {
 		return type;
 	}
 
-	public void setType(String type) {
+	public void setType(DishesType type) {
 		this.type = type;
 	}
 

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.projection.domain.Dishes;
+import com.projection.domain.DishesType;
 import com.projection.service.Base.BaseService;
 
 public class DishesService extends BaseService {
@@ -34,6 +35,14 @@ public class DishesService extends BaseService {
 	public void delete(Dishes dishes) {
 		dishes.setValid(0);
 		dishesDao.update(dishes);
+	}
+	
+	public DishesType getTypeById(Integer id) {
+		return dishesTypeDao.get(id);
+	}
+	
+	public List<DishesType> getAllTypes(){
+		return dishesTypeDao.getAll();
 	}
 
 }

@@ -169,4 +169,9 @@
 			<result>/WEB-INF/jsp/user/filterDish.jsp</result>
 		</action>
 	</package>
+	
+	<package name="test" extends="struts-default">
+		<action name="TestOrder" class="com.projection.action.test.TestClass">
+		</action>
+	</package>
 </struts>

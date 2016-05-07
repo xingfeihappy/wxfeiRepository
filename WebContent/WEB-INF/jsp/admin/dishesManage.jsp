@@ -37,7 +37,7 @@
 			<td><s:property value="#index.index+1" /></td>
 			<td><s:property value="name"/></td>
 			<td><s:property value="price"/></td>
-			<td><s:property value="type"/></td>
+			<td><s:property value="type.type"/></td>
 			<td>
 			    <a class="btn btn-warning" href="EditDishesPage?dishes.id=<s:property value="id" />" target="right" title="修改信息">修改</a> 
 				<a class="btn btn-success" href="ViewDishesPage?dishes.id=<s:property value="id" />" target="right" title="查看详细信息">查看</a>

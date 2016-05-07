@@ -24,7 +24,7 @@
 	       <td width="19%">单价</td>
 	       <td width="31%"><s:property value="dishes.price" /></td>
 	       <td width="19%">菜品种类</td>
-	       <td><s:property value="dishes.type" /></td>
+	       <td><s:property value="dishes.type.type" /></td>
 	     </tr>
 	     <tr>
 	       <td rowspan="3" width="19%">菜品描述</td>

@@ -9,17 +9,12 @@
 	<bean id="daoTemplate" abstract="true" lazy-init="true"
 		p:sessionFactory-ref="sessionFactory" />
 
-    <bean id="dishesDao" class="com.projection.dao.DishesDao"
-		parent="daoTemplate" /> 
-    <bean id="messageDao" class="com.projection.dao.MessageDao"
-		parent="daoTemplate" />
-    <bean id="orderDao" class="com.projection.dao.OrderDao"
-		parent="daoTemplate" />
-    <bean id="seatDao" class="com.projection.dao.SeatDao"
-		parent="daoTemplate" />
-    <bean id="userDao" class="com.projection.dao.UserDao"
-		parent="daoTemplate" />
-    <bean id="logDao" class="com.projection.dao.LogDao"
-		parent="daoTemplate" />
+	<bean id="dishesDao" class="com.projection.dao.DishesDao" parent="daoTemplate" />
+	<bean id="dishesTypeDao" class="com.projection.dao.DishesTypeDao" parent="daoTemplate" />
+	<bean id="messageDao" class="com.projection.dao.MessageDao"	parent="daoTemplate" />
+	<bean id="orderDao" class="com.projection.dao.OrderDao" parent="daoTemplate" />
+	<bean id="seatDao" class="com.projection.dao.SeatDao" parent="daoTemplate" />
+	<bean id="userDao" class="com.projection.dao.UserDao" parent="daoTemplate" />
+	<bean id="logDao" class="com.projection.dao.LogDao" parent="daoTemplate" />
 </beans>
 	

@@ -20,7 +20,9 @@ public class LoginForm extends BaseAction {
 			}
 			System.out.println(user.getUsername());
 			ctx.getSession().put(Constant.LOGIN_USER, user);
-
+			
+			//put all dishesTypes into session
+			ctx.getSession().put(Constant.DISHES_TYPES, dishesService.getAllTypes());
 			if ("0".equals(user.getUserType())) {
 				System.out.println(0);
 				return "user";

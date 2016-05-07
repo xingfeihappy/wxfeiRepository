@@ -16,6 +16,7 @@ public class DishesAction extends BaseAction {
 	private static final long serialVersionUID = 7974198552914942825L;
 	private String logContent;
 	private Dishes dishes;
+	private Integer type;
 	private List<Dishes> dishesList;
 	private File file;
 
@@ -44,14 +45,13 @@ public class DishesAction extends BaseAction {
 			if (dishes == null) {
 				throw new NullPointerException("参数为空");
 			}
-			System.out.println("jsfdkajsdkflasjdkl");
 			if (dishes.getId() != null) {
 				logContent = "更新菜品信息";
 				Dishes oldDishes = dishesService.get(dishes.getId());
 				oldDishes.setDescription(StringUtil.trim(dishes.getDescription()));
 				oldDishes.setName(StringUtil.trim(dishes.getName()));
 				oldDishes.setPrice(dishes.getPrice());
-				oldDishes.setType(StringUtil.trim(dishes.getType()));
+				oldDishes.setType(dishesService.getTypeById(type));
 				oldDishes.setDescription(StringUtil.trim(dishes.getDescription()));
 				oldDishes.setUpdateTime(new Date());
 				dishes = oldDishes;
@@ -60,7 +60,7 @@ public class DishesAction extends BaseAction {
 				dishes.setDescription(StringUtil.trim(dishes.getDescription()));
 				dishes.setName(StringUtil.trim(dishes.getName()));
 				dishes.setPrice(dishes.getPrice());
-				dishes.setType(StringUtil.trim(dishes.getType()));
+				dishes.setType(dishesService.getTypeById(type));
 				dishes.setDescription(StringUtil.trim(dishes.getDescription()));
 				dishes.setUpdateTime(new Date());
 			}
@@ -181,5 +181,13 @@ public class DishesAction extends BaseAction {
 
 	public void setIps(InputStream ips) {
 		this.ips = ips;
+	}
+
+	public Integer getType() {
+		return type;
+	}
+
+	public void setType(Integer type) {
+		this.type = type;
 	}
 }

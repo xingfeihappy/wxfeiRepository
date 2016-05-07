@@ -24,10 +24,11 @@
 		<many-to-one name="seat" column="seatId" class="Seat"
 			cascade="none" lazy="proxy" fetch="select" />
 
-		<set name="dishesSet" table="order_dishes">
+		<map name="dishesMap" table="order_dishes">
 			<key column="orderId" />
-			<many-to-many class="Dishes" column="dishesId" />
-		</set>
+			<index-many-to-many class="Dishes" column="dishesId" />
+			<element type="int" column="amount" />
+		</map>
 
 	</class>
 </hibernate-mapping>

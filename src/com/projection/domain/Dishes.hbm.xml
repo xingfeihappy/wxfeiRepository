@@ -16,7 +16,7 @@
 
 		<property name="name" column="name" type="string" />
 		<property name="price" column="price" type="double"/>
-		<property name="type" column="type" type="string"/>
+		<many-to-one name="type" column="type" cascade="all" class="DishesType" unique="true"/>
 		<property name="description" column="description" type="string"/>
 		
 		<property name="photo" lazy="true" column="photo" type="org.springframework.orm.hibernate3.support.BlobByteArrayType" />

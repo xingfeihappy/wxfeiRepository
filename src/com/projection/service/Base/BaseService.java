@@ -1,6 +1,7 @@
 package com.projection.service.Base;
 
 import com.projection.dao.DishesDao;
+import com.projection.dao.DishesTypeDao;
 import com.projection.dao.LogDao;
 import com.projection.dao.MessageDao;
 import com.projection.dao.OrderDao;
@@ -10,6 +11,7 @@ import com.projection.dao.UserDao;
 public class BaseService {
 	protected UserDao userDao;
 	protected DishesDao dishesDao;
+	protected DishesTypeDao dishesTypeDao;
 	protected MessageDao messageDao;
 	protected OrderDao orderDao;
 	protected SeatDao seatDao;
@@ -61,5 +63,13 @@ public class BaseService {
 
 	public void setLogDao(LogDao logDao) {
 		this.logDao = logDao;
+	}
+
+	public DishesTypeDao getDishesTypeDao() {
+		return dishesTypeDao;
+	}
+
+	public void setDishesTypeDao(DishesTypeDao dishesTypeDao) {
+		this.dishesTypeDao = dishesTypeDao;
 	}
 }

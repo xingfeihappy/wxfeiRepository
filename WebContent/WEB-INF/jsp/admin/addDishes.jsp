@@ -24,7 +24,17 @@
 	       <td width="19%">单价</td>
 	       <td width="31%"><input type='text' name="dishes.price" value="<s:property value="dishes.price" />"/></td>
 	       <td width="19%">菜品种类</td>
-	       <td><input type='text' name="dishes.type" value="<s:property value="dishes.type" />"/></td>
+	       <td>
+	       <select name="type">
+		   	<option></option>
+			<s:iterator value="#session.dishesTypes" id="type">
+				<option <s:if test="dishes.type.id==#type.id">selected</s:if> value="<s:property value="#type.id"/>"><s:property value="#type.type"/></option>
+			</s:iterator>
+           </select>
+
+	       <%-- <input type='text' name="dishes.type" value="<s:property value="dishes.type" />"/> --%>
+	       
+	       </td>
 	     </tr>
 	     <tr>
 	       <td rowspan="3" width="19%">菜品描述</td>

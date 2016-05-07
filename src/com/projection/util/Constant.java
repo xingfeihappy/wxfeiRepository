@@ -3,6 +3,7 @@ package com.projection.util;
 public class Constant {
 	public static String DEFAULT_PASSWORD = "123";
 	public static String ERROR = "error";
+	public static String DISHES_TYPES = "dishesTypes";
 	public static String LOGIN_USER = "user";
 	public static String USER_TYPE = "userType";
 	public static String USER_ID = "userId";

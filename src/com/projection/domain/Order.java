@@ -1,7 +1,7 @@
 package com.projection.domain;
 
 import java.util.Date;
-import java.util.Set;
+import java.util.Map;
 public class Order {
 	private Integer id;
 	private String codes;
@@ -11,7 +11,7 @@ public class Order {
 	private Double totalMoney;
 	private Date dinnerTime;
 	private String state;
-	private Set<Dishes> dishesSet;
+	private Map<Dishes, Integer> dishesMap;
 	
 	public Order(){
 		
@@ -81,12 +81,12 @@ public class Order {
 		this.seat = seat;
 	}
 
-	public Set<Dishes> getDishesSet() {
-		return dishesSet;
+	public Map<Dishes, Integer> getDishesMap() {
+		return dishesMap;
 	}
 
-	public void setDishesSet(Set<Dishes> dishesSet) {
-		this.dishesSet = dishesSet;
+	public void setDishesMap(Map<Dishes, Integer> dishesMap) {
+		this.dishesMap = dishesMap;
 	}
-	
+
 }
