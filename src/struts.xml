@@ -193,6 +193,9 @@
 		<action name="filterDish" class="com.projection.action.dishes.DishesAction">
 			<result>/WEB-INF/jsp/user/filterDish.jsp</result>
 		</action>
+		<action name="chooseSeatPage">
+			<result>/WEB-INF/jsp/user/chooseSeat.jsp</result>
+		</action>
 	</package>
 	
 	<package name="test" extends="struts-default">

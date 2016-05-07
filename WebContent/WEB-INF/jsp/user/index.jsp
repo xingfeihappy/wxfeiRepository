@@ -20,10 +20,10 @@
           <div class="top">
           <!-- 普通用户 -->
 		    <ul class="nav clearfix">
-			   <li><span href="#" style="color: #000;margin-left: 30px;"><i class="logo1" style="margin-right: 8px;"></i>welcome：<s:property value="#session.user.username"/><%-- <%=session.getAttribute(Constant.USER_NAME) %> --%></span></li>
-               <s:if test="user.userType.length <0"><li><span href="#" style="color: #000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>登录</span></li></s:if>
-               <li><span href="#" style="color: #000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>注册</span></li>
-               <li><a style="padding:0;cursor:pointer" href="myOrders" target="_self"><span href="#" style="color: #000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>我的订单</span></a></li>
+			   <li><span style="color: #000;margin-left: 30px;"><i class="logo1" style="margin-right: 8px;"></i>welcome：<s:property value="#session.user.username"/><%-- <%=session.getAttribute(Constant.USER_NAME) %> --%></span></li>
+               <s:if test="#session.user == null"><li><span style="color: #000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>登录</span></li></s:if>
+               <li><a href="chooseSeatPage" target="right" style="cursor:pointer;color: #000;margin-left: 30px;padding:0"><i class="logo5" style="margin-right: 8px;"></i>注册</a></li>
+               <li><a style="padding:0;cursor:pointer" href="myOrders" target="right"><span href="#" style="color: #000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>我的订单</span></a></li>
 			   <li class="drop" style="height: 30px;"><span style="color: #000;margin-left: 30px;cursor: pointer;position: relative;">个人资料</span>
 					<ul class="sub_menu">
 						<li><a href="ModifyPassword"  target="right">密码修改</a></li>
@@ -106,19 +106,6 @@
 	   function login(){
 		   location.href='LoginPage'
 	   }
-	   $(".navcontent table tr").mouseover(function(){
-		   $(this).parent().css({"border-left":"2px solid #eee","border-right":"0px","border-bottom":"0px"})
-		   $(".dishes-type").fadeIn("3000");
-	   })
-	   $(".navcontent table tr").mouseleave(function(){
-		   $(this).parent().css({"border": "1px solid #eee",
-				    "border-top": "2px solid #ff7200"})
-		   $(".dishes-type").fadeOut("3000");
-	   })
-	   $(".dishes-type ul li a,.navmenu ul li a").click(function(){
-		   $(".g-main1").css("display","none");
-		   $(".g-main-content").css("display","");
-	   })
 	    /* 判断加入购物车 前判断数量*/
 	   $(".addCar").click(function(){
 		   if($(".dishcount").attr("value") == 0){

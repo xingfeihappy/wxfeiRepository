@@ -308,3 +308,7 @@ textarea{
 .appraise-ul li:hover{background-color:#FA5D2F;color:#fff;border:0;padding:6px}
 .content-box-li{list-style: none}
 .table-width tbody tr,.table-width thead tr{height:45px !important}
+.content-box-li-hover li{border:1px solid #FA5D2F;float:left;margin-right:5%;margin-bottom:20px;}
+.content-box-li-hover li a{display:block}
+.content-box-li-hover li:hover{background-color:#FA5D2F;}
+.content-box-li-hover li:hover span{color:#fff}

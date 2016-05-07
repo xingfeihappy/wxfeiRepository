@@ -22,7 +22,7 @@
 	
 		<li class="content-box-li">
 				<div class="content-box-img f-fl">
-					<a href="dishDetail" target="_top"> <img
+					<a href="dishDetail" target="_self"> <img
 						src="ShowDishesPhoto?dishes.id=<s:property value='#dishes.id'/>" />
 					</a>
 				</div>
@@ -60,7 +60,7 @@
 						style="background-color: #ff7200; color: #fff" value="加入餐车" />
 				</div>
 				<div class="content-box-see-car f-fl">
-					<a class="btn seeCar" href="seeCar" target="_top"
+					<a class="btn seeCar" href="seeCar" target="_self"
 						style="background-color: #ff7200; color: #fff">查看餐车(<s:property value="#session.car.size" />件)</a>
 				</div>
 			</li>
@@ -72,22 +72,7 @@
    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/common/common.js"></script>
    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/showBo.js"></script>
    <script>
-	   function login(){
-		   location.href='LoginPage'
-	   }
-	   $(".navcontent table tr").mouseover(function(){
-		   $(this).parent().css({"border-left":"2px solid #eee","border-right":"0px","border-bottom":"0px"})
-		   $(".dishes-type").fadeIn("3000");
-	   })
-	   $(".navcontent table tr").mouseleave(function(){
-		   $(this).parent().css({"border": "1px solid #eee",
-				    "border-top": "2px solid #ff7200"})
-		   $(".dishes-type").fadeOut("3000");
-	   })
-	   $(".dishes-type ul li a,.navmenu ul li a").click(function(){
-		   $(".g-main1").css("display","none");
-		   $(".g-main-content").css("display","");
-	   })
+	   
 	   /* 数量的加减 */
 	   var dishcount;
 	   var count = 0;
