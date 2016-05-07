@@ -13,8 +13,11 @@
 <script language="JavaScript"> 
 	if (window != top) 
 	top.location.href = location.href; 
-	</script>
-
+</script>
+<style>
+ .login-link1{color:#bfc9ca;display: block;margin-top: 15px;font-size: 13px;text-align: center;}
+ .login-link1:hover{color:#31B0D5}
+</style>
 </head>
 <body>
 	<div class="container">
@@ -38,7 +41,7 @@
 							class="login-field-icon fui-lock" for="login-pass"></label>
 					</div>
 					<input type="submit" class="btn btn-primary btn-lg btn-block">
-					<a class="login-link" href="#"><s:property value="error" /></a>
+					<a class="login-link1" href="registerPage" target="_blank">没有帐号，注册一个</a>
 				</form>
 			</div>
 		</div>

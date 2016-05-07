@@ -40,7 +40,7 @@
    <div class="g-main-content">
    	<div class="container">
    		<div class="row">
-   		  <form>
+   		  <form id="form">
    		    <div class="nav-content">
 				<div class="content-box">
 					<ul>
@@ -86,7 +86,7 @@
 							<div>应付金额：<span class="">￥23</span></div>
 						</li>
 					</ul>
-					<input type="submit" class="btn submitCar f-fr" style="background-color:#ff7200;color:#fff;margin-right:6%" value="提交订单"/>
+					<input type="button" class="btn submitCar f-fr" style="background-color:#ff7200;color:#fff;margin-right:6%" value="提交订单"/>
 				</div>   		    	
    			</div>
    		  </form>
@@ -122,7 +122,7 @@
 	   })
 	   /* 数量的加减 */
 	   var dishcount;
-	   var count = 0;
+	   var count = $(".dishcount").attr("value");;
 	   $(".denis").click(function(){
 		   dishcount = $(".dishcount").attr("value");
 		   if(dishcount <= 0){
@@ -139,11 +139,13 @@
 		   $(this).prev().attr("value",count);
 	   })
 	    /* 判断加入购物车 前判断数量*/
-	   $(".addCar").click(function(){
+	   $(".submitCar").click(function(){
 		   if($(".dishcount").attr("value") == 0){
-			   Showbo.Msg.confirm('请先添加数量',function(flag){
+			   Showbo.Msg.confirm('餐车中有数量为0的菜',function(flag){
 					if(flag=='yes'){}	
 				}); 
+		   }else{
+			   $("#form").submit();
 		   }
 	   })
    </script>

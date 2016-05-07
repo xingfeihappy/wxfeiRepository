@@ -17,7 +17,7 @@
 	<div class="content-box">
 		<ul>
 		<s:iterator value="dishesList" id="dishes">
-		<form action="addCar" method="post">
+		<form action="addCar" method="post" id="form">
 		<input type="hidden" name="dishes.id" value="<s:property value='#dishes.id'/>" />
 	
 		<li class="content-box-li">
@@ -42,25 +42,25 @@
 				</div>
 				<div class="content-box-price f-fl">
 					<div class="text-price">
-						<span><s:property value="#dishes.price"/></span>
+						<span>￥<s:property value="#dishes.price"/></span>
 					</div>
 				</div>
 				<div class="content-box-count f-fl">
-					<button class="denis"
+					<button class="denis" type="button"
 						style="color: #fff; width: 20px; border: 0; background-color: #ff7200">
 						-</button>
 					<input type="text" readonly="true" name="amount" class="dishcount"
 						style="width: 60px" value="0" />
-					<button class="plus"
+					<button class="plus" type="button"
 						style="color: #fff; width: 20px; border: 0; background-color: #ff7200">
 						+</button>
 				</div>
 				<div class="content-box-join f-fl">
-					<input type="submit" class="btn addCar"
+					<input type="button" class="btn addCar"
 						style="background-color: #ff7200; color: #fff" value="加入餐车" />
 				</div>
 				<div class="content-box-see-car f-fl">
-					<a class="btn seeCar" href="seeCar"
+					<a class="btn seeCar" href="seeCar" target="_top"
 						style="background-color: #ff7200; color: #fff">查看餐车(<s:property value="#session.car.size" />件)</a>
 				</div>
 			</li>
@@ -110,8 +110,12 @@
 	   $(".addCar").click(function(){
 		   if($(".dishcount").attr("value") == 0){
 			   Showbo.Msg.confirm('请先添加数量',function(flag){
-					if(flag=='yes'){}	
+					if(flag=='yes'){
+						
+					}	
 				}); 
+		   }else{
+			   $("#form").submit();
 		   }
 	   })
    </script>
