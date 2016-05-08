@@ -87,7 +87,7 @@
 				</div>
 				<iframe name="right" src="filterDish?type=-1" id="iframe" scrolling="no"
 					marginWidth="0" onLoad="" frameborder="0"
-					style="width: 100%; height: 3000px; margin: 0px; padding: 0px;"></iframe>
+					style="width: 100%; height: 2000px; margin: 0px; padding: 0px;"></iframe>
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>
 	<script type="text/javascript"
