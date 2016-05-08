@@ -60,11 +60,11 @@
        <div class="row">
          <div class="navmenu">
 			<ul>
-				<li class="mainlevel"><a href="filterDish" target="right">首页</a></li>
-				<li class="mainlevel"><a href="filterDish" target="right">推荐菜</a></li>
-				<li class="mainlevel"><a href="filterDish" target="right">新上新</a></li>
-				<li class="mainlevel"><a href="filterDish" target="right">评分高</a></li>
-				<li class="mainlevel"><a href="filterDish" target="right">大酬宾</a></li>
+				<li class="mainlevel"><a href="filterDish?type=-1" target="right">首页</a></li>
+				<li class="mainlevel"><a href="anotherFilter?type=1" target="right">推荐菜</a></li>
+				<li class="mainlevel"><a href="anotherFilter?type=2" target="right">新上新</a></li>
+				<li class="mainlevel"><a href="anotherFilter?type=3" target="right">都说好</a></li>
+				<li class="mainlevel"><a href="anotherFilter?type=4" target="right">大酬宾</a></li>
 			</ul>
 		</div>
 		

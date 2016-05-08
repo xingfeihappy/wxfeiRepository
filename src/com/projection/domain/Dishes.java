@@ -11,6 +11,7 @@ public class Dishes {
 	private byte[] photo;
 	private Date updateTime;
 	private int valid = 1;
+	private int recommended = 0;//改项被推荐的次数
 	public Dishes(){
 		
 	}
@@ -79,10 +80,18 @@ public class Dishes {
 		this.valid = valid;
 	}
 
+	public int getRecommended() {
+		return recommended;
+	}
+
+	public void setRecommended(int recommended) {
+		this.recommended = recommended;
+	}
+
 	@Override
 	public String toString() {
 		return "Dishes [id=" + id + ", name=" + name + ", price=" + price + ", type=" + type.getType() + ", description="
-				+ description + ", updateTime=" + updateTime + ", valid=" + valid
+				+ description + ", updateTime=" + updateTime + ", valid=" + valid + ", recommended=" + recommended
 				+ "]";
 	}
 

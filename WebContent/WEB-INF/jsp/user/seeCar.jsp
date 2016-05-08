@@ -21,7 +21,7 @@
 					<s:iterator value="#session.car" id="entry">
 						<li class="content-box-li">
 							<div class="content-box-img f-fl">
-								<a href="dishDetail">
+								<a href="dishDetail?dishes.id=<s:property value='key.id'/>" target="_self"">
 									<img src="ShowDishesPhoto?dishes.id=<s:property value='key.id'/>" />
 								</a>
 							</div>
@@ -71,6 +71,5 @@
    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>
    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/common/common.js"></script>
    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/showBo.js"></script>
-   <script>
 </body>
 </html>

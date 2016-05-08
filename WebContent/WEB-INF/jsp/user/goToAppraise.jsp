@@ -24,18 +24,8 @@
 		<input type="radio" name="message.grade" value="2" />一般
 		<input type="radio" name="message.grade" value="1" />差
 		<input type="radio" name="message.grade" value="0" />强烈不推荐
-		
-		<!-- <ul class="appraise-ul" style="padding: 10px 0 10px 10%;"> -->		
-			<!-- <li>强烈推荐</li>
-			<li>很满意</li>
-			<li>满意</li>
-			<li>一般</li>
-			<li>差</li> -->
-			
-		<!-- </ul> -->
-		
 		<div>&nbsp;</div>
-		<div style="padding: 10px 0 10px 10%;">
+		<div style="padding: 10px 0 10px 0;">
 			<div>菜品口味如何？服务周到吗？环境如何？（写够15字，才是好同志~）</div>
 			<br />
 			<table style="width: 60%;">
@@ -48,10 +38,14 @@
 			<input type="checkbox" name="recommendation" value="<s:property value='#dish.id'/>" /><s:property value='#dish.name'/>
 			</s:iterator>
 			<input type="hidden" name="order.id" value="${order.id }" />
-			<input type="submit" class="btn addCar"
+			<s:if test="order.state==1"><input type="submit" class="btn addCar"
 				style="margin-top: 10px; background-color: #ff7200; color: #fff"
 				value="提交评价" />
 			<div style="color: #999; margin-top: 10px">* 提交后即不能修改</div>
+			</s:if>
+			<%-- <s:else>
+				<div id="" style="background-color: transparent;width: 1024px;height: 474px;position: absolute; top: 0px;">
+			</s:else> --%>
 		</div>
 	</div>
 	</form>

@@ -25,10 +25,10 @@
 	<thead>
 		<tr>
 			<th width="7.5%">序号</th>
-			<th width="7.5%">名称</th>
-			<th width="">单价</th>
-			<th width="">菜品种类</th>
-			<th width="18%">管理操作</th>
+			<th width="30%">名称</th>
+			<th width="15%">单价</th>
+			<th width="15%">菜品种类</th>
+			<th>管理操作</th>
 		</tr>
 	</thead>
 	<tbody>

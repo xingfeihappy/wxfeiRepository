@@ -39,6 +39,18 @@ public class DishesAction extends BaseAction {
 		return SUCCESS;
 	}
 
+	public String anotherFilter(){
+		try{
+			if(type != null){
+				System.out.println("action"+type);
+				dishesList = dishesService.getListGroupBy(type);
+			}
+			return SUCCESS;
+		}catch(Exception e){
+			e.printStackTrace();
+			return Constant.ERROR;
+		}
+	}
 	public List<Dishes> getDishesList() {
 		return dishesList;
 	}

@@ -171,7 +171,7 @@
 	</package>
 	<!-- ======================================================================================ADMIN -->
 	<package name="user" extends="struts-default">
-		<action name="dishDetail">
+		<action name="dishDetail" class="com.projection.action.admin.DishesAction" method="GetADishes">
 			<result>/WEB-INF/jsp/user/dishDetail.jsp</result>
 		</action>
 		<action name="myOrders" class="com.projection.action.order.OrderAction" method="myOrders">
@@ -206,6 +206,9 @@
 			<result type="redirect">myOrders</result>
 		</action>
 		<action name="filterDish" class="com.projection.action.dishes.DishesAction">
+			<result>/WEB-INF/jsp/user/filterDish.jsp</result>
+		</action>
+		<action name="anotherFilter" class="com.projection.action.dishes.DishesAction" method="anotherFilter">
 			<result>/WEB-INF/jsp/user/filterDish.jsp</result>
 		</action>
 		<action name="chooseSeatPage" class="com.projection.action.admin.SeatAction">

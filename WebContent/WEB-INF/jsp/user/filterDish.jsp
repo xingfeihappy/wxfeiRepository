@@ -22,7 +22,7 @@
 	
 		<li class="content-box-li">
 				<div class="content-box-img f-fl">
-					<a href="dishDetail" target="_self"> <img
+					<a href="dishDetail?dishes.id=<s:property value='#dishes.id'/>" target="_self"> <img
 						src="ShowDishesPhoto?dishes.id=<s:property value='#dishes.id'/>" />
 					</a>
 				</div>

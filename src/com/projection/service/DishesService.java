@@ -67,4 +67,8 @@ public class DishesService extends BaseService {
 		return result;
 	}
 
+	public List<Dishes> getListGroupBy(Integer type) {
+		return dishesDao.getListGroupBy(type);
+	}
+
 }

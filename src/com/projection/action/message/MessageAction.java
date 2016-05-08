@@ -14,7 +14,7 @@ public class MessageAction extends BaseAction {
 	private Message message;
 	private Set<Dishes> dishesSet;
 	private Integer[] recommendation;
-	
+	Dishes dish;
 	public String appraise(){
 		User user = (User) getValueFromSession(Constant.LOGIN_USER);
 		order = orderService.get(order.getId());
@@ -26,6 +26,13 @@ public class MessageAction extends BaseAction {
 		for(Integer i : recommendation){
 			sb.append(i);
 			sb.append(',');
+		}
+		//给每一个推荐菜的dishes-table更新一下
+		for(Integer i : recommendation){
+			dish = dishesService.get(i);
+			int count = dish.getRecommended();
+			dish.setRecommended(count+1);
+			dishesService.update(dish);
 		}
 		message.setRecommendation(sb.toString());
 		messageService.save(message);

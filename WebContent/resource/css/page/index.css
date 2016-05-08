@@ -278,9 +278,9 @@ textarea{
 .content-box-li1{padding:2% 5%;border:1px solid #eee;height:75px;width: 100%;text-align: right}
 .content-box-img a img{width:120px;height:90px}
 .content-box-li .content-box-text{padding:0px 2%;width:15%}
-.content-box-price{padding:0px 4%;width:21%}
-.content-box-count{padding:20px 5%;width:25%}
-.content-box-join,.content-box-see-car{padding:15px 2%;width:105}
+.content-box-price{padding:0px 2%;padding-right:0;width:18%}
+.content-box-count{padding:20px 3%;padding-right:0;width:25%}
+.content-box-join,.content-box-see-car{padding:15px 2%;padding-right:0;width:15%}
 .text-price{padding-top:13px}
 .face-box-img{text-align: center}
 .face-box-img img{width:90%;height:200px;}
@@ -302,7 +302,7 @@ textarea{
 .avg-people ul li{cursor:pointer;padding:4px;width:100px;border:1px solid #ffebd7;color:#FA5D2F;float:left;margin-top:20px;margin-right:4%}
 .avg-people ul li:hover{border:2px solid #FA5D2F;padding:3px}
 .content-box-li1 span{color:#FA5D2F;font-size:30px;}
-.appraise-total{padding:50px 0 10px 10%;font-size:16px}
+.appraise-total{padding:50px 0 10px 0;font-size:16px}
 .appraise-ul{text-align: center;}
 .appraise-ul li{width:10%;border:1px solid #eee;float:left;padding:5px;cursor:pointer;margin-right:5px}
 .appraise-ul li:hover{background-color:#FA5D2F;color:#fff;border:0;padding:6px}

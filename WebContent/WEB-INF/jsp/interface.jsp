@@ -1,3 +1,3 @@
 <%
-	response.sendRedirect("AdminIndex"); 
+	response.sendRedirect("LoginPage"); 
 %>

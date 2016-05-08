@@ -24,18 +24,6 @@ body{font-size:15px ! important; font-family:"Microsoft YAHEI"}
       </div>
     </div>
     <div class="form-group">
-      <label for="telephone" class="col-sm-2 control-label">手机号</label>
-      <div class="col-sm-10">
-        <span  class="form-control" style="width:250px;" id="telephone"><s:property value="#session.user.telephone" /></span>
-      </div>
-    </div>
-<%--     <div class="form-group">
-      <label for="oldpass" class="col-sm-2 control-label">旧密码</label>
-      <div class="col-sm-10">
-        <input type="password" class="form-control" style="width:250px;" id="oldpass" placeholder="旧密码" name="user.passwords"><span id="oldpassTip" style="display:none;color:red;"></span>
-      </div>
-    </div>   --%>
-    <div class="form-group">
       <label for="newpass" class="col-sm-2 control-label">新密码</label>
       <div class="col-sm-10">
         <input type="password" class="form-control" style="width:250px;" id="newpass" placeholder="新密码" name="newPassword"><span id="newpassTip" style="display:none;color:red;"></span>
@@ -49,7 +37,7 @@ body{font-size:15px ! important; font-family:"Microsoft YAHEI"}
     </div>
     <div class="form-group">
       <label class="col-sm-2 control-label">  </label>
-     <input  type="button" class="btn btn-primary  btn-confirm"  style="text-align:center;margin-left:16px;" value="确认修改" onclick="conf()"></input >
+     <input  type="button" class="btn btn-success  btn-confirm"  style="text-align:center;margin-left:16px;" value="确认修改" onclick="conf()"></input >
     </div>
   </form>
 </div>

@@ -22,7 +22,7 @@
 	     </tr>
 	     <tr>
 	       <td width="19%">单价</td>
-	       <td width="31%"><input type='text' name="dishes.price" value="<s:property value="dishes.price" />"/></td>
+	       <td width="31%"><input type='text' name="dishes.price" value="<s:property value="dishes.price" />" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9\.]+/,'');}).call(this)" onblur="this.v();"/></td>
 	       <td width="19%">菜品种类</td>
 	       <td>
 	       <select name="type">

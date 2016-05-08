@@ -105,6 +105,7 @@ public class DishesAction extends BaseAction {
 		try {
 			logContent = "查询菜品信息";
 			dishes = dishesService.get(dishes.getId());
+			dishesList = dishesService.getAll();
 			return SUCCESS;
 		} catch (Exception e) {
 			/*
