@@ -17,6 +17,6 @@
 		<property name="containPeople" column="containPeople" type="int" />
         <property name="state" column="state" type="int" />
 		<property name="remark" column="remark" type="string" />
-
+		<property name="valid" column="valid" type="int" />
 	</class>
 </hibernate-mapping>

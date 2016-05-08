@@ -24,7 +24,9 @@ public class OrderAction extends BaseAction{
 		//设置订单状态为已完成
 		order.setState(1);
 		//设置该订单所占用的桌子为可用
-		//order.getSeat().setState(1);
+		if(order.getSeat() != null){
+			order.getSeat().setState(1);
+		}
 		orderService.update(order);
 		return SUCCESS;
 	}
