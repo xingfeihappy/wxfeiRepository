@@ -22,7 +22,7 @@
 						<li class="content-box-li">
 							<div class="content-box-img f-fl">
 								<a>
-									<img src="http://p1.meituan.net/208.126/deal/__15908739__2365685.jpg" />
+									<img src="${pageContext.request.contextPath}/resource/image/order.png" />
 								</a>
 							</div>
 							<div class="content-box-text f-fl" style="width:20%">
