@@ -36,7 +36,7 @@
 		<tr>
 			<td><s:property value="#index.index+1" /></td>
 			<td><s:property value="containPeople"/></td>
-			<td><s:property value="state"/></td>
+			<td><s:if test="state==0">可用</s:if><s:else>不可用</s:else></td>
 			<td><s:property value="remark"/></td>
 			
 			<td>

@@ -203,7 +203,7 @@
 		<action name="filterDish" class="com.projection.action.dishes.DishesAction">
 			<result>/WEB-INF/jsp/user/filterDish.jsp</result>
 		</action>
-		<action name="chooseSeatPage">
+		<action name="chooseSeatPage" class="com.projection.action.admin.SeatAction">
 			<result>/WEB-INF/jsp/user/chooseSeat.jsp</result>
 		</action>
 	</package>

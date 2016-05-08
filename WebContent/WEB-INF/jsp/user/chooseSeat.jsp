@@ -18,50 +18,14 @@
    		    <div class="nav-content">
 				<div class="content-box">
 					<ul class="content-box-li-hover">
-						<%-- <s:iterator value="#session.car" id="entry"> --%>
-						<li class="content-box-li " style="width:20%"><a href="#">
-							<span>容纳人数：<s:property value="containPeople" /></span><br />
-							<span>状态：<s:property value="state" /></span><br />
-							<span>备注：<s:property value="remark" /></span><br />
-							<input type="hidden" value="<s:property value="id"/>"></a>
-						</li>
+					  <s:iterator value="seatList" id="entry">
 						<li class="content-box-li " style="width:20%">
 							<span>容纳人数：<s:property value="containPeople" /></span><br />
-							<span>状态：<s:property value="state" /></span><br />
+							<span>状态：<s:if test="state==0">可用</s:if><s:else>不可用</s:else></span><br />
 							<span>备注：<s:property value="remark" /></span><br />
-							<input type="hidden" value="<s:property value="id"/>">
+							<a href="" style="margin-top:15px" class="btn btn-default">选定该座位</a>
 						</li>
-						<li class="content-box-li " style="width:20%">
-							<span>容纳人数：<s:property value="containPeople" /></span><br />
-							<span>状态：<s:property value="state" /></span><br />
-							<span>备注：<s:property value="remark" /></span><br />
-							<input type="hidden" value="<s:property value="id"/>">
-						</li>
-						<li class="content-box-li " style="width:20%">
-							<span>容纳人数：<s:property value="containPeople" /></span><br />
-							<span>状态：<s:property value="state" /></span><br />
-							<span>备注：<s:property value="remark" /></span><br />
-							<input type="hidden" value="<s:property value="id"/>">
-						</li>
-						<li class="content-box-li " style="width:20%">
-							<span>容纳人数：<s:property value="containPeople" /></span><br />
-							<span>状态：<s:property value="state" /></span><br />
-							<span>备注：<s:property value="remark" /></span><br />
-							<input type="hidden" value="<s:property value="id"/>">
-						</li>
-						<li class="content-box-li " style="width:20%">
-							<span>容纳人数：<s:property value="containPeople" /></span><br />
-							<span>状态：<s:property value="state" /></span><br />
-							<span>备注：<s:property value="remark" /></span><br />
-							<input type="hidden" value="<s:property value="id"/>">
-						</li>
-						<li class="content-box-li " style="width:20%">
-							<span>容纳人数：<s:property value="containPeople" /></span><br />
-							<span>状态：<s:property value="state" /></span><br />
-							<span>备注：<s:property value="remark" /></span><br />
-							<input type="hidden" value="<s:property value="id"/>">
-						</li>
-						<%-- </s:iterator> --%>
+					  </s:iterator>
 					</ul>
 				</div>   		    	
    			</div>
