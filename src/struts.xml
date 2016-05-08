@@ -181,6 +181,9 @@
 		<action name="placeOrder" class="com.projection.action.order.OrderAction" method="placeOrder">
 			<result type="redirect">myOrders</result>
 		</action>
+		<action name="deleteOrder" class="com.projection.action.order.OrderAction" method="deleteOrder">
+			<result type="redirect">myOrders</result>
+		</action>
 		<action name="addCar" class="com.projection.action.car.CarAction" method="addCar">
 			<result name="fromIndex" type="redirect">filterDish</result>
 			<result type="redirect">seeCar</result>
@@ -197,8 +200,11 @@
 		<action name="deleteFromCar" class="com.projection.action.car.CarAction" method="deleteFromCar">
 			<result type="redirect">seeCar</result>
 		</action>
-		<action name="goToAppraise">
+		<action name="goToAppraise" class="com.projection.action.message.MessageAction" method="goToAppraise">
 			<result>/WEB-INF/jsp/user/goToAppraise.jsp</result>
+		</action>
+		<action name="appraise" class="com.projection.action.message.MessageAction" method="appraise">
+			<result type="redirect">myOrders</result>
 		</action>
 		<action name="filterDish" class="com.projection.action.dishes.DishesAction">
 			<result>/WEB-INF/jsp/user/filterDish.jsp</result>

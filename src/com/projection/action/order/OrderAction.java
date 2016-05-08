@@ -13,6 +13,7 @@ import com.projection.util.Constant;
 public class OrderAction extends BaseAction {
 	private Double total;
 	private List<Order> orders;
+	private Order order;
 	
 	public String myOrders() {
 		User user = (User) getValueFromSession(Constant.LOGIN_USER);
@@ -40,6 +41,13 @@ public class OrderAction extends BaseAction {
 		return SUCCESS;
 	}
 
+	public String deleteOrder() {
+		order = orderService.get(order.getId());
+		order.setValid(0);
+		orderService.update(order);
+		return SUCCESS;
+	}
+	
 	public Double getTotal() {
 		return total;
 	}
@@ -54,5 +62,13 @@ public class OrderAction extends BaseAction {
 
 	public void setOrders(List<Order> orders) {
 		this.orders = orders;
+	}
+
+	public Order getOrder() {
+		return order;
+	}
+
+	public void setOrder(Order order) {
+		this.order = order;
 	}
 }

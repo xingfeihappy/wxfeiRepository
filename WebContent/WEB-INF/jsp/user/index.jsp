@@ -86,7 +86,7 @@
 						</s:iterator>
 					</ul>
 				</div>
-				<iframe name="right" src="filterDish" id="iframe" scrolling="no"
+				<iframe name="right" src="filterDish?type=-1" id="iframe" scrolling="no"
 					marginWidth="0" onLoad="" frameborder="0"
 					style="width: 100%; height: 3000px; margin: 0px; padding: 0px;"></iframe>
 				<!-- <div class="g-footer">

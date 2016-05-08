@@ -62,6 +62,7 @@ public class OperateUserAction extends BaseAction {
 				userService.update(user);
 			//otherwise add new user
 			}else{
+				System.out.println(user);
 				user.setUsername(StringUtil.trim(user.getUsername()));
 				user.setName(StringUtil.trim(user.getName()));
 				if(user.getPassword().equals("") || user.getPassword() == null){

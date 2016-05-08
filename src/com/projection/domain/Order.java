@@ -11,6 +11,7 @@ public class Order {
 	private Double totalMoney;
 	private Date dinnerTime;
 	private String state;
+	private Integer valid = 1;
 	private Map<Dishes, Integer> dishesMap;
 	
 	public Order(){
@@ -87,6 +88,14 @@ public class Order {
 
 	public void setDishesMap(Map<Dishes, Integer> dishesMap) {
 		this.dishesMap = dishesMap;
+	}
+
+	public Integer getValid() {
+		return valid;
+	}
+
+	public void setValid(Integer valid) {
+		this.valid = valid;
 	}
 
 }

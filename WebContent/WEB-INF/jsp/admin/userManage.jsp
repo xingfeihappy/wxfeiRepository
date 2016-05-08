@@ -25,6 +25,7 @@
 	<thead>
 		<tr>
 			<th width="7.5%">序号</th>
+			<th width="7.5%">用户名</th>
 			<th width="7.5%">姓名</th>
 			<th width="">出生日期</th>
 			<th width="">联系方式</th>
@@ -38,6 +39,7 @@
 		<tr>
 			<td><s:property value="#index.index+1" /></td>
 			<td><s:property value="username"/></td>
+			<td><s:property value="name"/></td>
 			<td><s:date name="birthday" format="yyyy-MM-dd"/></td>
 			<td><s:property value="telephone"/></td>
 			<td><s:property value="email"/></td>

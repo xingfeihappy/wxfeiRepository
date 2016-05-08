@@ -29,6 +29,7 @@
 			<index-many-to-many class="Dishes" column="dishesId" />
 			<element type="int" column="amount" />
 		</map>
+		<property name="valid" column="valid" type="int"/>
 
 	</class>
 </hibernate-mapping>

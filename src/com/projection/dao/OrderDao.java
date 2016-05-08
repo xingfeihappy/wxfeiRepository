@@ -8,10 +8,9 @@ import com.projection.domain.Order;
 public class OrderDao extends SuperDao<Order>{
 
 	public List<Order> getOrderByUser(Integer id) {
-		String hql = "from Order o where o.user.id = :id";
+		String hql = "from Order o where o.user.id = :id and o.valid = 1";
 		@SuppressWarnings("unchecked")
-		List<Order> list = getHibernateTemplate().find(hql, id);
-		//List<Order> list = this.getSession().createQuery(hql).setParameter("id", id).list();
+		List<Order> list = this.getSession().createQuery(hql).setParameter("id", id).list();
 		return list;
 	}
 

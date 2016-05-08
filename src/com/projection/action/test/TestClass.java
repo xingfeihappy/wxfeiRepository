@@ -45,11 +45,9 @@ public class TestClass extends BaseAction {
 	}
 
 	public static void main(String[] args) {
-		Dishes d = new Dishes();
-		Dishes d1 = new Dishes();
-		d.setId(1);
-		d1.setId(1);
-		d1.setName("name");
-		System.out.println(d.equals(d1));
+		String s = "1,2,3,";
+		String[] r = s.split(",");
+		System.out.println(r.length);
+		
 	}
 }

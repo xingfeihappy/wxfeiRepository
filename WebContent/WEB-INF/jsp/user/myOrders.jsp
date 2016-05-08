@@ -32,9 +32,6 @@
 								</div>
 								<br />
 							</div>
-							<div class="content-box-count f-fl">
-								数量：<span>3</span>
-							</div>
 							<div class="content-box-join f-fl">
 								总价：<span><s:property value="#order.totalMoney"/></span>
 							</div>
@@ -42,10 +39,10 @@
 								订单状态：<span><s:property value="#order.state"/></span>
 							</div>
 							<div class="content-box-see-car f-fl">
-								评价：<a class="btn seeCar" style="background-color:#ff7200;color:#fff">去评价</a>
+								评价：<a class="btn seeCar" href="goToAppraise?order.id=<s:property value='#order.id'/>" style="background-color:#ff7200;color:#fff">去评价</a>
 							</div>
 							<div class="content-box-see-car f-fl">
-								操作：<a class="btn seeCar" style="background-color:#ff7200;color:#fff">删除</a>
+								操作：<a class="btn seeCar" href="deleteOrder?order.id=<s:property value='#order.id'/>" style="background-color:#ff7200;color:#fff">删除</a>
 							</div>
 						</li>
 						</s:iterator>

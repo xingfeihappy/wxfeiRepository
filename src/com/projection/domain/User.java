@@ -110,4 +110,13 @@ public class User {
 	public void setValid(int valid) {
 		this.valid = valid;
 	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", username=" + username + ", password=" + password + ", birthday="
+				+ birthday + ", sex=" + sex + ", telephone=" + telephone + ", email=" + email + ", address=" + address
+				+ ", userType=" + userType + ", valid=" + valid + "]";
+	}
+	
+	
 }
