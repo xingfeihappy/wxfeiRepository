@@ -19,10 +19,6 @@
 	     <tr>
 	       <td width="19%">容纳人数</td>
 	       <td width="31%"><input type='text' name="seat.containPeople" value="<s:property value="seat.containPeople" />"/></td>
-	       <td width="19%">状态</td>
-	       <td><input type='text' name="seat.state" value="<s:property value="seat.state" />"/></td>
-	     </tr>
-	     <tr>
 	       <td width="19%">备注</td>
 	       <td width="31%" colspan="3"><input type='text' name="seat.remark" value="<s:property value="seat.remark" />"/></td>
 	     </tr>
