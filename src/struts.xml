@@ -106,6 +106,10 @@
 		<action name="ViewOrder" class="com.projection.action.admin.OrderAction" method="GetAOrder">
 			<result>/WEB-INF/jsp/admin/viewOrder.jsp</result>
 		</action>
+		<action name="FinishOrder" class="com.projection.action.admin.OrderAction" method="FinishOrder">
+			<result type="redirect">OrderManage</result>
+		</action>
+		
 		<!-- ===========================================================orderManage -->
 		
 		<!-- ============================================================seatManage -->

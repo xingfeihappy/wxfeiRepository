@@ -29,7 +29,9 @@
 	       <td  width="19%">下单时间</td>
 	       <td  width="31%"><s:date name="order.dinnerTime" format="yyyy-MM-dd"/></td>
 	       <td width="19%">状态</td>
-	       <td><s:property value="order.state" /></td>
+	       <td><s:if test="order.state==0">已下单</s:if>
+				<s:if test="order.state==1">已完成</s:if>
+				<s:if test="order.state==2">已评价</s:if></td>
 	     </tr>
 	     <tr>
 	       <td  width="19%">下单人</td>

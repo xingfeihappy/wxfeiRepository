@@ -18,7 +18,7 @@
 		<property name="foodNum" column="foodNum" type="int" />
 		<property name="totalMoney" column="totalMoney" type="double" />
 		<property name="dinnerTime" column="dinnerTime" type="date" />
-		<property name="state" column="state" type="string" />
+		<property name="state" column="state" type="int" />
 		<many-to-one name="user" column="userId" class="User"
 			cascade="none" lazy="proxy" fetch="select" />
 		<many-to-one name="seat" column="seatId" class="Seat"

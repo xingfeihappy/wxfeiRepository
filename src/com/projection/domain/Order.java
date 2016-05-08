@@ -10,7 +10,7 @@ public class Order {
 	private Integer foodNum;
 	private Double totalMoney;
 	private Date dinnerTime;
-	private String state;
+	private Integer state; 	//0:已下单    1:已完成（可评价）   2:已评价（不可评价）
 	private Integer valid = 1;
 	private Map<Dishes, Integer> dishesMap;
 	
@@ -66,14 +66,6 @@ public class Order {
 		this.dinnerTime = dinnerTime;
 	}
 
-	public String getState() {
-		return state;
-	}
-
-	public void setState(String state) {
-		this.state = state;
-	}
-
 	public Seat getSeat() {
 		return seat;
 	}
@@ -96,6 +88,14 @@ public class Order {
 
 	public void setValid(Integer valid) {
 		this.valid = valid;
+	}
+
+	public Integer getState() {
+		return state;
+	}
+
+	public void setState(Integer state) {
+		this.state = state;
 	}
 
 }

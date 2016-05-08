@@ -3,8 +3,9 @@ package com.projection.domain;
 public class Seat {
 	private Integer id;
 	private Integer containPeople;
-	private Integer state = 0;
+	private Integer state = 0; //0:可用 1:不可用
 	private String remark;
+	private Integer valid = 1;
 	public Integer getId() {
 		return id;
 	}
@@ -29,9 +30,11 @@ public class Seat {
 	public void setRemark(String remark) {
 		this.remark = remark;
 	}
-	@Override
-	public String toString() {
-		return "Seat [id=" + id + ", containPeople=" + containPeople + ", state=" + state + ", remark=" + remark + "]";
+	public Integer getValid() {
+		return valid;
+	}
+	public void setValid(Integer valid) {
+		this.valid = valid;
 	}
 	
 

@@ -36,11 +36,18 @@
 								总价：<span><s:property value="#order.totalMoney"/></span>
 							</div>
 							<div class="content-box-see-car f-fl">
-								订单状态：<span><s:property value="#order.state"/></span>
+								订单状态：<span>
+								<s:if test="#order.state==0">已下单</s:if>
+								<s:if test="#order.state==1">已完成</s:if>
+								<s:if test="#order.state==2">已评价</s:if>
+								</span>
 							</div>
+							<s:if test="#order.state==1">
 							<div class="content-box-see-car f-fl">
 								评价：<a class="btn seeCar" href="goToAppraise?order.id=<s:property value='#order.id'/>" style="background-color:#ff7200;color:#fff">去评价</a>
 							</div>
+							</s:if>
+							
 							<div class="content-box-see-car f-fl">
 								操作：<a class="btn seeCar" href="deleteOrder?order.id=<s:property value='#order.id'/>" style="background-color:#ff7200;color:#fff">删除</a>
 							</div>

@@ -77,7 +77,8 @@ public class SeatAction extends BaseAction{
 			if (seat == null) {
 				throw new Exception("查询结果为空");
 			}
-			seatService.delete(seat);
+			seat.setValid(0);
+			seatService.update(seat);
 			return SUCCESS;
 		} catch (Exception e) {
 			/*

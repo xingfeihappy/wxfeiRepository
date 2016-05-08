@@ -42,13 +42,20 @@
 			<td><s:property value="foodNum"/></td>
 			<td><s:property value="totalMoney"/></td>
 			<td><s:date name="dinnerTime" format="yyyy-MM-dd"/></td>
-			<td><s:property value="state"/></td>
+			<td>
+				<s:if test="state==0">已下单</s:if>
+				<s:if test="state==1">已完成</s:if>
+				<s:if test="state==2">已评价</s:if>
+			</td>
 			<td><s:property value="user.username"/></td>
 			<td><s:property value="seat.id"/></td>
 			<td>
 				<%-- <s:if test="state.equals('未处理')">
 				    <a class="btn" href="EditOrder?order.id=<s:property value="id" />" target="right" title="修改信息">修改</a> 
 				</s:if> --%>
+				<s:if test="state==0">
+					<a class="btn btn-success" href="FinishOrder?order.id=<s:property value="id" />" target="right" title="完成付款">完成付款</a>
+				</s:if>
 				<a class="btn btn-success" href="ViewOrder?order.id=<s:property value="id" />" target="right" title="查看详细信息">查看</a>
 				<a class="btn btn-danger" href="javascript:void(0);"  onclick="deleteOpe(this)" title="删除">删除</a> 
 				<input type="hidden" value="<s:property value="id" />">

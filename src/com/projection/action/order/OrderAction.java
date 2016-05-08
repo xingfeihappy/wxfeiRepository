@@ -18,7 +18,6 @@ public class OrderAction extends BaseAction {
 	public String myOrders() {
 		User user = (User) getValueFromSession(Constant.LOGIN_USER);
 		orders = orderService.getOrderByUser(user.getId());
-		System.out.println("sunzibo::::" + orders.size());
 		return SUCCESS;
 	}
 	
@@ -31,7 +30,7 @@ public class OrderAction extends BaseAction {
 		order.setTotalMoney(total);
 		order.setUser(user);
 		order.setDinnerTime(new Date());
-		order.setState("已下单");
+		order.setState(0); //已下单
 		
 		
 		Integer id = orderService.save(order);

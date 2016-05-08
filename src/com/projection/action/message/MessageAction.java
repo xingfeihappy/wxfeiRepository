@@ -29,6 +29,9 @@ public class MessageAction extends BaseAction {
 		}
 		message.setRecommendation(sb.toString());
 		messageService.save(message);
+		
+		order.setState(2);
+		orderService.update(order);
 		return SUCCESS;
 	}
 
