@@ -4,6 +4,7 @@ public class Constant {
 	public static String DEFAULT_PASSWORD = "123";
 	public static String ERROR = "error";
 	public static String CAR = "car";
+	public static String FILTER_TYPE = "type";
 	public static String DISHES_TYPES = "dishesTypes";
 	public static String LOGIN_USER = "user";
 	public static String USER_TYPE = "userType";

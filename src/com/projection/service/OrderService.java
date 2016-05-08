@@ -6,6 +6,9 @@ import com.projection.domain.Order;
 import com.projection.service.Base.BaseService;
 
 public class OrderService extends BaseService {
+	public List<Order> getOrderByUser(Integer id) {
+		return orderDao.getOrderByUser(id);
+	}
 	
 	public List<Order> getAll() {
 		return orderDao.getAll();

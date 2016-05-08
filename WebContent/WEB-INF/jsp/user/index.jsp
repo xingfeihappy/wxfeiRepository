@@ -77,7 +77,7 @@
 			<div class="row">
 				<div class="top-nav">
 					<ul class="top-nav-ul">
-						<li class="top-nav-ul-li"><a href="filterDish" target="right">
+						<li class="top-nav-ul-li"><a href="filterDish?type=-1" target="right">
 								<i class="item1"></i> <span>全部</span>
 						</a></li>
 						<s:iterator value="#session.dishesTypes" status="index" >
@@ -106,14 +106,6 @@
 	   function login(){
 		   location.href='LoginPage'
 	   }
-	    /* 判断加入购物车 前判断数量*/
-	   $(".addCar").click(function(){
-		   if($(".dishcount").attr("value") == 0){
-			   Showbo.Msg.confirm('请先添加数量',function(flag){
-					if(flag=='yes'){}	
-				}); 
-		   }
-	   })
    </script>
 </body>
 </html>

@@ -46,22 +46,25 @@
 					</div>
 				</div>
 				<div class="content-box-count f-fl">
-					<button class="denis" type="button"
+					<button type="button" onclick='window.location.href="minusCar?dishes.id=<s:property value='#dishes.id'/>&fromIndex=1"'
 						style="color: #fff; width: 20px; border: 0; background-color: #ff7200">
 						-</button>
-					<input type="text" readonly="true" name="amount" class="dishcount"
-						style="width: 60px" value="0" />
-					<button class="plus" type="button"
+					
+					<s:if test="#session.car.get(#dishes)!=null">
+					<input type="text" readonly="true" value="<s:property value='#session.car.get(#dishes)' />" class="dishcount" style="width: 60px" />
+					</s:if>
+					<s:else>
+					<input type="text" readonly="true" value="0" class="dishcount" style="width: 60px" />
+					</s:else>
+					
+					<button type="button" onclick='window.location.href="addCar?dishes.id=<s:property value='#dishes.id'/>&fromIndex=1"'
 						style="color: #fff; width: 20px; border: 0; background-color: #ff7200">
 						+</button>
 				</div>
-				<div class="content-box-join f-fl">
-					<input type="button" class="btn addCar"
-						style="background-color: #ff7200; color: #fff" value="加入餐车" />
-				</div>
+
 				<div class="content-box-see-car f-fl">
 					<a class="btn seeCar" href="seeCar" target="_self"
-						style="background-color: #ff7200; color: #fff">查看餐车(<s:property value="#session.car.size" />件)</a>
+						style="background-color: #ff7200; color: #fff">查看餐车(<s:property value="totalAmount" />件)</a>
 				</div>
 			</li>
 			</form>
@@ -71,38 +74,5 @@
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>
    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/common/common.js"></script>
    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/showBo.js"></script>
-   <script>
-	   
-	   /* 数量的加减 */
-	   var dishcount;
-	   var count = 0;
-	   $(".denis").click(function(){
-		   dishcount = $(".dishcount").attr("value");
-		   if(dishcount <= 0){
-			   count = 0;
-			   $(this).next().attr("value",count);
-		   }else{
-			   count--;
-			   $(this).next().attr("value",count);
-		   }
-	   })
-	   $(".plus").click(function(){
-		   dishcount = $(".dishcount").attr("value");
-		   count++;
-		   $(this).prev().attr("value",count);
-	   })
-	    /* 判断加入购物车 前判断数量*/
-	   $(".addCar").click(function(){
-		   if($(".dishcount").attr("value") == 0){
-			   Showbo.Msg.confirm('请先添加数量',function(flag){
-					if(flag=='yes'){
-						
-					}	
-				}); 
-		   }else{
-			   $("#form").submit();
-		   }
-	   })
-   </script>
 </body>
 </html>

@@ -175,13 +175,23 @@
 		<action name="dishDetail">
 			<result>/WEB-INF/jsp/user/dishDetail.jsp</result>
 		</action>
-		<action name="myOrders">
+		<action name="myOrders" class="com.projection.action.order.OrderAction" method="myOrders">
 			<result>/WEB-INF/jsp/user/myOrders.jsp</result>
 		</action>
-		<action name="addCar" class="com.projection.action.car.CarAction" method="addCar">
-			<result type="redirect">filterDish</result>
+		<action name="placeOrder" class="com.projection.action.order.OrderAction" method="placeOrder">
+			<result type="redirect">myOrders</result>
 		</action>
-		<action name="seeCar">
+		<action name="addCar" class="com.projection.action.car.CarAction" method="addCar">
+			<result name="fromIndex" type="redirect">filterDish</result>
+			<result type="redirect">seeCar</result>
+		</action>
+		
+		<action name="minusCar" class="com.projection.action.car.CarAction" method="minusCar">
+			<result name="fromIndex" type="redirect">filterDish</result>
+			<result type="redirect">seeCar</result>
+		</action>
+		
+		<action name="seeCar" class="com.projection.action.car.CarAction" method="seeCar">
 			<result>/WEB-INF/jsp/user/seeCar.jsp</result>
 		</action>
 		<action name="deleteFromCar" class="com.projection.action.car.CarAction" method="deleteFromCar">
@@ -199,7 +209,7 @@
 	</package>
 	
 	<package name="test" extends="struts-default">
-		<action name="TestOrder" class="com.projection.action.test.TestClass">
+		<action name="TestClass" class="com.projection.action.test.TestClass">
 		</action>
 	</package>
 </struts>
