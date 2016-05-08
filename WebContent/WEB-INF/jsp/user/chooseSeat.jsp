@@ -20,10 +20,14 @@
 					<ul class="content-box-li-hover">
 					  <s:iterator value="seatList" id="entry">
 						<li class="content-box-li " style="width:20%">
+						  <form id="form" action="chooseSeatForm" method="post">
 							<span>容纳人数：<s:property value="containPeople" /></span><br />
 							<span>状态：<s:if test="state==0">可用</s:if><s:else>不可用</s:else></span><br />
 							<span>备注：<s:property value="remark" /></span><br />
-							<a href="" style="margin-top:15px" class="btn btn-default">选定该座位</a>
+							<input type="hidden" name="seat.id" value="<s:property value="id" />"/>
+							<input type="hidden" name="order.id" value="<s:property value="order.id" />"/>
+							<input type="submit" style="margin-top:15px;width:96%" class="btn btn-default" value="选定该座位"/>
+						  </form>
 						</li>
 					  </s:iterator>
 					</ul>
@@ -31,7 +35,6 @@
    			</div>
        	</div>
    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>
-   <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/common/common.js"></script>
    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/showBo.js"></script>
 </body>
 </html>

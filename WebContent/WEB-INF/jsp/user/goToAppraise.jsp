@@ -50,7 +50,6 @@
 	</div>
 	</form>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>
-   <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/common/common.js"></script>
    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/showBo.js"></script>
 </body>
 </html>

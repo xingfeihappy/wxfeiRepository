@@ -24,6 +24,7 @@
                <s:if test="#session.user == null"><li><span style="color: #000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>登录</span></li></s:if>
                <li><a href="registerPage" style="cursor:pointer;color: #000;margin-left: 30px;padding:0"><i class="logo5" style="margin-right: 8px;"></i>注册</a></li>
                <li><a style="padding:0;cursor:pointer" href="myOrders" target="right"><span href="#" style="color: #000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>我的订单</span></a></li>
+               <li><a style="padding:0;cursor:pointer" href="seeCar" target="right"><span href="#" style="color: #000;margin-left: 30px;"><i class="logo5" style="margin-right: 8px;"></i>我的餐车</span></a></li>
 			   <li class="drop" style="height: 30px;"><span style="color: #000;margin-left: 30px;cursor: pointer;position: relative;">个人资料</span>
 					<ul class="sub_menu">
 						<li><a href="ModifyPassword"  target="right">密码修改</a></li>
@@ -90,8 +91,6 @@
 					style="width: 100%; height: 2000px; margin: 0px; padding: 0px;"></iframe>
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>
-	<script type="text/javascript"
-		src="${pageContext.request.contextPath}/resource/js/common/common.js"></script>
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath}/resource/js/vendor/showBo.js"></script>
 	<script>

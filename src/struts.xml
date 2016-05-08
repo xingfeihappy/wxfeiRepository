@@ -178,7 +178,7 @@
 			<result>/WEB-INF/jsp/user/myOrders.jsp</result>
 		</action>
 		<action name="placeOrder" class="com.projection.action.order.OrderAction" method="placeOrder">
-			<result type="redirect">myOrders</result>
+			<result type="redirect">chooseSeatPage?order.id=${orderId}</result>
 		</action>
 		<action name="deleteOrder" class="com.projection.action.order.OrderAction" method="deleteOrder">
 			<result type="redirect">myOrders</result>
@@ -214,6 +214,10 @@
 		<action name="chooseSeatPage" class="com.projection.action.admin.SeatAction">
 			<result>/WEB-INF/jsp/user/chooseSeat.jsp</result>
 		</action>
+		<action name="chooseSeatForm" class="com.projection.action.order.OrderAction" method="addSeatForOrder">
+			<result type="redirect">myOrders</result>
+		</action>
+		
 	</package>
 	
 	<package name="test" extends="struts-default">

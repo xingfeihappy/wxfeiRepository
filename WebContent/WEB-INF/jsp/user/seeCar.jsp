@@ -64,12 +64,24 @@
 						</li>
 					</ul>
 					<input type="hidden" name="total" value="${total }"/>
-					<input type="submit" class="btn submitCar f-fr" style="background-color:#ff7200;color:#fff;margin-right:6%" value="提交订单"/>
+					<input type="button" class="btn submitCar f-fr" style="background-color:#ff7200;color:#fff;margin-right:6%" value="提交订单"/>
 				</div>
    			</div>
    		  </form>
    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>
-   <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/common/common.js"></script>
    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/showBo.js"></script>
+   <script>
+   	$(".submitCar").click(function(){
+   		if(${total }==0.0){
+   			Showbo.Msg.confirm('您的订单里面什么也没有',function(flag){
+   				if(flag=='yes'){
+   					return false;		
+   				}				
+   			}); 
+   		}else{
+   			$("#form").submit();
+   		}
+   	})
+   </script>
 </body>
 </html>

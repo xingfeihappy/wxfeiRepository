@@ -3,11 +3,13 @@ package com.projection.action.admin;
 import java.util.List;
 
 import com.projection.action.Base.BaseAction;
+import com.projection.domain.Order;
 import com.projection.domain.Seat;
 import com.projection.util.Constant;
 
 public class SeatAction extends BaseAction{
 	public Seat seat;
+	private Order order;
 	public List<Seat> getSeatList() {
 		return seatList;
 	}
@@ -19,7 +21,8 @@ public class SeatAction extends BaseAction{
 		try{
 			String logContent = "管理员查询全部餐位信息";
 			seatList = seatService.getAll();
-			
+			System.out.println(order.getId());
+			order = orderService.get(order.getId());
 			return SUCCESS;
 		}catch(Exception e){
 			/*logService.save(new Log(new User(
@@ -98,4 +101,11 @@ public class SeatAction extends BaseAction{
 	public void setSeat(Seat seat) {
 		this.seat = seat;
 	}
+	public Order getOrder() {
+		return order;
+	}
+	public void setOrder(Order order) {
+		this.order = order;
+	}
+	
 }
