@@ -34,20 +34,15 @@
 		<action name="UserIndex">
 			<result>/WEB-INF/jsp/user/index.jsp</result>
 		</action>
+		<action name="DishesSearch" class="com.projection.action.admin.DishesAction" method="dishSearch">
+			<result type="redirect">UserIndex?dishesList=${dishesList}</result>
+		</action>
 		<!-- 我的工具 -->
 		<action name="ModifyPassword">
 			<result >/WEB-INF/jsp/modifyPassword.jsp</result>
 		</action>
 		<action name="ModifyPasswordSuccess" class="com.projection.action.user.ModifyPasswordSuccessAction">
 			<result name="rightPassword">/WEB-INF/jsp/modifyPswSuccess.jsp</result>
-			<!-- <result name="errorPassword" >/WEB-INF/jsp/modifyPswSuccess.jsp</result> -->
-		</action>
-		<action name="PersonInformation" class="com.projection.action.user.GetUserByIdAction">
-			<result >/WEB-INF/jsp/personInformation.jsp</result>
-		</action>
-		<action name="SuccessModifyImfo" class="com.projection.action.user.ModifyUserInformationAction">
-			<result name="success">/WEB-INF/jsp/saveSuccess.jsp</result>
-			<!-- <result type="redirect" name="ModifyPsw" >ModifyPassword</result>  -->
 		</action>
 		<!-- end我的工具 -->
 	</package>

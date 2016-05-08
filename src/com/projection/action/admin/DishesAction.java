@@ -151,6 +151,21 @@ public class DishesAction extends BaseAction {
 		}
 	}
 
+	//搜索
+	public String dishSearch(){
+		System.out.println("进来了吗");
+		try{
+			if (dishes.getName() == null) {
+				throw new Exception("参数为空");
+			}
+			dishesList = dishesService.getListByName(dishes.getName());
+			System.out.println(dishesList.size());
+			return SUCCESS;
+		}catch(Exception e){
+			e.printStackTrace();
+			return Constant.ERROR;
+		}
+	}
 	public Dishes getDishes() {
 		return dishes;
 	}

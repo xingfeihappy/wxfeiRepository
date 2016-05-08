@@ -56,4 +56,15 @@ public class DishesService extends BaseService {
 		return dishesTypeDao.getAll();
 	}
 
+	public List<Dishes> getListByName(String name) {
+		List<Dishes> dishes = dishesDao.getAll();
+		List<Dishes> result = new ArrayList<>();
+		for (Dishes dish : dishes) {
+			if (dish.getName().contains(name)) {
+				result.add(dish);
+			}
+		}
+		return result;
+	}
+
 }

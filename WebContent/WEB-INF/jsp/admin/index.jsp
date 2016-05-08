@@ -39,8 +39,7 @@
           <a class="logo">
             <div class="logo-img f-fl"></div>
             <div class="logo-text f-fl">
-              <span class="logo-text-t1" style="font-size:25px; font-family: 微软雅黑, sans-serif;"></span><br />
-              <span class="logo-text-t2">sea </span>
+              <span class="logo-text-t1" style="font-size:25px; font-family: 微软雅黑, sans-serif;">餐饮管理系统</span>
             </div>
           </a>
            <!-- <form class="search_box f-fr">
