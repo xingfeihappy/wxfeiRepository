@@ -48,6 +48,15 @@
 	</package>
 <!-- ======================================================================================ADMIN -->
 	<package name="admin" extends="struts-default">
+		<interceptors>
+			<interceptor name="checkUserLogin"
+				class="com.projection.interceptor.UserLoginInterceptor" />
+			<interceptor-stack name="checkLoginStack">
+				<interceptor-ref name="checkUserLogin"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="checkLoginStack"></default-interceptor-ref>
 	    <!-- =========================================================userManage -->
 	    <action name="UserManage" class="com.projection.action.admin.OperateUserAction">
 			<result>/WEB-INF/jsp/admin/userManage.jsp</result>
@@ -171,6 +180,15 @@
 	</package>
 	<!-- ======================================================================================ADMIN -->
 	<package name="user" extends="struts-default">
+		<interceptors>
+			<interceptor name="checkUserLogin"
+				class="com.projection.interceptor.UserLoginInterceptor" />
+			<interceptor-stack name="checkLoginStack">
+				<interceptor-ref name="checkUserLogin"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="checkLoginStack"></default-interceptor-ref>
 		<action name="dishDetail" class="com.projection.action.admin.DishesAction" method="GetADishes">
 			<result>/WEB-INF/jsp/user/dishDetail.jsp</result>
 		</action>

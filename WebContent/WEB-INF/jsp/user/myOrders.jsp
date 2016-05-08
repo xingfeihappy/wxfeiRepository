@@ -26,11 +26,14 @@
 								</a>
 							</div>
 							<div class="content-box-text f-fl" style="width:20%">
-								<div class="text-title"><a><s:property value="#order.codes"/></a></div><br />
+								<div class="text-title"><a>订单：<s:property value="#order.codes"/></a></div><br />
 								<div class="text-grade">
-									<span><s:date name="#order.dinnerTime" format="yyyy-MM-dd"/></span>
+									<span>下单时间:<s:date name="#order.dinnerTime" format="yyyy-MM-dd"/></span>
 								</div>
 								<br />
+								<div class="text-grade">
+									<span>餐桌号：<s:if test="#order.seat!=null"><s:property value="#order.seat.id"/></s:if><s:else><a href="chooseSeatPage?order.id=<s:property value="#order.id"/>">去选座</a></s:else></span>
+								</div>
 							</div>
 							<div class="content-box-join f-fl" style="width:18%">
 								总价：<span><s:property value="#order.totalMoney"/></span>
