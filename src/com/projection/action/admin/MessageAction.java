@@ -1,10 +1,14 @@
 package com.projection.action.admin;
 
+import java.util.Date;
 import java.util.List;
 
 import com.projection.action.Base.BaseAction;
+import com.projection.domain.Log;
 import com.projection.domain.Message;
+import com.projection.domain.User;
 import com.projection.util.Constant;
+import com.projection.util.ExceptionUtil;
 
 public class MessageAction extends BaseAction{
 	private static final long serialVersionUID = -5200857075098978637L;
@@ -17,11 +21,6 @@ public class MessageAction extends BaseAction{
 			messageList = messageService.getAll();
 			return SUCCESS;
 		}catch(Exception e){
-			/*logService.save(new Log(new User(
-			(Integer) getValueFromSession(Constant.USER_ID)),
-			ExceptionUtil.getExceptionAllinformation(e), new Date(),
-			Constant.EXCEPTION_LOG, Constant.SEE_OPERATION, this
-					.getClass().getName()));*/
 			e.printStackTrace();
 			return Constant.ERROR;
 		}
@@ -33,11 +32,6 @@ public class MessageAction extends BaseAction{
 			message = messageService.get(message.getId());
 			return SUCCESS;
 		}catch(Exception e){
-			/*logService.save(new Log(new User(
-			(Integer) getValueFromSession(Constant.USER_ID)),
-			ExceptionUtil.getExceptionAllinformation(e), new Date(),
-			Constant.EXCEPTION_LOG, Constant.SEE_OPERATION, this
-					.getClass().getName()));*/
 			e.printStackTrace();
 			return Constant.ERROR;
 		}
@@ -45,7 +39,11 @@ public class MessageAction extends BaseAction{
 	
 	public String DeleteMessage(){
 		try{
-			logContent = "留言信息";
+			logContent = "删除留言信息";
+			logService.save(new Log((User) getValueFromSession(Constant.LOGIN_USER),
+					 logContent, new Date(),
+					 Constant.USER_LOG, Constant.DELETE_OPERATION, this
+					 .getClass().getName()));
 			if(message == null){
 				throw new Exception("参数为空");
 			}
@@ -56,11 +54,10 @@ public class MessageAction extends BaseAction{
 			messageService.delete(message);
 			return SUCCESS;
 		}catch(Exception e){
-			/*logService.save(new Log(new User(
-			(Integer) getValueFromSession(Constant.USER_ID)),
+			logService.save(new Log((User) getValueFromSession(Constant.LOGIN_USER),
 			ExceptionUtil.getExceptionAllinformation(e), new Date(),
-			Constant.EXCEPTION_LOG, Constant.SEE_OPERATION, this
-					.getClass().getName()));*/
+			Constant.EXCEPTION_LOG, Constant.DELETE_OPERATION, this
+					.getClass().getName()));
 			e.printStackTrace();
 			return Constant.ERROR;
 		}

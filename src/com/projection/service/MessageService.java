@@ -27,4 +27,12 @@ public class MessageService extends BaseService {
 		messageDao.delete(message);
 	}
 
+	public List<Message> getMessageByOrder(Integer id) {
+		return messageDao.getMessageByOrder(id);
+	}
+
+	public List<Message> getMessageByDish(Integer id) {
+		return messageDao.getMessageByDishes(id);
+	}
+
 }

@@ -1,10 +1,13 @@
 package com.projection.action.admin;
 
+import java.util.Date;
 import java.util.List;
 
 import com.projection.action.Base.BaseAction;
+import com.projection.domain.Log;
 import com.projection.domain.User;
 import com.projection.util.Constant;
+import com.projection.util.ExceptionUtil;
 import com.projection.util.MD5Util;
 import com.projection.util.StringUtil;
 
@@ -20,13 +23,6 @@ public class OperateUserAction extends BaseAction {
 			userList = userService.getAll();
 			return SUCCESS;
 		} catch (Exception e) {
-			/*
-			 * logService.save(new Log(new User( (Integer)
-			 * getValueFromSession(Constant.USER_ID)),
-			 * ExceptionUtil.getExceptionAllinformation(e), new Date(),
-			 * Constant.EXCEPTION_LOG, Constant.SEE_OPERATION, this
-			 * .getClass().getName()));
-			 */
 			e.printStackTrace();
 			return Constant.ERROR;
 		}
@@ -35,12 +31,10 @@ public class OperateUserAction extends BaseAction {
 	public String AddUser() {
 		try {
 			logContent = "更新用户信息";
-			/*
-			 * logService.save(new Log(new User( (Integer)
-			 * getValueFromSession(Constant.USER_ID)), logContent, new Date(),
-			 * Constant.EXCEPTION_LOG, Constant.SEE_OPERATION, this
-			 * .getClass().getName()));
-			 */
+			 logService.save(new Log((User) getValueFromSession(Constant.LOGIN_USER), logContent, new Date(),
+			 Constant.USER_LOG, Constant.UPDATE_OPERATION, this
+			 .getClass().getName()));
+			 
 			if (user == null) {
 				throw new NullPointerException("参数为空");
 			}
@@ -65,7 +59,7 @@ public class OperateUserAction extends BaseAction {
 				System.out.println(user);
 				user.setUsername(StringUtil.trim(user.getUsername()));
 				user.setName(StringUtil.trim(user.getName()));
-				if(user.getPassword().equals("") || user.getPassword() == null){
+				if(user == null || user.getPassword().equals("") || user.getPassword() == null){
 					user.setPassword(MD5Util.MD5(Constant.DEFAULT_PASSWORD));
 				}else{
 					user.setPassword(MD5Util.MD5(StringUtil.trim(user.getPassword())));
@@ -87,13 +81,11 @@ public class OperateUserAction extends BaseAction {
 			}
 			return SUCCESS;
 		} catch (Exception e) {
-			/*
-			 * logService.save(new Log(new User( (Integer)
-			 * getValueFromSession(Constant.USER_ID)),
-			 * ExceptionUtil.getExceptionAllinformation(e), new Date(),
-			 * Constant.EXCEPTION_LOG, Constant.SEE_OPERATION, this
-			 * .getClass().getName()));
-			 */
+			 logService.save(new Log((User) getValueFromSession(Constant.LOGIN_USER),
+			 ExceptionUtil.getExceptionAllinformation(e), new Date(),
+			 Constant.EXCEPTION_LOG, Constant.UPDATE_OPERATION, this
+			 .getClass().getName()));
+			 
 			e.printStackTrace();
 			return Constant.ERROR;
 		}
@@ -108,13 +100,6 @@ public class OperateUserAction extends BaseAction {
 			user = userService.get(user.getId());
 			return SUCCESS;
 		} catch (Exception e) {
-			/*
-			 * logService.save(new Log(new User( (Integer)
-			 * getValueFromSession(Constant.USER_ID)),
-			 * ExceptionUtil.getExceptionAllinformation(e), new Date(),
-			 * Constant.EXCEPTION_LOG, Constant.SEE_OPERATION, this
-			 * .getClass().getName()));
-			 */
 			e.printStackTrace();
 			return Constant.ERROR;
 		}
@@ -122,13 +107,11 @@ public class OperateUserAction extends BaseAction {
 
 	public String DeleteUser() {
 		try {
-			logContent = "删除用户信息";
-			/*
-			 * logService.save(new Log(new User( (Integer)
-			 * getValueFromSession(Constant.USER_ID)), logContent, new Date(),
-			 * Constant.USER_LOG, Constant.DELETE_OPERATION, this
-			 * .getClass().getName()));
-			 */
+			 logContent = "删除用户信息";
+			 logService.save(new Log((User) getValueFromSession(Constant.LOGIN_USER), logContent, new Date(),
+			 Constant.USER_LOG, Constant.DELETE_OPERATION, this
+			 .getClass().getName()));
+			 
 
 			if (user == null) {
 				throw new Exception("参数为空");
@@ -140,13 +123,11 @@ public class OperateUserAction extends BaseAction {
 			userService.delete(user);
 			return SUCCESS;
 		} catch (Exception e) {
-			/*
-			 * logService.save(new Log(new User( (Integer)
-			 * getValueFromSession(Constant.USER_ID)),
-			 * ExceptionUtil.getExceptionAllinformation(e), new Date(),
-			 * Constant.EXCEPTION_LOG, Constant.SEE_OPERATION, this
-			 * .getClass().getName()));
-			 */
+			
+			 logService.save(new Log((User) getValueFromSession(Constant.LOGIN_USER),
+			 ExceptionUtil.getExceptionAllinformation(e), new Date(),
+			 Constant.EXCEPTION_LOG, Constant.DELETE_OPERATION, this
+			 .getClass().getName()));
 			e.printStackTrace();
 			return Constant.ERROR;
 		}

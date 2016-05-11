@@ -14,4 +14,11 @@ public class OrderDao extends SuperDao<Order>{
 		return list;
 	}
 
+	public List<Order> getAllByDish(Integer id) {
+		String hql = "from Order_dishes o where o.dish.id = :id";
+		@SuppressWarnings("unchecked")
+		List<Order> list = this.getSession().createQuery(hql).setParameter("id", id).list();
+		return list;
+	}
+
 }

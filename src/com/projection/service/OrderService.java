@@ -1,7 +1,9 @@
 package com.projection.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import com.projection.domain.Dishes;
 import com.projection.domain.Order;
 import com.projection.service.Base.BaseService;
 
@@ -11,7 +13,14 @@ public class OrderService extends BaseService {
 	}
 	
 	public List<Order> getAll() {
-		return orderDao.getAll();
+		List<Order> orders = orderDao.getAll();
+		List<Order> result = new ArrayList<>();
+		for (Order order : orders) {
+			if (order.getValid() == 1) {
+				result.add(order);
+			}
+		}
+		return result;
 	}
 
 	public Integer save(Order order) {
@@ -27,7 +36,8 @@ public class OrderService extends BaseService {
 	}
 
 	public void delete(Order order) {
-		orderDao.delete(order);
+		order.setValid(0);
+		orderDao.update(order);
 	}
 
 }

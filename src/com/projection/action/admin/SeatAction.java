@@ -1,11 +1,15 @@
 package com.projection.action.admin;
 
+import java.util.Date;
 import java.util.List;
 
 import com.projection.action.Base.BaseAction;
+import com.projection.domain.Log;
 import com.projection.domain.Order;
 import com.projection.domain.Seat;
+import com.projection.domain.User;
 import com.projection.util.Constant;
+import com.projection.util.ExceptionUtil;
 
 public class SeatAction extends BaseAction{
 	public Seat seat;
@@ -19,17 +23,12 @@ public class SeatAction extends BaseAction{
 	private List<Seat> seatList;
 	public String execute(){
 		try{
-			String logContent = "管理员查询全部餐位信息";
 			seatList = seatService.getAll();
-			System.out.println(order.getId());
-			order = orderService.get(order.getId());
+			if(order != null){
+				order = orderService.get(order.getId());
+			}
 			return SUCCESS;
 		}catch(Exception e){
-			/*logService.save(new Log(new User(
-					(Integer) getValueFromSession(Constant.USER_ID)),
-					ExceptionUtil.getExceptionAllinformation(e), new Date(),
-					Constant.EXCEPTION_LOG, Constant.SEE_OPERATION, this
-							.getClass().getName()));*/
 			e.printStackTrace();
 			return Constant.ERROR;
 		}
@@ -37,6 +36,10 @@ public class SeatAction extends BaseAction{
 	
 	public String AddSeat() {
 		if(seat.getId() != null){
+			 String logContent = "删除用户信息";
+			 logService.save(new Log((User) getValueFromSession(Constant.LOGIN_USER), logContent, new Date(),
+			 Constant.USER_LOG, Constant.DELETE_OPERATION, this
+			 .getClass().getName()));
 			Seat oldSeat = seatService.get(seat.getId());
 			oldSeat.setContainPeople(seat.getContainPeople());
 			seat = oldSeat;
@@ -66,12 +69,10 @@ public class SeatAction extends BaseAction{
 	public String DeleteSeat() {
 		try {
 			String logContent = "删除餐位信息";
-			/*
-			 * logService.save(new Log(new User( (Integer)
-			 * getValueFromSession(Constant.USER_ID)), logContent, new Date(),
-			 * Constant.USER_LOG, Constant.DELETE_OPERATION, this
-			 * .getClass().getName()));
-			 */
+			
+			 logService.save(new Log((User) getValueFromSession(Constant.LOGIN_USER), logContent, new Date(),
+			 Constant.USER_LOG, Constant.DELETE_OPERATION, this
+			 .getClass().getName()));
 
 			if (seat == null) {
 				throw new Exception("参数为空");
@@ -84,13 +85,11 @@ public class SeatAction extends BaseAction{
 			seatService.update(seat);
 			return SUCCESS;
 		} catch (Exception e) {
-			/*
-			 * logService.save(new Log(new User( (Integer)
-			 * getValueFromSession(Constant.USER_ID)),
-			 * ExceptionUtil.getExceptionAllinformation(e), new Date(),
-			 * Constant.EXCEPTION_LOG, Constant.SEE_OPERATION, this
-			 * .getClass().getName()));
-			 */
+			 logService.save(new Log( (User) getValueFromSession(Constant.LOGIN_USER),
+			 ExceptionUtil.getExceptionAllinformation(e), new Date(),
+			 Constant.EXCEPTION_LOG, Constant.DELETE_OPERATION, this
+			 .getClass().getName()));
+			 
 			e.printStackTrace();
 			return Constant.ERROR;
 		}

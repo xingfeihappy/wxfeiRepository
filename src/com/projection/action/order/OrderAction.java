@@ -47,6 +47,8 @@ public class OrderAction extends BaseAction {
 		try{
 			order  = orderService.get(order.getId());
 			seat = seatService.get(seat.getId());
+			seat.setState(1);
+			seatService.update(seat);
 			order.setSeat(seat);
 			orderService.update(order);
 			return SUCCESS;

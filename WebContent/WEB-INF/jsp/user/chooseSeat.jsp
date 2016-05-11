@@ -26,7 +26,8 @@
 							<span>备注：<s:property value="remark" /></span><br />
 							<input type="hidden" name="seat.id" value="<s:property value="id" />"/>
 							<input type="hidden" name="order.id" value="<s:property value="order.id" />"/>
-							<input type="submit" style="margin-top:15px;width:96%" class="btn btn-default" value="选定该座位"/>
+							<input type="button" style="margin-top:15px;width:96%" class="btn chooseSeat btn-default" value="选定该座位"/>
+						    <input type="hidden" value="<s:property value="state" />">
 						  </form>
 						</li>
 					  </s:iterator>
@@ -36,5 +37,19 @@
        	</div>
    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>
    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/showBo.js"></script>
+   <script>
+   	 $(".chooseSeat").click(function(){
+   		 if($(this).next().attr("value")==1){
+   			Showbo.Msg.confirm('该餐位不可用',function(flag){
+   				if(flag=='yes'){
+   					return false;		
+   				}				
+   			}); 
+   		 }else{
+   			 $(this).parent().submit();
+   		 }
+   	 })
+   </script>
 </body>
+
 </html>

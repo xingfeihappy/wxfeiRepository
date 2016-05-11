@@ -63,14 +63,16 @@
    				</div>
    			</div>
    			<hr />
-   			<%-- <div class="appraise-box-title"></div>
+   			<s:iterator value="messageList" status="index">
+   			<div class="appraise-box-title"></div>
    			<ul class="appraise-box-ul">
    				<li>
-   					<p><s:property value="user.username" />wxf</p>
-   					<p><img src="" />8分</p>
-   					<p><s:property value="content" />真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃真他妈难吃</p>
+   					<p><s:property value="user.username" /></p>
+   					<p><img src="" /><s:property value="grade" /></p>
+   					<p><s:property value="content" /></p>
    				</li>
-   			</ul> --%>
+   			</ul>
+   			</s:iterator>
    		</div>
    	</div>
    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/vendor/jquery-2.1.4.js"></script>

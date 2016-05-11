@@ -1,14 +1,19 @@
 package com.projection.action.admin;
 
+import java.util.Date;
 import java.util.List;
 
 import com.projection.action.Base.BaseAction;
+import com.projection.domain.Log;
 import com.projection.domain.Order;
+import com.projection.domain.User;
 import com.projection.util.Constant;
+import com.projection.util.ExceptionUtil;
 
 public class OrderAction extends BaseAction{
 	private Order order;
 	private List<Order> orderList;
+	String logContent;
 	public String execute(){//delete
 		try{
 			orderList = orderService.getAll();
@@ -33,6 +38,11 @@ public class OrderAction extends BaseAction{
 	
 	public String DeleteOrder(){
 		try{
+			 logContent = "删除订单信息";
+			 logService.save(new Log((User) getValueFromSession(Constant.LOGIN_USER), logContent, new Date(),
+			 Constant.USER_LOG, Constant.DELETE_OPERATION, this
+			 .getClass().getName()));
+			 
 			if(order == null){
 				throw new Exception("参数为空");
 			}
@@ -43,6 +53,10 @@ public class OrderAction extends BaseAction{
 			orderService.delete(order);
 			return SUCCESS;
 		}catch(Exception e){
+			logService.save(new Log((User) getValueFromSession(Constant.LOGIN_USER),
+					 ExceptionUtil.getExceptionAllinformation(e), new Date(),
+					 Constant.EXCEPTION_LOG, Constant.DELETE_OPERATION, this
+					 .getClass().getName()));
 			e.printStackTrace();
 			return Constant.ERROR;
 		}

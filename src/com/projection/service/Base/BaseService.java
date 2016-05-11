@@ -72,4 +72,5 @@ public class BaseService {
 	public void setDishesTypeDao(DishesTypeDao dishesTypeDao) {
 		this.dishesTypeDao = dishesTypeDao;
 	}
+
 }

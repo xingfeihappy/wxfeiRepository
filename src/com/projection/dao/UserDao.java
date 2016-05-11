@@ -23,7 +23,6 @@ public class UserDao extends SuperDao<User> {
 		@SuppressWarnings("unchecked")
 		List<User> list = this.getSession().createQuery("from User u where u.username = :username and u.password = :password")
 				.setParameter("username", username).setParameter("password", MD5Util.MD5(password)).list();
-		System.out.println(MD5Util.MD5(password));
 		return list.size() > 0 ? list.get(0) : null;
 	}
 
