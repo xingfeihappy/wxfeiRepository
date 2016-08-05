@@ -63,6 +63,9 @@
    				</div>
    			</div>
    			<hr />
+   			<s:if test="messageList.size() == 0">
+   			<p>暂无评价</p>
+   			</s:if>
    			<s:iterator value="messageList" status="index">
    			<div class="appraise-box-title"></div>
    			<ul class="appraise-box-ul">

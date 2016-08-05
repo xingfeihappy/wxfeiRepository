@@ -15,7 +15,7 @@
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close" p:driverClass="com.mysql.jdbc.Driver"
 		p:jdbcUrl="jdbc:mysql://localhost/restaurantmanagesystem?useUnicode=true&amp;characterEncoding=UTF-8"
-		p:user="root" p:password="123456" p:maxPoolSize="50" p:minPoolSize="1"
+		p:user="root" p:password="" p:maxPoolSize="50" p:minPoolSize="1"
 		p:initialPoolSize="1" p:maxIdleTime="1800" p:idleConnectionTestPeriod="1800"
 		p:acquireRetryAttempts="30" p:breakAfterAcquireFailure="true"
 		p:testConnectionOnCheckout="false" />

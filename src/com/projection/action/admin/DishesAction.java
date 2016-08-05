@@ -103,6 +103,7 @@ public class DishesAction extends BaseAction {
 		try {
 			logContent = "查询菜品信息";
 			dishes = dishesService.get(dishes.getId());
+			dishesList = dishesService.getAll();
 			List<Message> messageList1 = messageService.getMessageByDish(dishes.getId());
 			String id = dishes.getId().toString();
 			for(int i=0;i<messageList1.size();i++){
